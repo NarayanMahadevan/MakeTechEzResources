@@ -174,7 +174,7 @@ Let us look at a simple code that would print the words Hello World on the conso
 ## Compile and Run Helloworld Program
 #  
 
-![C++ Compile and Run Flow Chart](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/C++CompileAndRunFlow.png) 
+![C++ Compile and Run Flow Chart](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/C++CompileAndRunFlow.png) 
 
 **Step 1:** Write the program hello.cpp using any [Text Editor](@editor) 
 

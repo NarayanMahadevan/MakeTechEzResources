@@ -56,7 +56,7 @@ As the first step lets learn how to declare variables. As mentioned above the pa
 
 The format for Veriable Definition is as shown below
 
-![Declare Variables](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/DeclareVariables.png) 
+![Declare Variables](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareVariables.png) 
 
 **Data Type** can be C++ built-in data types are char, short, int, long, float, double, etc or User Defined Data Types.
 
@@ -330,7 +330,7 @@ Sr.No | Operators   		| Associativity | Explanation
 
 The problem statement is to compute the volume of the Box Car and the Tank Car. Since the volume will be computed for varying length, breadth and height as well as for varying cylindrical length and radius, its best this computation is done in a volume computing function. The function definition is as follows: 
 
-![Function Declaration](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/DeclareFunctions.png) 
+![Function Declaration](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareFunctions.png) 
 
 **Procedure Abstraction** is achieved when computational detail are moved into a function. The benifits are: 
 

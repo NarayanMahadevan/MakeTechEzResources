@@ -95,8 +95,7 @@ A class definition starts with the keyword class followed by the class name; and
 
 Here is the diagram representation of class definition:
 #  
-
-![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/ClassDefinition.png) 
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/ClassDefinition.png) 
 #  
 
 ***
