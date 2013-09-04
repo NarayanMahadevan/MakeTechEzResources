@@ -105,7 +105,7 @@ The following sample shows class declaration. The class interface defined is Dog
 	@end
 
 
- you can see in the sample code above, Dog class has 4 sections. Each of the Sections are discussed with code samples.
+you can see in the sample code above, Dog class has 4 sections. Each of the Sections are discussed with code samples.
 
 * Section 1: [**Instance Variables**](@create_variables) 
 * Section 2: [**Accessor Methods**](#accessor_methods)
