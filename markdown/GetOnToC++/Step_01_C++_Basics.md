@@ -269,6 +269,10 @@ The input operator, >>, also known as the extraction operator, is the complement
 
 When output operator used with the **cout** output-place specification, the output operator displays the value of an expression on your screen. Similarly when input operator used with the **cin** input-place specification, the input operator picks up a value for a variable by watching whats typed on the keyboard. 
 
+**SIDE STEP**
+
+This program Input Output Operators
+
 	//
     //  Program Name - S1_UserInputs.cpp
     //  Series: GetOnToC++ Step: 1
