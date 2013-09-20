@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Application Performance</title>
+
+</head>
+<body>
+<h1>Application Performance</h1>
+
+<p>Generally the approach is to get the system up and running and then use disciplined optimization process based on measurement. However some architectural decisions affects performance that are difficult to fix. Its difficult to talk about performance because every system is very unique. But broadly the following parameters should be understood when architecting a system. They are:</p>
+
+<ol type="a">
+<li><a href="#system_response"><strong>Response Time and Responsiveness</strong></a></li>
+<li><a href="#system_latency"><strong>Latency</strong></a></li>
+<li><a href="#system_throughput"><strong>Throughput</strong></a></li>
+<li><a href="#system_load"><strong>Load and Load Sensistivity</strong></a></li>
+<li><a href="#system_efficiency"><strong>Efficiency and Capacity</strong></a></li>
+<li><a href="#system_scalability"><strong>Scalability</strong></a></li>
+<li><a href="#system_thumb_rule"><strong>General Thumb Rule</strong></a></li>
+</ol>
+
+
+<p><a name="system_response"/></a></p>
+
+<h4>Response Time and Responsiveness</h4>
+
+<h1></h1>
+
+<p><strong>Response Time</strong> is the time taken by the system to precoess a individual request. This might be UI Request or Server API Calls. Response Time can be improved by better caching but this also results in reduction of performance as load increases.</p>
+
+<p><strong>Responsiveness</strong> is how quickly system acknowledges a request as opposed to
+processing it. This is important because user may become frustrated if system has low responsiveness even if the response time is good.</p>
+
+<p>If the system waits during the whole request then the responsiveness and response time are the same. On the other hand if the system indicates it has received request before even it completes then the responsiveness is better. <strong>For e.g.</strong>  providing progress bar during file transfer improves responsiveness of the system.</p>
+
+<p><a name="system_latency"/></a></p>
+
+<h4>Latency</h4>
+
+<h1></h1>
+
+<p>Latency is the minimum time required to get any form of response, even if the work to be done is non-existent. If it is a local calll then the response if instentanious but there is some latency when it is a remote call. Letency is the reason why remote calls should be reduced.</p>
+
+<p><a name="system_throughput"/></a></p>
+
+<h4>Throughput</h4>
+
+<h1></h1>
+
+<p>Throughput is the work done in a given time. In Enterprise System it is typically transactions per second(tps). This are common sets of transactions that are frequently done by the system. In an Internet System its number of http calls handled by the system in a given time. While in a Web Service environment, its number of api calls handled in a given time. Sometimes improving throughput can effect the response time. So its best to improve responsiveness at the cost of response time to increase throughput and increase performance.</p>
+
+<p><a name="system_load"/></a></p>
+
+<h4>Load and Load Sensistivity</h4>
+
+<h1></h1>
+
+<p><strong>Load</strong> is how much stress system is under and is typically measured by number of concurrent users, concurrent connections, concurrent threads, etc. Load is used in context of response time like some request takes 0.5 secs/request to respond for 10 users while takes 2 secs/request for 20 users. As you can see the response time per request is impacted as number of users increases.</p>
+
+<p><strong>Load Sensistivity</strong> is measured based on how response times varies with the load. So for example System A has a response time of 0.5 secs for 10 through 20 users and System B has response time of 0.2 secs for 10 users and 2 secs for 20 users. The System A has lower load sensitivity compared to System B. In other words System B degrades in performance more the System B.</p>
+
+<p><a name="system_efficiency"/></a></p>
+
+<h4>Efficiency and Capacity</h4>
+
+<h1></h1>
+
+<p><strong>Efficiency</strong> is thoughput divided by resources. A system that gets 30 tps on 2 CPUs is better then the system that give 40 tps with 4 CPUs.</p>
+
+<p>The <strong>Capacity</strong> of a system is an indication of maximum effective throughput or load. This is absolute maximum or a point after which the performance dips below an acceptable threshold.</p>
+
+<p><a name="system_scalability"/></a></p>
+
+<h4>Scalability</h4>
+
+<h1></h1>
+
+<p><strong>Scalability</strong> is a measure of how adding resources(usually hardware) affects performance. A scalable system is one that allows to add hardware and get commensurate performance improvement. Such as doubling the server gave double the throughput.</p>
+
+<p><strong>Vertical Scalability</strong> or <strong>Scalling Up</strong> means adding more power to single server where as <strong>Horizontal Scalability</strong> or <strong>Scalling Out</strong> means adding more server.<br/>
+<a name="system_thumb_rule"/></a></p>
+
+<h4>General Thumb Rule</h4>
+
+<h1></h1>
+
+<p>Here are some basic thumb rules that can be used while architecting a system</p>
+
+<ol>
+<li><p>Build <strong>Highly Responsive System</strong>. Do not sacrifice performance to achieve higher response time.</p></li>
+<li><p>Improve Latency by <strong>Minimizing Remote Calling</strong> and locating servers closer to the user to reduce number of hops for the request and response to make their way across the wire.</p></li>
+<li><p>Balance between Response Time and Throughput needs to be achieved as increasing one will impact the other.</p></li>
+<li><p>Building Enterprise Application, it makes sense to build for <strong>Hardware Scalability</strong> rather than capacity or efficiency.</p></li>
+</ol>
+
+
+<p>Thus the 4 Pillar's for a highly available and responsive systems are Scalability, Responsiveness, Throughput and Response Time. Latency has to be improved where ever possible and balace between Throughput and Response Time has to be achieved.</p>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/ApplicationPerformance.png" title="4 Pillers for Application Performance" alt="Application Performance" /></p>
+
+<!--
+1]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/ApplicationPerformance.png "4 Pillers for Application Performance"   
+-->
+
+
+<h1></h1>
+</body>
+</html>

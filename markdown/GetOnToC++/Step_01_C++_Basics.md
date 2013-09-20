@@ -328,7 +328,7 @@ Sr.No | Operators   		| Associativity | Explanation
 ## Section 4: Write Functions
 #  
 
-The problem statement is to compute the volume of the Box Car and the Tank Car. Since the volume will be computed for varying length, breadth and height as well as for varying cylindrical length and radius, its best this computation is done in a volume computing function. The function definition is as follows: 
+A function is a group of statements that together perform a task. Every C++ program has at least one function which is main(). Looking into the problem statement, we can see we have to compute the volume of the Box Car and the Tank Car. Since the volume will be computed for varying length, breadth and height as well as for varying cylindrical length and radius, its best this computation is done in a volume computing function. The function definition is as follows: 
 
 ![Function Declaration](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareFunctions.png) 
 

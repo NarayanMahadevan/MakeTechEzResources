@@ -4,10 +4,14 @@ The main purpose of C++ programming is to add object orientation to the C progra
 
 1. [**Declaration of Classes**](#declare_class)
 2. [**Declaration of Member Variables**](#member_vars) 
-3. [**Declaration of Constructor Functions**](#constructor)
-4. [**Declaration of Member Functions**](#member_functions)
-5. [**Create Object and set Values to Member Variable**](#create_objects)
-6. [**Call Member Function on the Object**](#call_function)
+3. [**Declaration of Member Functions**](#member_functions)
+4. [**Create Object and set Values to Member Variable**](#create_objects)
+5. [**Call Member Function on the Object**](#call_function)
+
+Finally the end of the Section 
+
+a. [**Displays the result**](#result) of the [**Program**](#problem) defined below and
+b. Gives [**Practice Problems**](#practice) for Development
 
 <a name="problem"/></a>
 ## Problem Statement
@@ -64,19 +68,18 @@ Lets create a S1_ComputeVolume.cpp file and declare the main function and the pl
         // Vairables for Tank Car which is a Cylinder
         double radius = 0.0, lengthOfTankCar = 0.0;
 
-        // Section 5A - Create BoxCar Object and Assign values to its member 
+        // Section 4A - Create BoxCar Object and Assign values to its member 
         // variable
         
-        // Section 6A - Calling Member Function volume to calculate the Volume of 
+        // Section 5A - Calling Member Function volume to calculate the Volume of 
         // BoxCar Object
         
-        // Section 5B - Create TankCar Object and Assign values to its member 
+        // Section 4B - Create TankCar Object and Assign values to its member 
         // variable
         
-        // Section 6B - Calling Member Function volume to calculate the Volume of 
+        // Section 5B - Calling Member Function volume to calculate the Volume of 
         // TankCar Object
 
-        // Display the Result
     }
 
 <a name="declare_vars"/></a>
@@ -88,36 +91,41 @@ A class definition starts with the keyword class followed by the class name; and
 
 	class Circle {
 		public:
-			int mRadius; // Member Variable Radius of the Circle
-		
-			double area(); // Member Function computes the Area of the Circle
+			int mRadius;   	// Member Variable Radius of the Circle
+			Circle(); 		// Default Constructor
+			double area(); 	// Member Function computes the Area of the Circle
 	}
 
-Here is the diagram representation of class definition:
+The Circle class is implemented in [**Side Step: 4**](#side_step_4). Here is the diagram representation of class definition:
 #  
+![Class Definition](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/ClassDefinition.png) 
+<!--
 ![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/ClassDefinition.png) 
+-->
 #  
 
 ***
 **Note:** The keyword public determines the access attributes of the members of the class that follow it. A public member can be accessed from outside the class anywhere within the scope of the class object. You can also specify the members of a class as private or protected which we will discuss in later steps.
 ***
 
-A Class is typically identified by the **Noun** in the Problem Statement. 
+**A Class is typically identified by the *Noun* in the Problem Statement. **
 
-**SIDE STEP**
+<a name="side_step_1"/></a>
+**SIDE STEP :1 Define Simple Class** 
 
-**Problem:** Find the area of the Circle whose radius is 10cm.  
+**Problem:** Demonstrated Class Definition using a Counter Class to maintain the count value
 
-**Solution:** Here the noun is the Circle. The attribute or member variables of Cicle is radius. The member functions here is area as it uses the attribute to compute the value. 
+**Solution:** Here the noun is the Counter. The attribute or member variables of Counter is count. More details on Member Vairables will be covered in next section
 
     //
-    //  Program Name - S2_Circle.cpp
+    //  Program Name - S2_Counter.cpp
     //  Series: GetOnToC++ Step: 2
     //
-    //  Purpose: This program defines Circle and Square Shape and computes its area
+    //  Purpose: This program Demonstrated Class Definition using a Counter 
+    //           Class to maintain the count
     //
-    //  Compile: g++ S2_Circle.cpp -o S2_Circle
-    //  Execute: ./S2_Circle
+    //  Compile: g++ S2_Counter.cpp -o S2_Counter
+    //  Execute: ./S2_Counter
     //
     //  Created by Narayan Mahadevan on 18/08/13.
     //  Copyright (c) 2013 MakeTechEz. All rights reserved.
@@ -126,55 +134,45 @@ A Class is typically identified by the **Noun** in the Problem Statement.
     #include <iostream>
     using namespace std;
 
-    // Use the mathematics library, which contains a declaration for M_PI: 
-    #include <math.h>
-
-    class Circle {
+    class Counter {
         public:
-            // Member Variable mRadius. m indicates member vairable
-            int mRadius;
+            // Member Variable count to store the counter value. 
+            // The starting char m indicates member vairable
+            int mCount;
 
-    } aCircle; // Note that the class definition ends with semicolon. 
-               // Here a global variable aCircle is difined of type Circle
-
-    // This method is ideally suited to be a Member Function as it computes the
-    // area using attribute of the circle.
-    // Member Functions are covered in the Section 4 of Step 2
-    double area(Circle circle) { 
-        // M_PI is a macro defined in Math.h and its value is 3.14159            
-        return M_PI*circle.mRadius*circle.mRadius;
-    }
+    } aCounter; // Note that the class definition ends with semicolon. 
+                // Here a global variable aCounter is difined of type Counter
 
     // Main Function as the execution starts at the main function
     main ( ) { 
         // Section 1 - Declaration of Variables 
-        int rad = 10;
+        int count = 10;
 
-        // Assigning value to aCircle Objects member variable.
-        // Notice that the member variable mRadius is accessed using access 
+        // Assigning value to aCounter member variable.
+        // Notice that the member variable mCounter is accessed using access 
         // operator (.) 
-        aCircle.mRadius = rad;
+        aCounter.mCount = count;
 
-        // Notice that the area() function takes Circle Data type as Parameter
-        cout << "Area of the Circle = " << area(aCircle) << endl;
+        // Printing the counter value using mCounter Objects member vairable 
+        cout << "Assigned value = " << count <<
+                " And Objects mCount Value = " << aCounter.mCount << endl;
 
-        // Calculating the size of Circle class
-        // Note since the Circle class holds one integer vairable radius and 
-        // hence size of user defined data type Circle is 4 bytes.
-        cout << "Size of Circle Class = " << sizeof(Circle) << endl;
+        // Calculating the size of Counter class and Counter Object. Both are same. 
+        // Note since the Counter class holds one integer vairable radius and 
+        cout << "Size of Counter Class = " << sizeof(Counter) << endl 
+             << "Same as sizeof(int), which is = " << sizeof(int) << endl  
+             << "Same as Size of Counter Object = " << sizeof(aCounter) << endl;
         
-        // Calculating the size of Circle Object aCircle
-        cout << "Size of Circle Object = " << sizeof(aCircle) << endl;
     }
 
 ***
 **NOTE:** The following can be learnt from the above example: 
 
-1. The example defines the class Circle with member variable mRadius
+1. The example defines the class Counter with member variable mCount
 2. The Class Definition ends with semicolon
-3. The examples defines a global vairable aCircle of type Circle
-4. aCircle is a Object and has a memory size of 4 bytes. 
-5. The memory size of class or an object is the addition of size of all its member variables. Since Circle has Integer and hence the size if 4 bytes.
+3. The examples defines a global vairable aCounter of type Counter
+4. aCounter is a Object and has a memory size of 4 bytes. 
+5. The memory size of class or an object is the addition of size of all its member variables. Since Counter has an Integer and hence the size if 4 bytes.
 ***
 
 <a name="class_code"/></a>
@@ -191,9 +189,7 @@ Looking at the [**Problem Statement**](#problem), we can see the nouns are Box C
         
             // Section 2A - Box Car Class Member Variables Defined Here
 
-            // Section 3A - Box Car Class Constructor Defined Here
-
-            // Section 4A - Box Car Class Member Functions Defined Here
+            // Section 3A - Box Car Class Member Functions Defined Here
 
     };
 
@@ -206,9 +202,7 @@ Looking at the [**Problem Statement**](#problem), we can see the nouns are Box C
         
             // Section 2B - Tank Car Class Member Variables Defined Here
 
-            // Section 3B - Tank Car Class Constructor Defined Here
-
-            // Section 4B - Tank Car Class Member Functions Defined Here
+            // Section 3B - Tank Car Class Member Functions Defined Here
 
     };
 
@@ -235,7 +229,10 @@ Since no Vairable is assigned to BoxCar and TankCar class hence the minimum memo
 
 Member Variables are attributes that describe the class. Like radius is the attribute of a circle or length is the attribute of the square. Member Vairables appear inside the class definition. The memory size of the class or the object is determined by the memory size of the member variables. This member variables are also called **Instance Variable**. As the memory for the member vairable is allocated when an Instance of a Class i.e. is the Object is created. 
 
-**SIDE STEP**
+<a name="side_step_2"/></a>
+**SIDE STEP :2 Define Class and Member Vairable** 
+
+**Problem Statment:** Determine the Volume of the 2 Boxes, one is 4.0, 6.0, 8.0 feet while the other is 10.0, 12.0 and 14.0 feet 
 
 This program demonstrates declaration of Member Variables of Box class, creation of Box Object and calculating volume of the Box.
 
@@ -347,20 +344,258 @@ Looking at the [**Problem Statement**](#problem), we can see the attributes of B
             double  mRadius, mLength; 
             
 
-<a name="constructor"/></a>
-## Section 3: Declaration of Constructor Functions
+<a name="member_functions"/></a>
+## Section 3: Declaration of Member Functions
 #  
 
-<a name="member_functions"/></a>
-## Section 4: Declaration of Member Functions
-#  
+Member functions are part of a class and are basically behaviours or actions defined in the class. Member functions use the member variables to describe the behaviour or to compute results or to take actions. 
+
+Member functions are similar to ordinary functions, small but important changes in syntax distinguish the member function from ordinary function. It is in the way the member functions are invoked on the class object using the class-member operator.
+
+Member-function definitions differ from ordinary function definitions in the following respects:
+
+a. Member functions have no parameter corresponding to the class-object argument. Instead class-object is joined by class-member operator, a period, to the name of the member function, in a manner reminiscent of member variable references.
+b. In member functions, there are no parameters or variables connected to member variables via the class-member operator; instead, all member variables are taken to belong to the class-object argument. Thus, you define volume as a member function as follows:
+
+		class FlatCar { 
+  			public: 
+  			double width, length; 
+        	double volume ( ) { 
+          		// Member Function volume can directly access the member vairables 
+          		return 1 * width * length; 
+        	} 
+		} myFlatCar; 
+
+Hence to call the volume function on FlatCar, its written as `myFlatCar.volume ()`. Here myFlatCar is the class object joined by class-operator "." invoking the member function volume.
+
+<a name="side_step_3"/></a>
+**SIDE STEP :3 Define Class, Member Vairable and Member Functions** 
+
+**Problem Statment:** Find the area of the Circle whose radius is 10cm. 
+
+**Solution:** Here the noun is the Circle. The attribute or member variables of Cicle is radius. The member functions here is area as it uses the attribute to compute the value. More details on Member Vairables and Member functions will be covered in next section
+
+    //
+    //  Program Name - S2_Circle.cpp
+    //  Series: GetOnToC++ Step: 2
+    //
+    //  Purpose: This program defines Circle and Square Shape and computes its area
+    //
+    //  Compile: g++ S2_Circle.cpp -o S2_Circle
+    //  Execute: ./S2_Circle
+    //
+    //  Created by Narayan Mahadevan on 18/08/13.
+    //  Copyright (c) 2013 MakeTechEz. All rights reserved.
+    //
+
+    #include <iostream>
+    using namespace std;
+
+    // Use the mathematics library, which contains a declaration for M_PI: 
+    #include <math.h>
+
+    class Circle {
+        public:
+            // Member Variable mRadius. m indicates member vairable
+            int mRadius;
+
+        // This method is a Member Function as it computes the area using 
+        // attribute of the circle.
+        // Member Functions are covered in the Section 4 of Step 2
+        double area() { 
+            // M_PI is a macro defined in Math.h and its value is 3.14159            
+            return M_PI*mRadius*mRadius;
+        }
+
+    } aCircle; // Note that the class definition ends with semicolon. 
+               // Here a global variable aCircle is difined of type Circle
+
+    // Main Function as the execution starts at the main function
+    main ( ) { 
+        // Section 1 - Declaration of Variables 
+        int rad = 10;
+
+        // Assigning value to aCircle Objects member variable.
+        // Notice that the member variable mRadius is accessed using access 
+        // operator (.) 
+        aCircle.mRadius = rad;
+
+        // Notice that the area() function takes Circle Data type as Parameter
+        cout << "Area of the Circle = " << aCircle.area() << endl;
+
+        // Calculating the size of Circle class
+        // Note since the Circle class holds one integer vairable radius and 
+        // hence size of user defined data type Circle is 4 bytes.
+        cout << "Size of Circle Class = " << sizeof(Circle) << endl;
+        
+        // Calculating the size of Circle Object aCircle
+        cout << "Size of Circle Object = " << sizeof(aCircle) << endl;
+    }
+
+**Main Program**
+
+Looking at the [**Problem Statement**](#problem), we can define volume member function to compute volume of the box car and tank car. Please copy appropriately paste in section 3A and 3B in the [**Program**](#class_code) defined above.
+             
+            // Section 3A - Box Car Class Member Functions Defined Here
+
+            /*
+             * This member function calculates the Volume of the Box Car
+             * return: volume of the Box Car
+             * Note: volume is the class member function and can directly access 
+             *       the member variables 
+             */    
+            double volume() {
+                /*
+                 * The scope of the boxCarVol variable is local to this function.
+                 * This means the memory is not available outside the function.
+                 * The local variable boxCarVol stores the volume of the Box Car
+                 */        
+                double boxCarVol = 0.0;
+                
+                // Box Car Volume Computation using Arithmatic Operations
+                boxCarVol = mHeight*mWidth*mLength;
+                
+                // Returns the Box Car Volume
+                return boxCarVol;
+            }
+            
+            
+            // Section 3B - Tank Car Class Member Functions Defined Here
+
+            /*
+             * This function calculates the Volume of the Tank Car
+             * return: volume of the Tank Car
+             * Note: volume is the class member function and can directly access 
+             *       the member variables 
+             */    
+            double volume() {
+                /*
+                 * The scope of the tankCarVol variable is local to this function.
+                 * This means the memory is not available outside the function.
+                 * The local variable tankCarVol stores the volume of the Tank Car
+                 */        
+                double tankCarVol = 0.0;
+                
+                // Tank Car Volume Computation using Arithmatic Operations
+                // M_PI is a macro defined in Math.h and its value is 3.14159            
+                tankCarVol = M_PI * mRadius * mRadius * mLength;
+                
+                // Returns the Tank Car Volume
+                return tankCarVol;
+            }
+            
 
 <a name="create_objects"/></a>
-## Section 5: Create Object and set Values to Member Variable
+## Section 4: Create Object and set Values to Member Variable
 #  
+
+Once the BoxCar and TankCar class is defined, the variable for the user defined data type can be introduced as `BoxCar myBoxCar;` for BoxCar class and `TankCar myTankCar;` for TankCar class. Here Object and hence the memory for the member variables is created for BoxCar and TankCar class and can be accessed using the Objects myBoxCar and myTankCar.
+
+The member vairables of BoxCar and TankCar class can be accessed using the Object followd by **class-member operator i.e. "."**. Thus myBoxCar.mHeight accessess the height member variable of BoxCar Object. This can be used to assign value and subsequently retrieve value from the Object's member vairable. 
+
+**Main Program**
+
+The following codes creates BoxCar and TankCar Object and correspondingly sets the value for its member variables. Please copy appropriately paste in section 4A and 4B in the [**Program**](#main_code) defined above.
+
+        // Section 4A - Create BoxCar Object and Assign values to its member 
+        // variable
+
+        // Read in the Variables of Box Car and Tank Car
+        cout << "Please Enter the Length, Width and Height of the Box Car." 
+        	     << endl;
+        cin >> length >> width >> height;  
+
+        // Creating myBoxCar object for user defined class BoxCar. Once BoxCar
+        // Object is created, corresponding memory for the member variable is 
+        // created and can be accessed using the myBoxCar object.         
+        BoxCar myBoxCar;
+
+        // Assigning values to the Objects Member Variable
+        myBoxCar.mLength = length; 
+        myBoxCar.mHeight = height; 
+        myBoxCar.mWidth = width; 
+        
+        // Section 4B - Create TankCar Object and Assign values to its member 
+        // variable
+        
+        cout << "Please Enter the Radius and Length of the Tank Car." << endl;
+        cin >> radius >> lengthOfTankCar;  
+        
+        // Creating myTankCar object for user defined class TankCar. Once TankCar
+        // Object is created, corresponding memory for the member variable is 
+        // created and can be accessed using the myTankCar object.         
+        TankCar myTankCar;
+
+        // Assigning values to the Objects Member Variable
+        myTankCar.mLength = lengthOfTankCar; 
+        myTankCar.mRadius = radius; 
+
 
 <a name="call_function"/></a>
-## Section 6: Call Member Function on the Object
+## Section 5: Call Member Function on the Object
 #  
 
+The member functions of BoxCar and TankCar class can be accessed using the Object followd by **class-member operator i.e. "."**. Hence to call the volume function on BoxCar Object, its written as `myBoxCar.volume ()`. Here myBoxCar is the class object joined by class-operator "." invoking the member function volume.
 
+**Main Program**
+
+The following codes calls the volume member function of BoxCar and TankCar Object. Please copy appropriately paste in section 5A and 5B in the [**Program**](#main_code) defined above.
+
+        // Section 5A - Calling Member Function volume to calculate the Volume of 
+        // BoxCar Object
+        cout << "The Volume of the Box Car Object of lth: " << myBoxCar.mLength 
+             << " Wt: " << myBoxCar.mWidth << " and Ht: " << myBoxCar.mHeight
+             << " is " << myBoxCar.volume() << endl;
+
+        // Section 5B - Calling Member Function volume to calculate the Volume of 
+        // TankCar Object
+        cout << "The Volume of the Tan Car Object of lth: " << myTankCar.mLength 
+             << " And Rad: " << myTankCar.mRadius << " is " << myTankCar.volume()
+             << endl;
+    
+        // Memory Size of Box Car and Tank Car Class is same as their Objects
+        cout << "Memory of BoxCar Class = " << sizeof(BoxCar) << endl;
+        cout << "Memory of TankCar Class = " << sizeof(TankCar) << endl;        
+  
+<a name="result"/></a>
+## Display Program Result
+#  
+
+The following displays the Compilation, Execution, Inputs and Outputs of the [**Main Program**](#main_code) developed in this step
+
+***
+
+Enter the Following in Command Prompt for first Compilation and then Executiom
+
+`$ g++ S2_CreateClassesAndObjects.cpp -o S2_CreateClassesAndObjects`
+
+`$ ./S2_CreateClassesAndObjects `
+
+Please Enter the Length, Width and Height of the Box Car.
+
+10 10 10
+
+The Volume of the Box Car Object of lth: 10 Wt: 10 and Ht: 10 is 1000
+
+Please Enter the Radius and Length of the Tank Car.
+
+10 10
+
+The Volume of the Tan Car Object of lth: 10 And Rad: 10 is 3141.59
+
+Memory of BoxCar Class = 24
+
+Memory of TankCar Class = 16
+
+***
+
+<a name="practice"/></a>
+## Practice Problem for Development
+#  
+
+1. Device a FlatCar class for Flat Cars and device a volume function if the flat cars are loaded to a maximum height of 8.25 feet 
+
+2. Calculate the age of BoxCar and TankCar. For this do the following 
+   a. Define member variable `int mYearBuilt; // Year Built` for Box Car and Tank Car 
+   b. Take user input to specify the value for the mYearBuilt member variable
+   c. Define `int age()`  member function that returns the current age of the Box Car and Tank Car. 

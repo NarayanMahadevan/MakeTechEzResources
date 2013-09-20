@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Enterprise Application</title>
+
+</head>
+<body>
+<h1>Enterprise Application</h1>
+
+<p>Enterprise is kind of application that has its own set of challanges and complexities. It could be because of lot of data or because its a realtime system or its a Business Process System with a complex workflow of how the work gets done or integration with multitude of systems from legacy mainframe to windows to unix to linux, etc Enterprise system usually involve</p>
+
+<ul>
+<li>Persistent Data - Huge amount Data with tens of millions of records</li>
+<li>Access Data Concurrently - Web based systems with thousands of users accessing data concurrently</li>
+<li>Lots of User Interface Screens in Mobile, Web and Desktop for user access</li>
+<li>Integration with other enterprise application built on different technologies and requiring complete different Hardware servers.</li>
+<li>Integration with third party applications</li>
+<li>Differences in business models and processes w.r.t enterprise data. This is called business logic or rules which are unique to each systems and are tightly coupled.</li>
+</ul>
+
+
+<p>Lets consider 3 sample Enterprise Application</p>
+
+<p><strong>B2C eCommerce System -</strong> Users browse, search for Products, add it to cart, buy, do payment and place orders. Such a system needs</p>
+
+<ol type="a">
+<li> To handle a very high volume of users</li>
+<li> Highly Responsive</li>
+<li> Use system resources efficiently</li>
+<li> Be Scalable so that more load can be handled by adding more Hardware.</li>
+<li> Domain logic is pretty straight-forward, simple pricing, shipping and tax calculation</li>
+<li> Integration points with external systems are fairly well defined with Payment Systems or Shipping Handlers.</li>
+<li> Simple and elegant presentation layer and be able to allow access from multiple touch points like Web, Mobile, etc.</li>
+<li> Data Source includes database for holding users, products, orders, and perhaps the inventory systems</li>
+<li> The following picture shows a typical eCommerce System
+
+<h1></h1>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/eCommSystem.png" alt="eCommerce System" /></p></li>
+</ol>
+
+
+<!--
+![eCommerce System](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/eCommSystem.png) 
+-->
+
+
+<p></p>
+
+<h1></h1>
+
+<p><strong>Lease Management System -</strong> Automates processing of lease agreements. Such a system need</p>
+
+<ol type="a">
+<li> Simpler then B2C, manage fewer amx upto 100 users at any time</li>
+<li> Complicated Business Logic like calculating monthly bills on lease, handling    events such as early returns, late paymennts, etc, asset valuation, pricing, and validating data as lease are booked</li>
+<li> Dynamic Business Rules and adjust to competition</li>
+<li> Intricate User Interface and UI Navigation based on Business Logic.</li>
+<li> Transaction support over a longer period of time as booking lease might take an hour or two over which time user is in a logic transaction.</li>
+<li> Complex Database schema with over 200 tables</li>
+<li> The following picture shows a typical Expense Tracking System
+
+<h1></h1>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/expenseTrackingSystem.png" alt="Expense Tracking System" /></p></li>
+</ol>
+
+
+<!--
+![Expense Tracking System](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/expenseTrackingSystem.png) 
+-->
+
+
+<h1></h1>
+
+<p><strong>Expense Tracking System -</strong> Such a System needs</p>
+
+<ol type="a">
+<li> To support fewer users and has to be made available across the company on the Internet.</li>
+<li> To be built quickly, such system has to accomodate new functionalities over a period of time like Calculate Reimbursement Checks, feed them into payroll system, understand tax implication, tie into airline reservation web service, etc</li>
+<li> Support Data Analytics and Reports to CFO as Expense is major area of control and cost cutting CFO would like to under take</li>
+<li> The following picture shows a typical Lease Management System
+
+<h1></h1>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/LeaseManagementSystem.png" alt="Lease Management System" /></p></li>
+</ol>
+
+
+<!--
+![Lease Management System](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/LeaseManagementSystem.png) 
+-->
+
+
+<h1></h1>
+
+<p>All the three systems are different but as you can see the architecture is more or less same. Hence broadly following parameters need to be considered for a available, scalable, secured and responsive system. Each of this items are discussed in detail in the blog, They are:</p>
+
+<ol>
+<li><strong><em>Application Architecture</em></strong></li>
+<li><strong><em>Application Design</em></strong></li>
+<li><strong><em>Application Security</em></strong></li>
+<li><strong><em>Application Performance</em></strong></li>
+</ol>
+
+
+<p><strong>4 Legs of Enterprise Application</strong> <img src="/Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/EnterpriseApplication.png" title="4 Legs of Enterprise Application" alt="Enterprise Application" /></p>
+
+<!--
+4]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/EnterpriseApplication.png "4 Legs of Enterprise Application"   
+-->
+
+
+<h1></h1>
+</body>
+</html>
