@@ -23,10 +23,12 @@ Lets consider 3 sample Enterprise Application
   h. Data Source includes database for holding users, products, orders, and perhaps the inventory systems
   i. The following picture shows a typical eCommerce System
 #  
-   ![eCommerce System](/Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/eCommSystem.png)
-<!--
-![eCommerce System](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/eCommSystem.png) 
--->   
+![eCommerce System][1]
+[1]:https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/eCommSystem.png "eCommerce System"
+<!--   
+![eCommerce System](/Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/eCommSystem.png)
+-->
+
 #  
 
 **Lease Management System -** Automates processing of lease agreements. Such a system need
@@ -39,9 +41,9 @@ Lets consider 3 sample Enterprise Application
   f. Complex Database schema with over 200 tables
   g. The following picture shows a typical Expense Tracking System          
 #  
-![Expense Tracking System](/Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/expenseTrackingSystem.png) 
+![Lease Management System](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/LeaseManagementSystem.png) 
 <!--
-![Expense Tracking System](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/expenseTrackingSystem.png) 
+![Lease Management System](/Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/LeaseManagementSystem.png) 
 -->
 #  
 
@@ -52,9 +54,9 @@ Lets consider 3 sample Enterprise Application
   c. Support Data Analytics and Reports to CFO as Expense is major area of control and cost cutting CFO would like to under take
   d. The following picture shows a typical Lease Management System 
 #  
-![Lease Management System](/Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/LeaseManagementSystem.png) 
+![Expense Tracking System](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/expenseTrackingSystem.png "Expense Tracking System") 
 <!--
-![Lease Management System](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/LeaseManagementSystem.png) 
+![Expense Tracking System](/Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/expenseTrackingSystem.png) 
 -->
 #  
 
@@ -63,13 +65,13 @@ All the three systems are different but as you can see the architecture is more 
 1. ***Application Architecture***
 2. ***Application Design***
 3. ***Application Security***
-4. ***Application Performance***
+4. [***Application Performance***](http://wp.me/p2Yph5-5f)
  
 **4 Legs of Enterprise Application** ![Enterprise Application][4]
 
-[4]: /Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/EnterpriseApplication.png "4 Legs of Enterprise Application"  
+[4]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/EnterpriseApplication.png "4 Legs of Enterprise Application"   
 <!--
-4]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/EnterpriseApplication.png "4 Legs of Enterprise Application"   
+[4]: /Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/EnterpriseApplication.png "4 Legs of Enterprise Application"  
 -->
 #  
 

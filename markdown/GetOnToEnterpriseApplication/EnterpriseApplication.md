@@ -73,15 +73,55 @@ All the three systems are different but as you can see the architecture is more 
 -->
 #  
 
-
 <a name="appln_architecture"/></a>
 ## Application Architecture
 #  
-Enterprise Architecture is essentially a combination of Application Architecture and System Architecture. 
 
-1. **Application Architecture:** This essentially means breaking enterprise software into different software layeres, each layer indipendent of the other. Hence this can also be referred as Layered Architecture. More details in the following section.
+<!--
+Enterprise Architecture is essentially a combination of Application Architecture and System Architecture. The focus here is Application Architecture
 
-2. **System Architecture:** This esentially means running the enterprise application on different servers or machines. Logically all layers can be run on one server or each layer of the application can be run on different servers. System Architecture also involves Firewall for Secured Access, Server Clustering for Load Balancing, etc. 
+1. **Application Architecture:** This essentially means breaking enterprise software into different software modules, each module indipendent of the other. Hence Application Architecture helps in software modularisation and internal structuring of enterprise software. More details in the following section.
+
+2. **System Architecture:** This esentially means deployment strategy of running the enterprise application on different servers or machines. System Architecture also involves Firewall for Secured Access, Server Clustering for Load Balancing, etc. 
+
+<a name="appln_architecture"/></a>
+####Application Architecture
+-->
+
+Application Architecture essentially means breaking enterprise software into different software modules, each module indipendent of the other. Hence Application Architecture helps in software modularisation and internal structuring of enterprise software. 
+
+Application Architecture is about 
+
+1. Ensuring the current suite of Application being used by an Enterprise, the 3rd party application being connected with, etc are structured to ensure it gives desired results in scalable, reliable, available and manageable way.
+
+2. Not only understanding and managing the dynamics of the business functionalities it is implementing but also helping formulating a deployment strategy and keeping an eye out for technological risks that could jeopardize the growth and/or operations of the organization.
+
+3. Specifying the structure based on Business Requirements. This involves 
+   a. Different ways the users can interact with the system 
+   b. Defining the interaction between application packages, databases, and middleware systems in terms of functional coverage and about how data is consumed and produced by each of this applications or systems.
+
+<a name="appln_architecture"/></a>
+####Architectural Patterns
+
+Applications Architecture means managing how multiple applications are poised to work together in a pattern best suited to solve the dynamics of the business functionality. Patterns are a way of putting building blocks into context and describe how to use the building blocks to address one or multiple architectural concerns. Application Patterns are broadly-scoped solutions to previously encountered problems.
+
+Benifit of architectural pattern are:
+1. Is found repeatedly in practice
+2. Is a package of design decisions
+3. Has known properties that permit reuse
+4. Describes a class of architectures
+A architectural pattern is determined and described by
+1. A set of element types - for example, data repositories, processes, and objects
+2. A set of interaction mechanisms or connectors - for example, subroutine calls, events, and pipes
+3. A topological layout of the components
+4. A set of semantic constraints covering topology, element behavior, and interaction mechanisms
+Following Architectural Patterns covered in this series. These patterns are widely known and include many familiar design approaches. They are in no means a universal list.
+1. Client-Server and N-Tier Systems Architecture
+2. Layered Architecture
+3. Message Oriented Architecture
+4. Pipe and Filter Architecture
+5. Service Oriented Architecture
+6. Hexagonal Architecture
 
 ####Layered Architecture
 

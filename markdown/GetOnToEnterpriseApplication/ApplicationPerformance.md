@@ -67,8 +67,8 @@ Thus the 4 Pillar's for a highly available and responsive systems are Scalabilit
 
 ![Application Performance][1]
 
-[1]: /Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/ApplicationPerformance.png "4 Pillers for Application Performance"  
+[1]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/ApplicationPerformance.png "4 Pillers for Application Performance"   
 <!--
-1]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriceApp/ApplicationPerformance.png "4 Pillers for Application Performance"   
+[1]: /Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriceApp/ApplicationPerformance.png "4 Pillers for Application Performance"  
 -->
 #  

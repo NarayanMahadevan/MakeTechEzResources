@@ -1,0 +1,1270 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Step 1: Learn Objective C</title>
+
+</head>
+<body>
+<h1>Step 1: Learn Objective C</h1>
+
+<p><a name="intro"/></a></p>
+
+<h2>Introduction</h2>
+
+<h1></h1>
+
+<p>Objective-C is the primary programming language for writing software in OS X and iOS. It’s a superset of the C programming language and provides object-oriented capabilities and a dynamic runtime. Objective-C inherits the syntax, primitive types, and flow control statements of C and adds syntax for defining classes and methods. Its assumed that you have basic understanding of C and Object Oriented Programming. Objective-C, unlike C++, doesn’t allow operator overloading, templates, or multiple inheritance.</p>
+
+<p>Objective-C is the first step before programming in iOS. This step will help you understand all you have to know about Objective-C by implementing a <a href="#step_project"><strong>Simple Project</strong></a> as defined below. The Concepts introduced in this step are:</p>
+
+<ol>
+<li><a href="#create_project"><strong>Create Objective-C Project</strong></a></li>
+<li><a href="#create_class"><strong>Definition of new classes</strong></a></li>
+<li><a href="#declare_props"><strong>Declaration of Properties</strong></a></li>
+<li><a href="#create_methods"><strong>Defining Class and instance methods</strong></a></li>
+<li><a href="#class_implementation"><strong>Class Implementation</strong></a></li>
+<li><a href="#call_methods"><strong>Object Creation and Method invocation</strong></a></li>
+</ol>
+
+
+<p>Finally the end of the Section</p>
+
+<ol type="a">
+<li><a href="#result"><strong>Displays the result</strong></a> of the <a href="#step_project"><strong>Simple MyDog Project</strong></a> defined below and</li>
+<li>Gives <a href="#practice"><strong>Practice Projects</strong></a> for Development</li>
+</ol>
+
+
+<p><a name="step_project"/></a></p>
+
+<h2>Simple MyDog Project</h2>
+
+<h1></h1>
+
+<p>This is a simple project, the goal being end of this step you are comfortable with basics of Objective-C Programming. In this step, you will learn to create new Project, Define a new Class, specify class attributes and properties, define class and instance methods, etc as listed in <a href="#intro">Introduction</a>.</p>
+
+<hr />
+
+<p><strong>NOTE:</strong> <em>Every section would introduce a new concept with the code for the sample project under the heading <strong>Main Program</strong>. All the codes when copied one-by-one into your xcode environment will finally build up into an executable project.</em></p>
+
+<hr />
+
+<p>The project is about Dog Class which is essentially an Animal. We will describe the Dog's attributes by its Color, Breed, Name, etc as well as Dogs behaviour such as temperament, aggression, intelligence etc. The execuatble project will let you create a Dog with its name, breed and color and check-out its behaviour.</p>
+
+<p>Please note as different concepts are in</p>
+
+<p><a name="create_project"/></a></p>
+
+<h2>Create Objective-C Project</h2>
+
+<h1></h1>
+
+<p>Please refer the following figure for steps to create a new Command Line Project for the MyDog Project .</p>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/ObjCCreateProject.jpg" alt="Class Definition" /></p>
+
+<!--
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjCCreateProject.jpg) 
+-->
+
+
+<h1></h1>
+
+<ul>
+<li><strong>Step 1:</strong> Create a new Xcode project, located directly below the Welcome to Xcode title or you can create a new project by going to the File menu and selecting New > Project….</li>
+<li><strong>Step 2:</strong> In the column on the left hand side, find the OS X section, click on Application and select Command Line Tool as shown in the figure above.</li>
+<li><strong>Step 3:</strong> On clicking Next, fill in the fields as indicated in the screen:
+
+<ul>
+<li>Product Name: My Dog Project</li>
+<li>Organization Name: This field can be left blank. Here we have entered MakeTechEz</li>
+<li>Company Identifier: Enter com.maketechez</li>
+<li>Type: Foundation. This indicates Foundation Framework</li>
+<li>Use Automatic Reference Counting: Check this box</li>
+</ul>
+</li>
+<li><strong>Step 4:</strong> Click Next to choose a location to store the project files and Click Create</li>
+<li><strong>Step 5:</strong> On Create, Xcode will set up your new project and open it up in the editor as shown in the Figure below.
+<a name="main_source_file"/></a>
+
+<h1></h1>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/NewProjectCreated.png" alt="New XCode Project" /></p></li>
+</ul>
+
+
+<!--
+![New XCode Project](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/NewProjectCreated.png) 
+-->
+
+
+<h1></h1>
+
+<p>As you can see the figure, the left pane of Xcode displays a list of files that are part of the project. The files you see were automatically created by the project template you used. For detail explanation please see <a href="#class_implementation"><strong>Class Implementation</strong></a></p>
+
+<hr />
+
+<p><strong>Note: </strong> <em>You should be able to Compile and Run the My Dog project without writing single line of code and see the Hello World output. This log statement is in main.m Source code which is the starting point for any execution.</em></p>
+
+<h1></h1>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/RunAndViewOutput.jpg" alt="Run and View Output" /></p>
+
+<!--
+![Run and View Output](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/RunAndViewOutput.jpg) 
+-->
+
+
+<h1></h1>
+
+<hr />
+
+<p><a name="create_class"/></a></p>
+
+<h2>Definition of new classes</h2>
+
+<h1></h1>
+
+<p>As in most Object Oriented Languages, Objective-C supports creating your own Data Type by creating a <strong>Class Interface</strong> and ecapsulation of data by creating <strong>Properties</strong> and defining the actions that operate on that data by creating <strong>Methods</strong>. Creating Objects as run-time instance of class having its own in-memory copy of the instance variables declared by its class and pointers to the methods of the class.</p>
+
+<p>A Class in Objective-C consists of</p>
+
+<ul>
+<li><strong>Header file</strong> - The header file is essentially a class definition with properties which are attributes of the class and methods that describe the behavior.</li>
+<li><strong>Implementation file</strong> - The Implementation file is the source file containing the programmong logic by implementing the methods defined in the Header file.</li>
+</ul>
+
+
+<p>The table below indicates the file name extensions for Header Files and Implementation Files</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Extension </th>
+<th align="left"> Source Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">.h        </td>
+<td align="left"> Header files. Header files contain class, type, function, and constant declarations.</td>
+</tr>
+<tr>
+<td align="left">.m        </td>
+<td align="left"> Implementation files. A file with this extension can contain both Objective-C and C code. It is sometimes called a source file.</td>
+</tr>
+<tr>
+<td align="left">.mm       </td>
+<td align="left"> Implementation files. An implementation file with this extension can contain C++ code in addition to Objective-C and C code. Use this extension only if you actually refer to C++ classes or features from your Objective-C code.</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>The Following Figure shows process to create Objective-C file for Dog. This in turn will create Dog.h Header file and Dog.m Implementation File</p>
+
+<h1></h1>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/DogFile.jpg" alt="Dog Source File" /></p>
+
+<!--
+![Dog Source File](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/RunAndViewOutput.jpg) 
+-->
+
+
+<h1></h1>
+
+<h5>Comments</h5>
+
+<p>The following code will be auto-generated on the top of Dog.h File. This are comments in  Objective-C to give information of Dog file</p>
+
+<pre><code>//
+//  Dog.h
+//  LearnObjective-C
+//
+//  Created by MakeTechEz on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+</code></pre>
+
+<h5>Import Foundation Framework</h5>
+
+<p>The following code sample uses <strong>#import</strong> directive. This is similar to C’s #include directive, except that it makes sure that the same file is never included more than once.</p>
+
+<p>Here Foundation Framework is imported. Generally framework is imported to import most or all of the header files contained within the framework. This is done by  importing the framework’s umbrella header file, which has the same name as the framework.</p>
+
+<p>The Foundation framework provides many primitive object classes and data types, making it fundamental to any Objective-C development. It defines classes to manage Strings (NSString), manage numbers NSNumber, manage Collections NSArray and NSDictionary, etc. The core classes of Foundation framework is covered in step 2.</p>
+
+<p>The following code is auto generated in Dgg.h file to import the Foundation Framework.</p>
+
+<pre><code>#import &lt;Foundation/Foundation.h&gt;
+</code></pre>
+
+<h5>Class Declaration</h5>
+
+<p>The class declaration begins with the <strong>@interface</strong> compiler directive and ends with the <strong>@end</strong> directive. The instance variables, properties, and methods appear between these two statements. The class interface is usually stored in the .h file. The following diagram typically shows class declaration</p>
+
+<h1></h1>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/ObjC_ClassDef.png" alt="Class Definition" /></p>
+
+<!--
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjC_ClassDef.png) 
+-->
+
+
+<h1></h1>
+
+<p><a name="header_code"/></a>
+<strong>Main Program - Class Declaration</strong></p>
+
+<p>The following code shows class declaration of Dog.h header file. The class interface defined is Dog and hence the header file name is Dog.h and the implemntation file is Dog.m. Following the class name (and separated from it by a colon) is the name of the parent class NSObject. In Objective-C, a class can have only one parent. Please copy the following code into Dog.h file. Please insert code from different sections to build MyDog Project.</p>
+
+<pre><code>@interface Dog : NSObject
+{
+    // Section 1: Instance Variables declared here
+}
+// Section 2: Accessor Methods i.e. getter and setter methods are declared here
+// Section 3: Properties are declared here
+// Section 4: Class Methods and Instance Methods declared here
+@end
+</code></pre>
+
+<p>you can see in the sample code above, Dog class has 4 sections. Each of the Sections are discussed with code samples.</p>
+
+<ul>
+<li>Section 1: <a href="@create_variables"><strong>Instance Variables</strong></a></li>
+<li>Section 2: <a href="#accessor_methods"><strong>Accessor Methods</strong></a></li>
+<li>Section 3: <a href="#declare_props"><strong>Properties</strong></a></li>
+<li>Section 4: <a href="#create_methods"><strong>Class and Instance Methods</strong></a></li>
+</ul>
+
+
+<hr />
+
+<p><strong>Note:</strong> Instance Variables and Methods can be called using an Object which is a run-time instance of class having its own in-memory copy. While Class Variables and Methods can be called directly using the Class.</p>
+
+<hr />
+
+<p><a name="create_variables"/></a></p>
+
+<h4>Instance Variables</h4>
+
+<p>Instance Variables are defined within the curly brackets immediately after the class declaration as shown in the sample below. This are essentially read-only variables and setter and getter methods (accessor methods) have to be manually defined to access these variables. <a href="#declare_props">Properties</a> as discussed later are far superior to Instance Variable. Use Properties instead of Instance Variables.</p>
+
+<p><strong>Main Program - Instance Variable Declaration</strong></p>
+
+<p>Please copy the code below and paste it into Section 1 of Dog.h file as shown in the <a href="#header_code">Class Declaration</a>.</p>
+
+<pre><code>// Section 1: Instance Variables declared here.
+NSString* name; // Name of the Dog
+NSString* breed; // Breed of the Dog
+</code></pre>
+
+<p><a name="accessor_methods"/></a></p>
+
+<h4>Accessor Methods</h4>
+
+<p>This section shows how to add getter and setter accessor methods to get and set values to the Instance Vairables.</p>
+
+<hr />
+
+<p><strong>Note:</strong> If <a href="#declare_props"><strong>Properties</strong></a> were used instead of Instance Variables, <a href="#synthesize"><strong>@synthesize</strong></a> feature of Objective-C can be used to auto-generate accessor methods.</p>
+
+<hr />
+
+<p>The getter and setter methods are instance method and indicated by single dash (-) before the method name. Class methods can be called without creating an instance and is indicated by plus (+) sign before the method name.</p>
+
+<p><strong>Main Program - Accessor Methods</strong></p>
+
+<p>The following code shows the accessor methods for the instance variables. The getter methods are specified with the same name as the instance variable, while the setter methods are specified by adding "set" word in front of the vairable as shown below. Please copy the code below and paste it into Section 2 of Dog.h file as shown in the <a href="#header_code">Class Declaration</a>.</p>
+
+<pre><code>// Section 2: Accessor Methods i.e. getter and setter methods are declared here
+
+// getter methods
+- (NSString*) name;
+- (NSString*) breed;
+
+// setter methods
+- (void) setName: (NSString*) name;
+- (void) setBreed: (NSString*) breed;
+</code></pre>
+
+<hr />
+
+<p><strong>Note: </strong> The way setter method is defined is exactly the same way the methods are defined in Objective-C. See more in <a href="#create_methods"><strong>Class and Instance Methods</strong></a></p>
+
+<hr />
+
+<p><a name="declare_props"/></a></p>
+
+<h2>Declaration of Properties</h2>
+
+<h1></h1>
+
+<p>A property in the general sense is some data encapsulated or stored by an object. It is either an attribute—such as a name or a color or a relationship to one or more other objects.</p>
+
+<p>Properties in Objective-C provide a well-defined interface for other classes to manipulate attributes of a class. It is extension of Instance Variable described above. As such it is better to use Properties then Instance Variable.</p>
+
+<p>Property essentially is a feature in Objective-C that allow automatic generation of  accessors through the use of <a href="#synthesize">synthesize</a> directive. The properties are defined with attributes comma seperated as shown in the declaration below:</p>
+
+<hr />
+
+<p>@property (attributes) property Name;</p>
+
+<hr />
+
+<p><strong>Attributes</strong> fall into following categories:</p>
+
+<ul>
+<li><strong>Writability</strong>
+
+<ul>
+<li><strong>readwrite</strong> (Default Setting) - the property may be written and read.</li>
+<li><strong>readonly</strong> - the property only may be read.</li>
+</ul>
+</li>
+<li><strong>Memory Settings</strong>
+
+<ul>
+<li><strong>strong</strong> (Default Setting) - Same as <strong>retain</strong> used in iOS 4.0. The memory cannont be released till the reference is nullified.</li>
+<li><strong>weak</strong> - Does not protect the object from Garbage Collection. As soon as the stron reference to the object is released the weak refrence is automatically released.</li>
+<li><strong>assign</strong> - the incoming value will be assigned to the property. Use this for plain datatypes (e.g. int, double).</li>
+<li><strong>retain</strong> - the incoming value will be retained. If the value is an Objective-C object this is the most common.</li>
+<li><strong>copy</strong> - the incoming value will be copied. This is used if there is a chance that the incoming object may change (e.g. NSMutableString).</li>
+</ul>
+</li>
+<li><strong>Atomocity</strong>
+
+<ul>
+<li><strong>atomic</strong> (Default Setting) - Only one thread executes at a time on the property</li>
+<li><strong>nonatomic</strong> - Multiple thread can access and set the property. Is not thread sefe but gives better performance</li>
+</ul>
+</li>
+</ul>
+
+
+<p><strong>Main Program - Declaration of Properties</strong></p>
+
+<p>The code below declares property of the Instance Variable describe above plus adds color, age, and isPoliceDog property for the Dog. Please copy the code below and paste it into Section 3 of Dog.h file as shown in the <a href="#header_code">Class Declaration</a>.</p>
+
+<pre><code>// Section 3: Properties are declared here
+// This properties are defined for instance veriable mName, mBreed and mColor
+// Note here the properties are defined with attributes nonatomic and strong
+@property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSString* breed;
+@property (nonatomic, strong) NSString* color;
+
+// This is the new property defining age of the dog 
+@property (nonatomic, strong) NSNumber* age;
+
+// This property defines if the dog is a Police Dog and defines a new 
+// setter method 
+@property (nonatomic, assign, setter=isPoliceDog:) BOOL isPoliceDog;
+</code></pre>
+
+<hr />
+
+<p>Note: The setter method is defined for the Property isPoliceDog. Also assign attribute is used as it is basic data type</p>
+
+<hr />
+
+<p><a name="create_methods"/></a></p>
+
+<h2>Defining Class and instance methods</h2>
+
+<h1></h1>
+
+<p>Methods are basically behaviours or actions defined in the class. So taking the example of Dog, the behaviours are temperament, aggression, intelligence etc. Methods use the properties to describe the behaviour or to compute results or to take actions.</p>
+
+<p>Methods are also used where-in large network of objects can interact with each other by sending messages. In Objective-C terms, one object sends a message to another object by calling a method on that object.</p>
+
+<p>There are two kinds of methods in Objective-C: instance methods and class methods.</p>
+
+<ol>
+<li><p><strong>Instance Method</strong> - An instance method is a method whose execution is scoped to a particular instance of the class. In other words, before you call an instance method, you must first create an instance or an object of the class.</p></li>
+<li><p><strong>Class Method</strong> - A class method is a method whose execution is scoped to the method’s class. Class method gets called on the Class itself and does not require an instance of a class to be created by the programmer.</p></li>
+</ol>
+
+
+<p>Here’s the declaration of a method in ObjC.</p>
+
+<h1></h1>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_decl_objc.png" alt="Class Definition" /></p>
+
+<!--
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjC_ClassDef.png) 
+-->
+
+
+<h1></h1>
+
+<p>The declaration of a method consists of</p>
+
+<ol>
+<li><strong>Method Type Identifier ( - or + )</strong> to indicate Instance or Class Method</li>
+<li><strong>Return type</strong> enclosed within paranthesis to indicate the data type object of the return value. In case of no return it is (void).</li>
+<li>One or more <strong>Signature Keywords</strong> to indicate method name</li>
+<li>Each method name or signature keyword is specified by colon (:) followed by
+
+<ol type="a">
+<li><strong>Parameter Type</strong> enclosed within paranthesis to indicate the data type and</li>
+<li><strong>Parameter Name</strong> i.e. the name of the parameter</li>
+</ol>
+</li>
+</ol>
+
+
+<p><a name="method_code"/></a>
+<strong>Main Program - Class and instance methods</strong></p>
+
+<p>The following code adds the class and instance methods for Dog class. Please copy the code below and paste it into Section 4 of Dog.h file as shown in the <a href="#header_code">Class Declaration</a>.</p>
+
+<pre><code>// Section 4: Class Methods and Instance Methods declared here
+
+// Class Method to initialize Dog Object
++(id)alocAndInitName:(NSString*)aName Breed:(NSString*)aBreed 
+               Color:(NSString*)aColor AndAge:(NSNumber*)aAge;
+
+// Instance Methods to Set Dog Object Properties
+-(id)initName:(NSString*)aName Breed:(NSString*)aBreed 
+        Color:(NSString*)aColor AndAge:(NSNumber*)aAge;
+
+// Instance Methods to describe Dogs Behaviour such as temperament, 
+// aggression, intelligence etc
+
+-(void) temperament;
+
+-(void) aggression;
+
+-(void) intelligence;
+</code></pre>
+
+<hr />
+
+<p><strong>Note Num 1:</strong> The name of the following method is <strong>initName:Breed:Color:AndAge:</strong></p>
+
+<pre><code>-(id)initName:(NSString*)aName Breed:(NSString*)aBreed 
+        Color:(NSString*)aColor AndAge:(NSNumber*)aAge;
+</code></pre>
+
+<p><strong>Note Num 2:</strong> The Instance Method returns id Object. This is Dynamic Typing as in Objective-C uses pointers to keep track of Objects in Memory, so it doesn’t matter what specific class type you use for that pointer. Hence Objective-C defines <strong>id type</strong> for a generic object pointer. Refer <a href="#typing_var"><strong>Static and dynamic typing</strong></a> for more details.</p>
+
+<hr />
+
+<p><a name="class_implementation"/></a></p>
+
+<h2>Class Implementation</h2>
+
+<h1></h1>
+
+<p>The Class Implementation begins with importing the corresponding header file. Then begins with the <strong>@implementation</strong> compiler directive and ends with the <strong>@end</strong> directive, just like the interface. All methods must appear between these two statements.</p>
+
+<p>The following code is auto generated in Dog.m implementation file when Dog Objective-C file is created.</p>
+
+<pre><code>//
+//  Dog.m
+//  LearnObjective-C
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#import "Dog.h"
+</code></pre>
+
+<p><a name="impl_code"/></a>
+<strong>Main Program - Class Implementation Code</strong></p>
+
+<p>To the auto-generated code add following sections to synthesize properties, implement <a href="#method_code">class and instance methods</a> declared in the header file, etc.</p>
+
+<pre><code>// Optional Section A1: Implementation Variable - Local to the 
+// implementation file is defined here
+
+@implementation Dog {
+    // Optional Section A2: Implementation Variable - Instance Variable 
+    // available only to this implementation file is defined here
+}
+
+// Section B: @synthesize directive
+// Section C: Accessor Methods are implemented here
+// Section D: Class Method to Initialize (init) is implemented here
+// Section E: Instance Method to Initialize (init) is implemented here
+// Section F: Instance Method to describe Dogs Behaviour is implemented here
+
+@end
+</code></pre>
+
+<p>As you can see in the implementation code above, Dog implementation class has 5 sections. Each of the Sections are discussed with code samples.</p>
+
+<ul>
+<li>Section A: <a href="#impl_var"><strong>Implementation Variable</strong></a></li>
+<li>Section B: <a href="@synthesize"><strong>@synthesize directive</strong></a></li>
+<li>Section C: <a href="#accessor_methods_impl"><strong>Accessor Methods Implementation</strong></a></li>
+<li>Section D: <a href="#class_method_impl"><strong>Class Init Method Implementation</strong></a></li>
+<li>Section E: <a href="#init_method_impl"><strong>Instance Init Method Implementation</strong></a></li>
+<li>Section F: <a href="#instance__method_impl"><strong>Instance Method Implementation</strong></a></li>
+</ul>
+
+
+<p><a name="impl_var"/></a></p>
+
+<h4>Section A :- Implementation Variable</h4>
+
+<h1></h1>
+
+<p>Implementation Variable can be a local variable or instance variable. In both the cases the variable scope is local to the implementation file. Both are optional.</p>
+
+<p><strong>Main Program - Instance Variable in Implementation</strong></p>
+
+<p>As seen in the code below, NSDictionary Objects (Discussed more in Next Step Number 2) for Dogs Behaviour is defined. NSDictionary Objects essentially maintains a key value pair and is part of Foundation Framework. Please copy the code below and paste it into Section A1 and A2 of Dog.m file as shown in the <a href="#impl_code">Class Implementation</a>.</p>
+
+<pre><code>// Optional Section A1: Implementation Variable - Local to the implementation
+// file is defined here
+
+// The vairables are declared static only one instance object needs
+// to be created across all Dog Objects
+static NSDictionary *_DogTemperament;
+static NSDictionary *_DogAggression;
+static NSDictionary *_DogIntelligence;
+static Bool _IsStaticVarInit = false;
+
+// Optional Section A2: Implementation Variable - Instance Variable available 
+// only to this implementation file is defined here
+
+// This variable maintains Dog Objects temperament, aggression and intelligence
+NSString *mTemperament;
+NSString *mAggression;
+NSString *mIntelligence;
+</code></pre>
+
+<hr />
+
+<p><strong>Note:</strong> The static keyword in the above code indicates that these Objects like <em>DogTemperament, </em>DogAggression, etc are initialized only ones and is used by all Dog Objects.</p>
+
+<hr />
+
+<p><a name="synthesize"/></a></p>
+
+<h4>Section B :- @synthesize Directive</h4>
+
+<h1></h1>
+
+<p>@synthesize Directive is used for Property for the compiler to automatically generate the most common forms of getters and setter.</p>
+
+<p>The general form of the synthesize directive is:</p>
+
+<p>@synthesize property_name;</p>
+
+<p>OR</p>
+
+<p>@synthesize property_name = instance_name;</p>
+
+<p>Here instance_name is optional. It helps to refer the instance variable by instance name. So dogs instance veriable can be accessed as self.name or mName in the implementation file. Our recomendation is to have property name begining with smaller case like name, breed, etc and instance name as mName, mBreed, etc for readability of code so there is clear seperation between local veriables and class variables.</p>
+
+<p><strong>Main Program - @synthesize Directive</strong></p>
+
+<p>Please copy the code below and paste it into Section A of Dog.m file as shown in the <a href="#impl_code">Class Implementation</a>.</p>
+
+<p>The following code shows @synthesize Directive for the properties define in Dog Header file. Please copy the code below and paste it into Section B of Dog.m file as shown in the <a href="#impl_code">Class Implementation</a>.</p>
+
+<pre><code>// Section B: @synthesize directive
+
+// Use synthesize dirivative to auto-generate setter and getters methods for  
+// the property.
+// Here the property name, breed, color, age is referred by instance name
+// mName, mBreed, mColor, mAge, etc.
+
+@synthesize name = mName;
+@synthesize breed = mBreed;
+@synthesize color = mColor;
+@synthesize age = mAge;
+@synthesize isPoliceDog = mIsPoliceDog;
+</code></pre>
+
+<p><a name="accessor_methods_impl"/></a></p>
+
+<h4>Section C :- Accessor Methods Implementation</h4>
+
+<h1></h1>
+
+<p>The accessor methods i.e. the setter and getter methods are defined in the header file and implemented in .m file as shown below.</p>
+
+<p><strong>Main Program</strong></p>
+
+<p>The code below shows the implementation of <a href="#accessor_methods">Setter and Getter Methods</a> described in Dog.h file. Please copy the code below and paste it into Section C of Dog.m file as shown in the <a href="#impl_code">Class Implementation</a>.</p>
+
+<pre><code>// Section C: Accessor Methods are implemented here
+
+// getter methods
+- (NSString*) name {
+    return mName;
+}
+
+- (NSString*) breed {
+    return mBreed;
+}
+
+// setter methods
+- (void) setName: (NSString*) aName {
+    mName = aName;
+}
+
+- (void) setBreed: (NSString*) aBreed {
+    mBreed = aBreed;
+}
+</code></pre>
+
+<hr />
+
+<p><strong>Note Num 1: </strong> Since the @synthesize directive is used, the accessor methods definition and implementation is not needed. Here it is just shown for completeness.</p>
+
+<p><strong>Note Num 2: </strong> If there is no Garbage Collection Environment then the following code becomes relevant as the old memory has to be released before new assignment. For e.g. setName setter method will be written as</p>
+
+<pre><code>- (void) setName: (NSString*) aName {
+    // Since no Auto Garbage Collection is used hence need to release the 
+    // old object, and retain the new one. 
+    [mName autorelease];
+    mName = [aName retain];
+}
+</code></pre>
+
+<p>In Manual Reference Counting Environment, firstly the reference to the existing object has to be released, and then the new input object has to be retained. In a Manual Reference Counting Environment(ARC), we could just set the new value directly as shown in the setter method. <strong>Memory Management</strong> is covered in next step.</p>
+
+<hr />
+
+<p><a name="class_method_impl"/></a></p>
+
+<h4>Section D :- Class Init Method Implementation</h4>
+
+<h1></h1>
+
+<p>The class init methods typically allocate memory and set the values for the property.</p>
+
+<p><strong>Main Program</strong></p>
+
+<p>The code below shows the implementation of class method to allocate new memory for Dog Object and initialize with the input parameters. Please copy the code below and paste it into Section D of Dog.m file as shown in the <a href="#impl_code">Class Implementation</a>.</p>
+
+<pre><code>// Section D: Class Method to Initialize (init) is implemented here
+
++(id)alocAndInitName:(NSString*)aName Breed:(NSString*)aBreed 
+               Color:(NSString*)aColor AndAge:(NSNumber*)aAge
+{
+    Dog* myDog = [[Dog alloc] init];
+    // Calls the Instance Method to initialize the Class Properties
+    return [myDog initName:aName Breed:aBreed Color:aColor AndAge:aAge];
+}
+
+// This C method is local to the implementation file and its purpose is to
+// allocate memory and initialize the static variables
+void initStaticVars() {
+
+    // Checks if the static variables are already initialized. If not then 
+    // the memory is allocated and initialized.
+    if (_IsStaticVarInit) return;
+
+    // Set the values for the local static variable
+    _DogTemperament = [[NSDictionary alloc] initWithObjectsAndKeys:
+                       @"Fearless, and willing to defend",
+                       @"Doberman",
+                       @"Active and willingness to learn",
+                       @"German Shepherd",
+                       nil];
+
+    _DogAggression = [[NSDictionary alloc] initWithObjectsAndKeys:
+                      @"Extremely high on stranger-directed aggression",
+                      @"Doberman",
+                      @"Being very safe",
+                      @"German Shepherd",
+                      nil];
+
+    _DogIntelligence = [[NSDictionary alloc] initWithObjectsAndKeys:
+                        @"Ranked 5th most intelligent dog",
+                        @"Doberman",
+                        @"Ranked 3rd most intelligent dog",
+                        @"German Shepherd",
+                        nil];
+    _IsStaticVarInit = true;
+
+}
+</code></pre>
+
+<hr />
+
+<p><strong>Note:</strong> The code above instantiates the Object and calls the Instance Methods. More Explanation is provided in <a href="#call_methods"><strong>Object Creation and Method invocation</strong></a></p>
+
+<hr />
+
+<p><a name="init_method_impl"/></a></p>
+
+<h4>Section E :- Instance Init Method Implementation</h4>
+
+<h1></h1>
+
+<p>The init methods typically used to set the values for the property. The default init method is declared in NSObject class and will be called by default during allocation.</p>
+
+<p><strong>Main Program</strong></p>
+
+<p>The code below shows the implementation of instance method to initialize the properties with the input parameters. The init method is over-written to initialize the static variable defined in the implementation file. Please copy the code below and paste it into Section E of Dog.m file as shown in the <a href="#impl_code">Class Implementation</a>.</p>
+
+<pre><code>// Section E: Instance Method to Initialize (init) is implemented here
+
+// This method is over written from the super class.
+// Since all the properties are using @synthesize directive, this 
+// init method is called during memory allocation
+
+-(id)init {
+    self = [super init];
+    // By default all dogs are not Police Dog
+    mIsPoliceDog = false;
+    if (self) {
+        // Initializes and Sets the values for the local instance variable
+        initStaticVars();
+    }
+    return self;
+}
+
+
+-(id)initName:(NSString*)aName Breed:(NSString*)aBreed 
+        Color:(NSString*)aColor AndAge:(NSNumber*)aAge
+{
+    initStaticVars();
+    mName = aName;
+    mBreed = aBreed;
+    mColor = aColor;
+    mAge = aAge;
+    return self;
+}
+</code></pre>
+
+<p><a name="instance__method_impl"/></a></p>
+
+<h4>Section F :- Instance Method Implementation</h4>
+
+<h1></h1>
+
+<p>The Behaviour of the class is implemented as instance method. The Behaviors are defined in the .h file and are implemented in the .m file</p>
+
+<p><strong>Main Program</strong></p>
+
+<p>The code below shows the implementation of instance methods to implement Dogs Behaviour such as temperament, aggression, intelligence etc. Note that pre-defined Dictionary Object to specify the Dogs Behaviour. Please copy the code below and paste it into Section F of Dog.m file as shown in the <a href="#impl_code">Class Implementation</a>.</p>
+
+<pre><code>// Section F: Instance Method to describe Dogs Behaviour is implemented here
+
+-(void) temperament {
+    if (mTemperament == NULL)
+        mTemperament = [_DogTemperament objectForKey:mBreed];
+    NSLog(@"Temperament of my %@ the %@ Dog is %@", mName, mBreed,
+          mTemperament);
+}
+
+-(void) aggression {
+    if (mAggression == NULL)
+        mAggression = [_DogAggression objectForKey:mBreed];
+    NSLog(@"Aggression of my %@ the %@ Dog is %@", mName, mBreed,
+          mAggression);
+}
+
+-(void) intelligence {
+    if (mIntelligence == NULL)
+        mIntelligence = [_DogIntelligence objectForKey:mBreed];
+    NSLog(@"Intelligence of my %@ the %@ Dog is %@", mName, mBreed,
+          mIntelligence);
+}
+
+// This method is over-written from NSObject and Returns a string that
+// represents the contents of the receiving class.
+- (NSString *)description {
+    return [NSString stringWithFormat:
+            @"My Dogs name is %@, Breed is %@, and Color is %@",
+            mName, mBreed, mColor];
+}
+</code></pre>
+
+<hr />
+
+<p><strong>Note:</strong> Logging messages to the console in Objective-C is very simple. Use NSLog() function to Log. For Logging Objects use %@ token as shown above in the instance methods as well as below to show the current date. The Constant String in Objective-C is defined as @"string". More in Step 2.</p>
+
+<pre><code>NSLog ( @"The current date and time is: %@", [NSDate date] );
+</code></pre>
+
+<hr />
+
+<p><a name="call_methods"/></a></p>
+
+<h2>Object Creation and Method invocation</h2>
+
+<h1></h1>
+
+<p>Object Creation of Dog Class and Invocation of its method will be done in this MyDog project in the main.m file. As with plain old C programs, the main() function serves as the root of an Objective-C application. Most of the built-in Xcode templates create a file called main.m that defines a default main() function.</p>
+
+<p><a name="main_code"/></a>
+<strong>Main Program: main.m file</strong></p>
+
+<p>To this we add sections to create Dog Object and Invoke Methods. Please copy the following code to main.m file</p>
+
+<pre><code>//
+//  main.m
+//  MyDog
+//
+//  Created by Narayan Mahadevan on 06/09/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#import &lt;Foundation/Foundation.h&gt;
+
+// Section A: Import file.
+
+// This line declares a function called main. All of the code in your
+// app that provides some type of processing or logic is encapsulated
+// into functions; the main function is what kicks off the whole app.
+
+// The int part of int main means the return value of main returns an
+// integer such as 10 or -2. The (int argc, const char * argv[]) bits
+// in parentheses are the arguments, or inputs, to the function.
+int main(int argc, const char * argv[])
+{
+
+    // Autorelease pools are used to manage memory. Automatic Memory
+    // Management is done for all the objects in between the curly braces
+    @autoreleasepool {
+
+        // Section B: Object Creation
+
+        // Section C: Method Invocation or Messaging 
+
+        // Section D: Set Properties 
+
+        // Section E: Invoke Behaviour
+
+    }
+    return 0;
+}
+</code></pre>
+
+<hr />
+
+<p><strong>Note Num 1:</strong> As discussed earlier code execution begins in main function. It takes in argc and argv input parameters and returns the result. Here it is defaulted to 0.</p>
+
+<p><strong>Note Num 2:</strong> <strong>@autoreleasepool</strong> is a tool that automates the task of releasing memory. The other tool is Automatic Reference Counting (ARC). More in <a href="#manage_memory"><strong>Memory Management</strong></a> Section.</p>
+
+<p><strong>Note Num 3:</strong> As you can see the code above, the following auto generated code is replaced</p>
+
+<pre><code>// insert code here...
+NSLog(@"Hello, World!");
+</code></pre>
+
+<hr />
+
+<p>As you can see the code above consists of 3 sections. They are:</p>
+
+<ol>
+<li>Section A: <a href="#import_file"><strong>Import file</strong></a></li>
+<li>Section B: <a href="#object_creation"><strong>Object Creation</strong></a></li>
+<li>Section C: <a href="#method_invocation"><strong>Method Invocation or Messaging</strong></a></li>
+<li>Section D: <a href="#set_props"><strong>Set Properties</strong></a></li>
+<li>Section E: <a href="#invoke_behaviour"><strong>Invoke Behaviour</strong></a></li>
+</ol>
+
+
+<p><a name="import_file"/></a></p>
+
+<h4>Section A: Import Files</h4>
+
+<h1></h1>
+
+<p><strong>Main Program</strong></p>
+
+<p>Here files created for My Dog Project is imported. Please copy the code below and paste it into Section A of main.m file as shown in the <a href="#main_code">Main Code</a>.</p>
+
+<pre><code>// Section A: Import file pertaining to MyDog Project.
+// This tells the compiler where to look when Dog Object is create and
+// methods are invoked
+
+#import "Dog.h"
+</code></pre>
+
+<p><a name="import_file"/></a></p>
+
+<h4>Section B: Object Creation</h4>
+
+<h1></h1>
+
+<p>Objects inherited from NSObject must be prepared for use in 2 steps:</p>
+
+<ol>
+<li><p><strong>Allocation</strong>: Unlike C++ where Objects can be accessed without pointers, in Objective-C the Objects are always accessed using pointers. So the first step is allocation of memory to the pointer. This is done using <strong>alloc</strong> method which is implemented in NSObject. This method creates memory for all the instance variables and initializes the Instance Vairables to zero. After this initialization of variables are done.</p></li>
+<li><p><strong>Initialization</strong>: Here the <strong>init</strong> method is invoked. The init method's default implementation is in NSObject class. The sub class can overwrite this init method to set appropriate default values to the vairables and performing other task such as instatiating other internal objects.</p></li>
+</ol>
+
+
+<p><strong>Main Program</strong></p>
+
+<p>As you can see the code below we create 2 Dog Objects, one for German Shepard and other for Dobberman. Please copy the code below and paste it into Section B of main.m file as shown in the <a href="#main_code">Main Code</a>.</p>
+
+<pre><code>    // Section B: Object Creation
+
+    // Creating Dog Objects for Doberman and German Shepherd
+    Dog *myDoberman = [[Dog alloc] init];
+    Dog *myGermanShepherd = [[Dog alloc] init];
+</code></pre>
+
+<p><a name="method_invocation"/></a></p>
+
+<h4>Section C: Method Invocation or Messaging</h4>
+
+<h1></h1>
+
+<p>As discussed earlier method invocation can be done on a class for class methods or on an instance of the class for instance methods. The class itself in Objective-C is an Object of type <strong>Class</strong> created by the runtime. This class object is a singleton object reated at runtime.</p>
+
+<p>A Method is called by sending a message to the object that implements the method. Messaging is done to perform some action, return some object or value, or do both things. The Messaging is done on a Object called <strong>reciver</strong> and the method name with parameters is called the <strong>message</strong>. The message expression is on the right side of the assignment, enclosed by the square brackets and as shown in the figure below.</p>
+
+<h1></h1>
+
+<p>Messaging Format => <code>[receiver message]</code><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_call_new.png" alt="Method Call" /></p>
+
+<!--
+![Method Call](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/method_call.png) 
+-->
+
+
+<h1></h1>
+
+<p>Lets take the allocation and initialization of myDoberman object</p>
+
+<pre><code>    Dog *myDoberman = [[Dog alloc] init];
+</code></pre>
+
+<p>The above code sample is a nested method call consisiting of 2 parts.</p>
+
+<ol>
+<li><p>The first is the alloc method called on Dog <code>Class Dog* myDoberman = [Dog alloc];</code> Here Dog class Object is the receiver and alloc is the message that is called on the receiver. This is a relatively low-level call which reserves memory and instantiates the Dog object.</p></li>
+<li><p>The second partxp is a call to initialize the new Dog object <code>myDoberman = [myDoberman init];</code> The init implementation usually does basic setup, such as creating instance variables. The init method can be over-written for initialization  of properties and local vairables.</p></li>
+</ol>
+
+
+<hr />
+
+<p><strong>Note:</strong> As discussed above even though its possible to first allocate and then init in two different method calls, its best practise that both allocation and initialization are one nested call. This is because its very much possible for init to return different object then in that case you’ll be left with a pointer to the object that was originally allocated but never initialized.</p>
+
+<hr />
+
+<p><strong>Nested Messaging</strong> is done to avoid declaring numerous local variables to store temporary results. The return value from each nested expression is used as a parameter, or as the receiving object, of another message.</p>
+
+<p><strong>Main Program</strong></p>
+
+<p>The code below shows the nested method to allocate and initialize the properties of Dog Object. Please copy the code below and paste it into Section C of main.m file as shown in the <a href="#main_code">Main Code</a>.</p>
+
+<pre><code>    // Section C: Method Invocation or Messaging 
+
+    // The following method Dog Object is initialized without calling
+    // Objects Setter Property
+    // Here dog is directly initialized after allocation by calling the
+    // initName:Breed:Color:AndAge method
+    Dog* myDog = [[Dog alloc] initName:@"Stormy" Breed:@"Doberman"
+                                 Color:@"Black"
+                                 AndAge:[NSNumber numberWithInt:10]];
+
+    // Here allocation and initialization of dog object is done by calling
+    // the Dog's Class Method
+    Dog* myDog1 = [Dog alocAndInitName:@"Topsy" Breed:@"German Shepherd"
+                                 Color:@"Black"
+                                 AndAge:[NSNumber numberWithInt:10]];
+</code></pre>
+
+<p>As you would see the instantiation of myDog object, it first allocates and then calls the instance method initName:Breed:Color:AndAge to set the properties of Dog Class. Similarly myDog1 object calls the class method alocAndInitName:Breed:Color:AndAge to allocate and initialize the properties of Dog class. The following diagram identifies the receiver object and message for Allocation and Intiallization of mDog Object</p>
+
+<h1></h1>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_multi_call.png" alt="Method Call" /></p>
+
+<!--
+![Method Call](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/method_multi_call.png) 
+-->
+
+
+<h1></h1>
+
+<p>As you can see the figure above alloc class method is invoked on receiver 1 i.e. Dog Class Object. The result is Dog Object which is receiver 2. The instance method initName:Breed:Color:AndAge is invoked on receiver 2. The combination of keyword and its value which is essentially the method parameter is the message. As you can see in the figure the value4 is derived by calling numberWithInt method on NSNumber class object.</p>
+
+<hr />
+
+<p><strong>Note:</strong> The combination of keyword and value for each methof parameters improves the readability of the code. It is of the form <code>keyword: value</code></p>
+
+<hr />
+
+<p><a name="set_props"/></a></p>
+
+<h4>Section D: Set Properties</h4>
+
+<h1></h1>
+
+<p>As you know the properties of Dog are Name, Breed, Color, Age, and isPoliceDog. Since they were declared as Property using <code>@synthesize</code> their getter and setter(i.e. accessor) methods can be called as if they were declared and implemented. You would see that for Name and Breed Property the  accessor methods are over written. But for isPoliceDog the name of the setter method is changed to isPoliceDog. For Age and Color Property the accessor methods will be called as if they were implemented.</p>
+
+<p>Properties accessed via dot-notation get translated to the accessor methods behind the scenes, so the following <code>myDoberman.color = @"Black";</code> code actually calls <code>[myDoberman setColor:@"Black"];</code> So as you can see the direct benifits of declaring Property are</p>
+
+<ol>
+<li>The accessor methods can be called as if they were declared and implemented.</li>
+<li>The accessor method name can be changed while declaration and again the same need not be declared nor implemented.</li>
+<li>Properties can be accessed via dot-notation and behind the scene the accessor methods will be called.</li>
+</ol>
+
+
+<p><strong>Main Program</strong></p>
+
+<p>The following code sets the value for Dogs Property. Please copy the code below and paste it into Section D of main.m file as shown in the <a href="#main_code">Main Code</a>.</p>
+
+<pre><code>    // Section D: Set Properties
+    // Note that the compiler internally convert the following code to
+    // setter method during compile-time. So value can be assigned to
+    // name property directly instead of [myDoberman setName:@"Stacy"];
+
+    // Here setter method is called on each property while in section C
+    // the init method is set on all the properties of Dog class
+
+    // Setting myDoberman properties
+    myDoberman.name = @"Buddy";
+    myDoberman.breed = @"Doberman";
+    myDoberman.color = @"Black";
+    myDoberman.age = [NSNumber numberWithInt:10];
+
+    // myGermanShepherd myDoberman properties
+    myGermanShepherd.name = @"Rombo";
+    myGermanShepherd.breed = @"German Shepherd";
+    myGermanShepherd.color = @"Black";
+    myGermanShepherd.age = [NSNumber numberWithInt:5];
+
+    // Note: The both lines of the following code call the setter method
+    //       isPoliceDog. The second line calls explicitly. Also note
+    //       the setter method name was changed during Property Settings
+    //       to isPoliceDog
+    myGermanShepherd.isPoliceDog = true;
+    [myGermanShepherd isPoliceDog:true];
+</code></pre>
+
+<p><a name="invoke_behaviour"/></a></p>
+
+<h4>Section E: Invoke Behaviour</h4>
+
+<h1></h1>
+
+<p>As discussed in the <a href="#method_invocation">Method Invocation</a>, a method is invoked by placing the object and the desired method in square brackets, separated by a space. Arguments are separated from the method name using a colon(:).</p>
+
+<p><strong>Main Program</strong></p>
+
+<p>The following code invokes the instance methods on Dog Object to know the behaviour. Please copy the code below and paste it into Section E of main.m file as shown in the <a href="#main_code">Main Code</a>.</p>
+
+<pre><code>    // Section E: Invoke Behaviour
+
+    // Invoke Methods to understand the Behaviour of Doberman
+    [myDoberman temperament];
+    [myDoberman aggression];
+    [myDoberman intelligence];
+
+    // Invoke Methods to understand the Behaviour of German Shepherd
+    [myGermanShepherd temperament];
+    [myGermanShepherd aggression];
+    [myGermanShepherd intelligence];
+
+    // Dog Description
+    NSLog(@"myDog Object Desc = %@", [myDog description]);
+    NSLog(@"myDog1 Object Desc = %@", [myDog1 description]);
+</code></pre>
+
+<p><a name="result"/></a></p>
+
+<h2>Display Simple Dog Project Results</h2>
+
+<h1></h1>
+
+<p>The following displays the Outputs of the <a href="#step_project"><strong>Simple Dog Project</strong></a> developed in this step</p>
+
+<hr />
+
+<p>2013-09-23 10:07:24.319 MyDog[8849:303] In Dog Project</p>
+
+<p>2013-09-23 10:07:24.322 MyDog[8849:303] Temperament of my Buddy the Doberman Dog is Fearless, and willing to defend</p>
+
+<p>2013-09-23 10:07:24.322 MyDog[8849:303] Aggression of my Buddy the Doberman Dog is Extremely high on stranger-directed aggression</p>
+
+<p>2013-09-23 10:07:24.323 MyDog[8849:303] Intelligence of my Buddy the Doberman Dog is Ranked 5th most intelligent dog</p>
+
+<p>2013-09-23 10:07:24.324 MyDog[8849:303] Temperament of my Rombo the German Shepherd Dog is Active and willingness to learn</p>
+
+<p>2013-09-23 10:07:24.324 MyDog[8849:303] Aggression of my Rombo the German Shepherd Dog is Being very safe</p>
+
+<p>2013-09-23 10:07:24.326 MyDog[8849:303] Intelligence of my Rombo the German Shepherd Dog is Ranked 3rd most intelligent dog</p>
+
+<p>2013-09-23 10:07:24.327 MyDog[8849:303] myDog Object Desc = My Dogs name is Stormy, Breed is Doberman, and Color is Black</p>
+
+<p>2013-09-23 10:07:24.327 MyDog[8849:303] myDog1 Object Desc = My Dogs name is Topsy, Breed is German Shepherd, and Color is Black</p>
+
+<hr />
+
+<p><a name="practice"/></a></p>
+
+<h2>Practice Project</h2>
+
+<h1></h1>
+
+<p>Try developing following Practice Projects:</p>
+
+<ol>
+<li><p>Create a Project to find the area of the Circle whose radius is 10 cm.</p></li>
+<li><p>Create a Project to find the speed of the Car which has travelled 200 kms in 4 hours.</p></li>
+</ol>
+
+</body>
+</html>
