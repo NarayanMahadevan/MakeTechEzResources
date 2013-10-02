@@ -63,11 +63,11 @@ SPDP derives from above functionalities and is the four important aspect for suc
    e. Unit Test Plans 
 
 
-**Aspects of Software Delivery** ![Software Delivery Management][4]
+**Aspects of Software Delivery** ![Software Delivery Management][1]
 
-[4]: /Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriseArchPlan/SoftwareDelivery.png "4 Aspects of Software Delivery"  
+[1]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriseArchPlan/SoftwareDelivery.png "4 Aspects of Software Delivery"     
 <!--
-4]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriseArchPlan/SoftwareDelivery.png "4 Aspects of Software Delivery"     
+[1]: /Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriseArchPlan/SoftwareDelivery.png "4 Aspects of Software Delivery"  
 -->
 #  
 

@@ -14,8 +14,8 @@ a. [**Displays the result**](#result) of the [**Program**](#problem) defined bel
 b. Gives [**Practice Problems**](#practice) for Development
 
 <a name="problem"/></a>
-## Problem Statement
-#  
+# Problem Statement
+  
 In this step lets write same Program as in Step 1 but creates Box Car and Tank Car Object. Write member function to compute the volume of a Box Car and Tank Car and Outputs the result onto the Console.
 
 Here Box Car is a Rectangular Car having length, breadth and height while the tank car is cylindrical having radius and length.
@@ -83,8 +83,8 @@ Lets create a S1_ComputeVolume.cpp file and declare the main function and the pl
     }
 
 <a name="declare_vars"/></a>
-## Section 1: Declaration of Classes
-#  
+# Section 1: Declaration of Classes
+  
 As discussed earlier C++ **built-in data types** are char, short, int, long, float, double, etc. Further C++ encourges building your own data type and data type heirarchies to describe effectively the real-world problems. **These user defined data types are called Classes**. A class is described by its attributes which are called [**Member Vairables**](member_vars) and behaviours which are called [**Member Functions**](member_functions). 
 
 A class definition starts with the keyword class followed by the class name; and the class body, enclosed by a pair of curly braces. A class definition must be followed either by a semicolon or a list of declarations. For example we defined the Circle data type using the keyword class as follows:
@@ -98,9 +98,9 @@ A class definition starts with the keyword class followed by the class name; and
 
 The Circle class is implemented in [**Side Step: 4**](#side_step_4). Here is the diagram representation of class definition:
 #  
-![Class Definition](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/ClassDefinition.png) 
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/ClassDefinition.png "Class Definition") 
 <!--
-![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/ClassDefinition.png) 
+![Class Definition](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/ClassDefinition.png "Class Definition") 
 -->
 #  
 
@@ -224,8 +224,8 @@ Since no Vairable is assigned to BoxCar and TankCar class hence the minimum memo
 ***
 
 <a name="member_vars"/></a>
-## Section 2: Declaration of Member Variables
-#  
+# Section 2: Declaration of Member Variables
+  
 
 Member Variables are attributes that describe the class. Like radius is the attribute of a circle or length is the attribute of the square. Member Vairables appear inside the class definition. The memory size of the class or the object is determined by the memory size of the member variables. This member variables are also called **Instance Variable**. As the memory for the member vairable is allocated when an Instance of a Class i.e. is the Object is created. 
 
@@ -345,8 +345,7 @@ Looking at the [**Problem Statement**](#problem), we can see the attributes of B
             
 
 <a name="member_functions"/></a>
-## Section 3: Declaration of Member Functions
-#  
+# Section 3: Declaration of Member Functions  
 
 Member functions are part of a class and are basically behaviours or actions defined in the class. Member functions use the member variables to describe the behaviour or to compute results or to take actions. 
 
@@ -486,8 +485,8 @@ Looking at the [**Problem Statement**](#problem), we can define volume member fu
             
 
 <a name="create_objects"/></a>
-## Section 4: Create Object and set Values to Member Variable
-#  
+# Section 4: Create Object and set Values to Member Variable
+  
 
 Once the BoxCar and TankCar class is defined, the variable for the user defined data type can be introduced as `BoxCar myBoxCar;` for BoxCar class and `TankCar myTankCar;` for TankCar class. Here Object and hence the memory for the member variables is created for BoxCar and TankCar class and can be accessed using the Objects myBoxCar and myTankCar.
 
@@ -532,8 +531,7 @@ The following codes creates BoxCar and TankCar Object and correspondingly sets t
 
 
 <a name="call_function"/></a>
-## Section 5: Call Member Function on the Object
-#  
+# Section 5: Call Member Function on the Object  
 
 The member functions of BoxCar and TankCar class can be accessed using the Object followd by **class-member operator i.e. "."**. Hence to call the volume function on BoxCar Object, its written as `myBoxCar.volume ()`. Here myBoxCar is the class object joined by class-operator "." invoking the member function volume.
 
@@ -558,8 +556,7 @@ The following codes calls the volume member function of BoxCar and TankCar Objec
         cout << "Memory of TankCar Class = " << sizeof(TankCar) << endl;        
   
 <a name="result"/></a>
-## Display Program Result
-#  
+# Display Program Result  
 
 The following displays the Compilation, Execution, Inputs and Outputs of the [**Main Program**](#main_code) developed in this step
 
@@ -590,8 +587,7 @@ Memory of TankCar Class = 16
 ***
 
 <a name="practice"/></a>
-## Practice Problem for Development
-#  
+# Practice Problem for Development  
 
 1. Device a FlatCar class for Flat Cars and device a volume function if the flat cars are loaded to a maximum height of 8.25 feet 
 

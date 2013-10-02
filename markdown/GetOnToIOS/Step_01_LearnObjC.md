@@ -1,8 +1,8 @@
 # Step 1: Learn Objective C
 
 <a name="intro"/></a>
-## Introduction
-#  
+# Introduction
+
 Objective-C is the primary programming language for writing software in OS X and iOS. It’s a superset of the C programming language and provides object-oriented capabilities and a dynamic runtime. Objective-C inherits the syntax, primitive types, and flow control statements of C and adds syntax for defining classes and methods. Its assumed that you have basic understanding of C and Object Oriented Programming. Objective-C, unlike C++, doesn’t allow operator overloading, templates, or multiple inheritance. 
 
 Objective-C is the first step before programming in iOS. This step will help you understand all you have to know about Objective-C by implementing a [**Simple Project**](#step_project) as defined below. The Concepts introduced in this step are:
@@ -20,8 +20,8 @@ a. [**Displays the result**](#result) of the [**Simple MyDog Project**](#step_pr
 b. Gives [**Practice Projects**](#practice) for Development
 
 <a name="step_project"/></a>
-## Simple MyDog Project
-#  
+# Simple MyDog Project
+
 This is a simple project, the goal being end of this step you are comfortable with basics of Objective-C Programming. In this step, you will learn to create new Project, Define a new Class, specify class attributes and properties, define class and instance methods, etc as listed in [Introduction](#intro). 
 
 ***
@@ -33,8 +33,8 @@ The project is about Dog Class which is essentially an Animal. We will describe 
 Please note as different concepts are in
 
 <a name="create_project"/></a>
-## Create Objective-C Project
-#  
+# Create Objective-C Project
+  
 Please refer the following figure for steps to create a new Command Line Project for the MyDog Project . 
   
 ![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjCCreateProject.jpg "Class Definition") 
@@ -66,16 +66,16 @@ As you can see the figure, the left pane of Xcode displays a list of files that 
 ***
 **Note: ** *You should be able to Compile and Run the My Dog project without writing single line of code and see the Hello World output. This log statement is in main.m Source code which is the starting point for any execution.*
 #  
-![Run and View Output](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/RunAndViewOutput.jpg) 
+![Run and View Output](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/RunAndViewOutput.jpg "Run and View Output") 
 <!--
-![Run and View Output](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/RunAndViewOutput.jpg) 
+![Run and View Output](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/RunAndViewOutput.jpg "Run and View Output") 
 -->
 #  
 ***
 
 <a name="create_class"/></a>
-## Definition of new classes
-#  
+# Definition of new classes
+  
 As in most Object Oriented Languages, Objective-C supports creating your own Data Type by creating a **Class Interface** and ecapsulation of data by creating **Properties** and defining the actions that operate on that data by creating **Methods**. Creating Objects as run-time instance of class having its own in-memory copy of the instance variables declared by its class and pointers to the methods of the class.
 
 A Class in Objective-C consists of 
@@ -99,7 +99,7 @@ The Following Figure shows process to create Objective-C file for Dog. This in t
 -->
 #  
 
-#####Comments
+####Comments
 
 The following code will be auto-generated on the top of Dog.h File. This are comments in  Objective-C to give information of Dog file
 
@@ -111,7 +111,7 @@ The following code will be auto-generated on the top of Dog.h File. This are com
 	//  Copyright (c) 2013 MakeTechEz. All rights reserved.
 	//
 
-#####Import Foundation Framework
+####Import Foundation Framework
 
 The following code sample uses **#import** directive. This is similar to C’s #include directive, except that it makes sure that the same file is never included more than once. 
 
@@ -123,14 +123,14 @@ The following code is auto generated in Dgg.h file to import the Foundation Fram
 
 	#import <Foundation/Foundation.h>
 
-#####Class Declaration
+####Class Declaration
 
 The class declaration begins with the **@interface** compiler directive and ends with the **@end** directive. The instance variables, properties, and methods appear between these two statements. The class interface is usually stored in the .h file. The following diagram typically shows class declaration  
 
 #  
-![Class Definition](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/ObjC_ClassDef.png) 
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjC_ClassDef.png "Class Definition") 
 <!--
-![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjC_ClassDef.png) 
+![Class Definition](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/ObjC_ClassDef.png "Class Definition") 
 -->
 #  
 
@@ -205,8 +205,7 @@ The following code shows the accessor methods for the instance variables. The ge
 ***
 
 <a name="declare_props"/></a>
-## Declaration of Properties
-#  
+# Declaration of Properties  
 
 A property in the general sense is some data encapsulated or stored by an object. It is either an attribute—such as a name or a color or a relationship to one or more other objects.  
 
@@ -254,8 +253,7 @@ Note: The setter method is defined for the Property isPoliceDog. Also assign att
 ***
 
 <a name="create_methods"/></a>
-## Defining Class and instance methods
-#  
+# Defining Class and instance methods  
 
 Methods are basically behaviours or actions defined in the class. So taking the example of Dog, the behaviours are temperament, aggression, intelligence etc. Methods use the properties to describe the behaviour or to compute results or to take actions. 
 
@@ -270,9 +268,9 @@ There are two kinds of methods in Objective-C: instance methods and class method
 Here’s the declaration of a method in ObjC.
 
 #  
-![Class Definition](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_decl_objc.png) 
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjC_ClassDef.png "Class Definition") 
 <!--
-![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjC_ClassDef.png) 
+![Class Definition](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_decl_objc.png "Class Definition") 
 -->
 #  
 
@@ -319,8 +317,7 @@ The following code adds the class and instance methods for Dog class. Please cop
 ***
 
 <a name="class_implementation"/></a>
-## Class Implementation
-#  
+# Class Implementation  
 
 The Class Implementation begins with importing the corresponding header file. Then begins with the **@implementation** compiler directive and ends with the **@end** directive, just like the interface. All methods must appear between these two statements. 
 
@@ -367,8 +364,8 @@ As you can see in the implementation code above, Dog implementation class has 5 
 * Section F: [**Instance Method Implementation**](#instance__method_impl)
 
 <a name="impl_var"/></a>
-#### Section A :- Implementation Variable
-#  
+### Section A :- Implementation Variable
+  
 Implementation Variable can be a local variable or instance variable. In both the cases the variable scope is local to the implementation file. Both are optional. 
 
 **Main Program - Instance Variable in Implementation**
@@ -399,8 +396,7 @@ As seen in the code below, NSDictionary Objects (Discussed more in Next Step Num
 ***
 
 <a name="synthesize"/></a>
-#### Section B :- @synthesize Directive
-#  
+### Section B :- @synthesize Directive  
 
 @synthesize Directive is used for Property for the compiler to automatically generate the most common forms of getters and setter. 
 
@@ -434,8 +430,8 @@ The following code shows @synthesize Directive for the properties define in Dog 
 	@synthesize isPoliceDog = mIsPoliceDog;
 
 <a name="accessor_methods_impl"/></a>
-#### Section C :- Accessor Methods Implementation
-#  
+### Section C :- Accessor Methods Implementation
+  
 The accessor methods i.e. the setter and getter methods are defined in the header file and implemented in .m file as shown below. 
 
 **Main Program**
@@ -479,8 +475,8 @@ In Manual Reference Counting Environment, firstly the reference to the existing 
 ***
 
 <a name="class_method_impl"/></a>
-#### Section D :- Class Init Method Implementation
-#  
+### Section D :- Class Init Method Implementation
+  
 The class init methods typically allocate memory and set the values for the property. 
  
 **Main Program**
@@ -536,8 +532,7 @@ The code below shows the implementation of class method to allocate new memory f
 ***
 
 <a name="init_method_impl"/></a>
-#### Section E :- Instance Init Method Implementation
-#  
+### Section E :- Instance Init Method Implementation  
 
 The init methods typically used to set the values for the property. The default init method is declared in NSObject class and will be called by default during allocation.
 
@@ -575,8 +570,8 @@ The code below shows the implementation of instance method to initialize the pro
     }
 
 <a name="instance__method_impl"/></a>
-#### Section F :- Instance Method Implementation
-#  
+### Section F :- Instance Method Implementation
+  
 The Behaviour of the class is implemented as instance method. The Behaviors are defined in the .h file and are implemented in the .m file
 
 **Main Program**
@@ -622,8 +617,7 @@ The code below shows the implementation of instance methods to implement Dogs Be
 ***
 
 <a name="call_methods"/></a>
-## Object Creation and Method invocation
-# 
+# Object Creation and Method invocation 
  
 Object Creation of Dog Class and Invocation of its method will be done in this MyDog project in the main.m file. As with plain old C programs, the main() function serves as the root of an Objective-C application. Most of the built-in Xcode templates create a file called main.m that defines a default main() function. 
 
@@ -690,8 +684,7 @@ As you can see the code above consists of 3 sections. They are:
 5. Section E: [**Invoke Behaviour**](#invoke_behaviour)
 
 <a name="import_file"/></a>
-#### Section A: Import Files
-#  
+### Section A: Import Files  
 
 **Main Program**
 
@@ -704,8 +697,8 @@ Here files created for My Dog Project is imported. Please copy the code below an
     #import "Dog.h"
 
 <a name="import_file"/></a>
-#### Section B: Object Creation
-#  
+### Section B: Object Creation
+  
 Objects inherited from NSObject must be prepared for use in 2 steps:
 
 1. **Allocation**: Unlike C++ where Objects can be accessed without pointers, in Objective-C the Objects are always accessed using pointers. So the first step is allocation of memory to the pointer. This is done using **alloc** method which is implemented in NSObject. This method creates memory for all the instance variables and initializes the Instance Vairables to zero. After this initialization of variables are done.
@@ -723,16 +716,17 @@ As you can see the code below we create 2 Dog Objects, one for German Shepard an
         Dog *myGermanShepherd = [[Dog alloc] init];
         
 <a name="method_invocation"/></a>
-#### Section C: Method Invocation or Messaging
-#  
+### Section C: Method Invocation or Messaging
+  
 As discussed earlier method invocation can be done on a class for class methods or on an instance of the class for instance methods. The class itself in Objective-C is an Object of type **Class** created by the runtime. This class object is a singleton object reated at runtime. 
 
 A Method is called by sending a message to the object that implements the method. Messaging is done to perform some action, return some object or value, or do both things. The Messaging is done on a Object called **reciver** and the method name with parameters is called the **message**. The message expression is on the right side of the assignment, enclosed by the square brackets and as shown in the figure below. 
 
 #  
-Messaging Format => `[receiver message]`![Method Call](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_call_new.png) 
+Messaging Format => `[receiver message]`
+![Method Call](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/method_call_new.png "Method Call") 
 <!--
-![Method Call](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/method_call.png) 
+![Method Call](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_call_new.png "Method Call") 
 -->
 #  
 
@@ -775,9 +769,9 @@ The code below shows the nested method to allocate and initialize the properties
         
 As you would see the instantiation of myDog object, it first allocates and then calls the instance method initName:Breed:Color:AndAge to set the properties of Dog Class. Similarly myDog1 object calls the class method alocAndInitName:Breed:Color:AndAge to allocate and initialize the properties of Dog class. The following diagram identifies the receiver object and message for Allocation and Intiallization of mDog Object  
 #  
-![Method Call](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_multi_call.png) 
+![Method Call](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/method_multi_call.png "Multi Level Method Call")  
 <!--
-![Method Call](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/method_multi_call.png) 
+![Method Call](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_multi_call.png "Multi Level Method Call") 
 -->
 #  
 As you can see the figure above alloc class method is invoked on receiver 1 i.e. Dog Class Object. The result is Dog Object which is receiver 2. The instance method initName:Breed:Color:AndAge is invoked on receiver 2. The combination of keyword and its value which is essentially the method parameter is the message. As you can see in the figure the value4 is derived by calling numberWithInt method on NSNumber class object.
@@ -787,8 +781,8 @@ As you can see the figure above alloc class method is invoked on receiver 1 i.e.
 ***
 
 <a name="set_props"/></a>
-#### Section D: Set Properties
-#  
+### Section D: Set Properties
+  
 As you know the properties of Dog are Name, Breed, Color, Age, and isPoliceDog. Since they were declared as Property using `@synthesize` their getter and setter(i.e. accessor) methods can be called as if they were declared and implemented. You would see that for Name and Breed Property the  accessor methods are over written. But for isPoliceDog the name of the setter method is changed to isPoliceDog. For Age and Color Property the accessor methods will be called as if they were implemented. 
 
 Properties accessed via dot-notation get translated to the accessor methods behind the scenes, so the following `myDoberman.color = @"Black";` code actually calls `[myDoberman setColor:@"Black"];` So as you can see the direct benifits of declaring Property are 
@@ -829,8 +823,8 @@ The following code sets the value for Dogs Property. Please copy the code below 
         [myGermanShepherd isPoliceDog:true];
         
 <a name="invoke_behaviour"/></a>
-#### Section E: Invoke Behaviour
-#  
+### Section E: Invoke Behaviour
+  
 As discussed in the [Method Invocation](#method_invocation), a method is invoked by placing the object and the desired method in square brackets, separated by a space. Arguments are separated from the method name using a colon(:).
 
 **Main Program**
@@ -854,8 +848,7 @@ The following code invokes the instance methods on Dog Object to know the behavi
         NSLog(@"myDog1 Object Desc = %@", [myDog1 description]);
 
 <a name="result"/></a>
-## Display Simple Dog Project Results
-#  
+# Display Simple Dog Project Results
 
 The following displays the Outputs of the [**Simple Dog Project**](#step_project) developed in this step
 
@@ -880,8 +873,8 @@ The following displays the Outputs of the [**Simple Dog Project**](#step_project
 ***
 
 <a name="practice"/></a>
-## Practice Project 
-#  
+# Practice Project 
+
 Try developing following Practice Projects:
 
 1. Create a Project to find the area of the Circle whose radius is 10 cm.
