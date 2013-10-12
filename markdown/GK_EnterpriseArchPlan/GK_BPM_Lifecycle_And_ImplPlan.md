@@ -23,18 +23,16 @@ b. [**BPM Implementation Plan**](#bpm_impl)
 Business Process Management can be grouped into Design, Modeling, Execution, Monitoring, and Optimization as shown in the figure below: 
 
 #  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-![BPM Process Lifecycle][3]
+![BPM Process Lifecycle][1]
 
-[3]: /Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriseArchPlan/BPMLifeCycle.png "BPM Process Lifecycle"  
+[1]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriseArchPlan/BPMLifeCycle.png "BPM Process Lifecycle"     
 <!--
-[3]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriseArchPlan/BPMImpl.png "BPM Process Lifecycle"     
+[1]: /Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriseArchPlan/BPMLifeCycle.png "BPM Process Lifecycle"  
 -->
 
 ####Design
 
-Process Design encompasses both the identification of existing processes and the design of "to-be" processes. Areas of focus include representation of the process flow, the factors within it such as the processes, automations, the alerts & notifications, escalations, Standard Operating Procedures, Service Level Agreements, and task hand-over mechanisms. Mode details are covered in the article  sections - [**Process Design**](#bpm_process_design), [**Business Rule Management**](#bpm_buss_rule), and [**Business Event Management**](#bpm_evnt_mgmt)
+Process Design encompasses both the identification of existing processes and the design of "to-be" processes. Areas of focus include representation of the process flow, the factors within it such as the processes, automations, the alerts & notifications, escalations, Standard Operating Procedures, Service Level Agreements, and task hand-over mechanisms. Mode details are covered in the article   - [**BPM Process Design, Business Rules and Event Management**](http://wp.me/p2Yph5-5C)
 
 ####Modeling  
 
@@ -42,7 +40,7 @@ Modeling takes the theoretical process design and introduces combinations of var
 
 ####Execution  
 
-For execution of BPM Project, its important to understand the required [**Implementation Plan**](#bpm_impl) as discussed in Section below. The best way to execute BPM Projects is to use [BPM software vendors](#bpm_vendors). The [**Major Software Components**](#bpm_platform) that are required in a BPM Platform is discussed in a seperate section below.
+For execution of BPM Project, its important to understand the required [**Implementation Plan**](#bpm_impl) as discussed in Section below. The best way to execute BPM Projects is to use [BPM software vendors](http://wp.me/p2Yph5-5E). The [**Major Software Components**](http://wp.me/p2Yph5-5A) that are required in a BPM Platform is discussed in a seperate article.
 
 ####Monitoring  
 
@@ -62,9 +60,9 @@ BPM implementation with-in an organization is all about being **FASTER** as show
 #  
 ![BPM Implementation][2]
 
-[2]: /Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriseArchPlan/BPMImpl.png "BPM Implementation"  
-<!--
 [2]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriseArchPlan/BPMImpl.png "BPM Implementation"     
+<!--
+[2]: /Users/narayan/Documents/MakeTechEzResources/images/GK_EnterpriseArchPlan/BPMImpl.png "BPM Implementation"  
 -->
 #  
 1. Create **FLow Charts** for different process for faster decision making.

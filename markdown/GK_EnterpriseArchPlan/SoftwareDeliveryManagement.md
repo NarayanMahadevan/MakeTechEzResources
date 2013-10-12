@@ -1,6 +1,6 @@
 # Software Delivery Management
 
-Enterprise Application Development is essentially about 
+Enterprise Application Development(EAD) is essentially about 
 
 1. Allignment of Technology Assets and Business Priorities to deliver business value efficiently with reduced error and friction
 
@@ -41,9 +41,10 @@ The above challanges also goes to show Software Delivery is the one most critica
 
 SPDP derives from above functionalities and is the four important aspect for successful Software Delivery.  Essentially SPDP is:
 
-1. **Scope Management -** Major reason for Software Failure is the mis-management of Scope of the Project. This involves effective 
-   a. Requirement and 
-   b. Change Management <p></p>
+1. **Scope Management -** Major reason for Software Failure is the mis-management of Scope of the Project. This involves clear specification of  
+   a. Project Objectives,
+   b. Requirements, 
+   c. Milestones <p></p>
 
 2. **Project Management -** Software Delivery can be better managed if all the stake holders had the clear visibility of current status of the Software Delivery. So as mush as the Scope has to be well-defined, the following has to be also well-define for Progress Monitoring. They are
    a. Milestone Releases,

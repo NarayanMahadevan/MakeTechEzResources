@@ -26,7 +26,7 @@ e. [**Reasons for BPM Project failure**](#bpm_proj_failure)
 **Business Process Management (BPM)** is an approach that’s designed to produce better processes through the combination of technology and business expertise. Its well know that Better Processes create value for the enterprise through growth, improved performance, better productivity, higher staff effectiveness, and better customer service. 
 
 In a dynamic business environment, organizations need to be agile to respond to changes. BPM provides that agility by giving you more direct control over your operational processes. Practices such as Six Sigma and Lean Six Sigma as well asthe work done in quality control are fully incorporated in BPM methodology. 
-BPM leverages software and services to provide total visibility into the organization. BPM Lifecycle involves Discovery of Business Processes, Documentation of Business Processes, Automation of Business Process, and continuous improvement of business processes to increase efficiency and reduce costs. This artic
+BPM leverages software and services to provide total visibility into the organization. BPM Lifecycle involves Discovery of Business Processes, Documentation of Business Processes, Automation of Business Process, and continuous improvement of business processes to increase efficiency and reduce costs. 
 
 <a name="why_bpm"/></a>
 # Why BPM - Achieves *PDF*
@@ -42,19 +42,30 @@ At its core, BPM takes rigid, independent processes and transforms them into fle
 
 Content management, workflow, and collaboration capabilities between departments and across the enterprise are good choices for BPM projects relating to the authoring, assembly, distribution, and maintenance of documents. 
 Content management, workflow, and collaboration capabilities are very appropriate when retention & records management are important parts of the business such as in litigation and compliance, audit support, etc. 
-BPM solution makes good sense with content life cycle processes, document capture workflow, case management, and retention-sensitive processes.
+BPM solution makes good sense with content life cycle processes, document capture workflow, case management, and retention-sensitive processes. Below are the list of various BPM Projects that work across industry. Also the section below look at BPM Projects specically in [**Financial Service Industry**](#fin_serv_bpm). Note that typically all of them would involve in some form or the other Content or Document Lifecycle which involves Documentation, Document Processing Workflow and Collaboration across various department.
 
-Lets take a look at BPM for Financial Service Industry. Note that typically all of them would involve in some form or the other Content or Document Lifecycle which involves Documentation, Document Processing Workflow and Collaboration across various department.
+1. **Cross-sell, Up-sell and Personalized Messaging:** At various customer touch points be it on telephone, internet, mobile app, email, or postal mail, maximize opportunities through targeted offerring and loyality through personalize messaging. BPM Project makes it possible through use of Customer Data, Business Rule Automation and BPM Adapters to integrate with Enterprise Systems.
 
-**✓ &nbsp; [Financial Services](#fin_serv_bpm) -** Financial Services industry is burdened with regulatory compliance and huge investment on inflexible IT Systems. Yet requiring to keep competitive pace with the every changing market forces. Hence its required to have efficint processes and BPM implementation.
+2. **Fraud prevention and detection:** Tracking events, correlating event patterns and executing automated risk assessments enable companies to take a proactive approach to identifying and stopping claims fraud, money laundering schemes, mobile device hacking, phishing scams, meter or other equipment tampering, and identity theft.
 
-1. **New Client and Asset On-Boarding:** involves business processes to get Customer and asset on-board as they are critical for customer satisfaction and getting assets under management sooner so net fee income is increased.  
+3. **New Product Introduction:** Delivering new products to market is crucial for improving competitive differentiation and increasing market share. BPM for New Product Introduction Process involves managing all activities and resources from Marketting, Legal, R&D, Supply Chain, Warehousing, Sales and Distribution etc to bring a new product to market in a streamlined and predictable manner.
 
-2. **Credit Request & Loan Origination:** Lending processes involves credit evaluation, underwriting, fulfillment, and monitoring between descrete department becomes an ideal candidate for BPM Project. 
+4. **Sales & Distribution -** BPM makes process easier for opening up new sales channels, introducing new product, boosting the sales and distribution partners with relevant information and case study. 
 
-3. **Regulatory Compliance:**  New regulations spawned in the wake of the financial meltdown are further complicating financial services operations and overburdening inflexible IT systems. BPM Project implementation will allow creating and integration applications which can easily adapt as more rules are specified and implemented.
+5. **Customer Acquisition -** Success in this arena requires getting an appropriate product in front of the right customer at the right time, without breaking any rules or regulation. BPM software can provide integrated analytics combined with an optimized process framework, that enable customer acquisition campaign managers to make better, faster decisions that increase outcomes.
 
-4. **New Product Introduction:** Delivering new products to market is crucial for improving competitive differentiation and increasing market share in financial industries. BPM Projects will allow financial services industry accelerate the pace of introduction of new products. 
+6. **Lightweight processes**	 common in many companies for handling relatively simple activities such as on-boarding a new employee, booking travel, customer feedbacks, customer satisfaction survey, etc. are ideal for BPM Projects.  
+
+<a name="fin_serv_bpm"/></a>
+#### BPM Projects in Financial Services
+
+BPM Processes can be effectively used from the way customers are acquired, on-boarded and serviced, to the speed with which new products are brought to market, and the means by which financial firms assess risk and ensure compliance across the lifetime of a customer. 
+
+Process | BPM Solution 
+:----------- | :-----------
+**New Customer and Asset On-Boarding**</br> This involves business processes to get Customer and asset on-board as they are critical for customer satisfaction and getting assets under management sooner so net fee income is increased. </br>A strong processes for Customer and Asset On-boarding is not only critical for efficiently ramping new customers to profitability, but increasingly to deal with stringent compliance requirements such as  Know Your Customer (KYC) and other risk management requirements. Inefficient or incomplete processes in this arena increase the risk of non-compliance. They also create negative customer perception. | A BPM suite can drive a customer-centric on-boarding experience that creates a strong positive first impression. </br>Visibility into activities and their status can be shared not only with employees to increase efficiency, but directly with customers as well, bringing them into the process and keeping them informed of any information they need to supply, next steps, and ultimate resolution.       
+**Financial Case Management**</br> This involves managing individual cases which essentially are customer interaction points such as customer support issue, Credit Request, up-sell new financial products, etc.</br> The successful resolution of a customer support issue or closing a sales opportunity can be accelerated if all pertinent interactions and documentation are easily accessible via a case folder.           | A BPM platform with an integrated content management system will allow integration of all customer interactions and related documents across all products. </br>Alert and escalation capabilities  as well as Comprehensive analytics and reporting capabilities with-in in the BPM platform can help keeping customer satisfaction index high, manage regulatory compliance and successfull positioning of new products     
+
 <a name="bpm_roadmap"/></a>
 # High level BPM Roadmap - Just *BSE*
 
