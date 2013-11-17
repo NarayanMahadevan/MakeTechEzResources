@@ -30,16 +30,14 @@ This is a simple project, the goal being end of this step you are comfortable wi
 
 The project is about Dog Class which is essentially an Animal. We will describe the Dog's attributes by its Color, Breed, Name, etc as well as Dogs behaviour such as temperament, aggression, intelligence etc. The execuatble project will let you create a Dog with its name, breed and color and check-out its behaviour. 
 
-Please note as different concepts are in
-
 <a name="create_project"/></a>
 # Create Objective-C Project
   
 Please refer the following figure for steps to create a new Command Line Project for the MyDog Project . 
   
-![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjCCreateProject.jpg "Class Definition") 
-<!--
 ![Class Definition](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/ObjCCreateProject.jpg) 
+<!--
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjCCreateProject.jpg "Class Definition") 
 -->
 #  
 
@@ -55,9 +53,9 @@ Please refer the following figure for steps to create a new Command Line Project
 * **Step 5:** On Create, Xcode will set up your new project and open it up in the editor as shown in the Figure below. 
 <a name="main_source_file"/></a>
 #  
-![New XCode Project](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/NewProjectCreated.png "New XCode Project") 
-<!--
 ![New XCode Project](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/NewProjectCreated.png "New XCode Project") 
+<!--
+![New XCode Project](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/NewProjectCreated.png "New XCode Project") 
 -->
 #  
  
@@ -66,9 +64,9 @@ As you can see the figure, the left pane of Xcode displays a list of files that 
 ***
 **Note: ** *You should be able to Compile and Run the My Dog project without writing single line of code and see the Hello World output. This log statement is in main.m Source code which is the starting point for any execution.*
 #  
-![Run and View Output](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/RunAndViewOutput.jpg "Run and View Output") 
-<!--
 ![Run and View Output](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/RunAndViewOutput.jpg "Run and View Output") 
+<!--
+![Run and View Output](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/RunAndViewOutput.jpg "Run and View Output") 
 -->
 #  
 ***
@@ -93,9 +91,9 @@ Extension | Source Type
 
 The Following Figure shows process to create Objective-C file for Dog. This in turn will create Dog.h Header file and Dog.m Implementation File
 #  
-![Dog Source File](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/RunAndViewOutput.jpg "Source File") 
-<!--
 ![Dog Source File](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/DogFile.jpg "Source File") 
+<!--
+![Dog Source File](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/RunAndViewOutput.jpg "Source File") 
 -->
 #  
 
@@ -128,9 +126,9 @@ The following code is auto generated in Dgg.h file to import the Foundation Fram
 The class declaration begins with the **@interface** compiler directive and ends with the **@end** directive. The instance variables, properties, and methods appear between these two statements. The class interface is usually stored in the .h file. The following diagram typically shows class declaration  
 
 #  
-![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjC_ClassDef.png "Class Definition") 
-<!--
 ![Class Definition](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/ObjC_ClassDef.png "Class Definition") 
+<!--
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjC_ClassDef.png "Class Definition") 
 -->
 #  
 
@@ -268,9 +266,9 @@ There are two kinds of methods in Objective-C: instance methods and class method
 Here’s the declaration of a method in ObjC.
 
 #  
-![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjC_ClassDef.png "Class Definition") 
-<!--
 ![Class Definition](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_decl_objc.png "Class Definition") 
+<!--
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/ObjC_ClassDef.png "Class Definition") 
 -->
 #  
 
@@ -724,9 +722,9 @@ A Method is called by sending a message to the object that implements the method
 
 #  
 Messaging Format => `[receiver message]`
-![Method Call](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/method_call_new.png "Method Call") 
-<!--
 ![Method Call](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_call_new.png "Method Call") 
+<!--
+![Method Call](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/method_call_new.png "Method Call") 
 -->
 #  
 
@@ -769,9 +767,9 @@ The code below shows the nested method to allocate and initialize the properties
         
 As you would see the instantiation of myDog object, it first allocates and then calls the instance method initName:Breed:Color:AndAge to set the properties of Dog Class. Similarly myDog1 object calls the class method alocAndInitName:Breed:Color:AndAge to allocate and initialize the properties of Dog class. The following diagram identifies the receiver object and message for Allocation and Intiallization of mDog Object  
 #  
-![Method Call](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/method_multi_call.png "Multi Level Method Call")  
-<!--
 ![Method Call](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToIOS/method_multi_call.png "Multi Level Method Call") 
+<!--
+![Method Call](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToIOS/method_multi_call.png "Multi Level Method Call")  
 -->
 #  
 As you can see the figure above alloc class method is invoked on receiver 1 i.e. Dog Class Object. The result is Dog Object which is receiver 2. The instance method initName:Breed:Color:AndAge is invoked on receiver 2. The combination of keyword and its value which is essentially the method parameter is the message. As you can see in the figure the value4 is derived by calling numberWithInt method on NSNumber class object.

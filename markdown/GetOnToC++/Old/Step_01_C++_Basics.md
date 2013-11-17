@@ -1,62 +1,87 @@
 # Step 1: Get On To C/C++ Basics
 
-In this step C++ Basics is introduced by writing a executable program for the Problem Statement defined below. The Concepts introduced in this step are:
+This steps introduces variables, different kinds operators used in C++ and control statements to test conditional statements for branching, iterations and recursions. All the concepts are introduced through one [**Main Program**](#main_code) for the problem statement defined in the next section and **Side Steps** which is a side program to explain the concept. The Concepts introduced in this step are:
 
 1. [**Declaration of Variables**](#declare_vars)
-2. [**Local and Global Variables**](#local_global_vars) 
+2. [**Variable Types**](#var_types) 
 3. [**Arithmetic Operators, Output & Input Operators and Assignment Operators**](#operators)
-4. [**Write Functions**](#write_functions)
+4. [**Conditional Statements**](#conditional_statements)
+5. [**Loops and Control Statements**](#loops)
 
+Finally the end of the Section 
+
+a. [**Displays the result**](#result) of the [**Program**](#problem) defined below and
+b. Gives [**Practice Problems**](#practice) for Development
+
+<a name="problem"/></a>
 ## Problem Statement
-#  
-In this step lets write a Program that reads User Defined Inputs to compute the volume of a Box Car and Tank Car and Outputs the result onto the Console.
+</br>  
+Write a program that takes student marks as user inputs. Checks if it is pass, fail, A, B, C or D Grade and outputs number of students passed, failed and have got A, B, C and D grade.
 
-Here Box Car is a Rectangular Car having length, breadth and height while the tank car is cylindrical having radius and length.
-
+<a name="main_code"/></a>
 **Main Program**
 
-Lets create a S1_ComputeVolume.cpp file and declare the main function and the place holders for Variables, Input & Output Operators, Functions, and Global Variables.
+Lets create a S1_CourseGrade.cpp file and declare the main function and the place holders for Variables, Input & Output Operators, Loops, and Conditional Statements.
 
     //
-    //  Program Name - S1_ComputeVolume.cpp
+    //  Program Name - S1_CourseGrade.cpp
     //  Series: GetOnToC++ Step: 1
     //
-    //  Purpose: This program computes the Volume of the Box Car and the Tank Car  
+    //  Purpose: This program takes user input for course marks and computes the 
+    //           number of students passed, failed and have got A, B, C and D 
+    //			 grade. 
     //
-    //  Compile: g++ S1_ComputeVolume.cpp -o S1_ComputeVolume
-    //  Execute: ./S1_ComputeVolume
+    //  Compile: g++ S1_CourseGrade.cpp -o S1_CourseGrade
+    //  Execute: ./S1_CourseGrade
     //
     //  Created by Narayan Mahadevan on 18/08/13.
     //  Copyright (c) 2013 MakeTechEz. All rights reserved.
     //
-    
+
     #include <iostream>
     using namespace std;
-        
-    // Section 2 - Global Variables 
 
-    // Section 4 - Write Functions
-    
+    // Section 1 - Constants for A, B, C and D Grade
+
+    // Section 2 - Macros to calculate percentage
+
     main ( ) { 
-        // Section 1 - Declaration of Variables 
-    
-        // Section 3 - Output & Input Operators 
+        // Section 3 - Variables for number of students with A, B, C, and D Grade
 
+        // While loop to take in multiple User Inputs
+        while (marks >= 0) {
+
+            // Section 4 - Input Operator to take User Input for course marks
+            
+            // Section 5 - Two Way Conditional loop to determine A, B, C and D 
+            // Grade
+
+            // Section 6 - Multiway Conditional loop to calc num of A, B, C and D 
+            // Grade
+        }
+
+        // Section 7 - Arithmatic Operator
+
+        // Section 8 - Output Operator to print results
     }
- 
+    
 ***
-**NOTE:** The Functions are defined below the Global Variables and Above the Main Function. Every Section 1, 2, 3 and 4 has code for the Main Program. As you go through the section copy the code and place it appropriately under the section identified above.
+**NOTE:** The Constants, Macros, Typedef are defined above the Main Function. As you can see the Program is devided into 8 sections, every Section has a corresponding code across this article along. The code corresponding to the section is under the sub heading Main Program as and when the cooresponding concept is introduced. You are expected to copy and paste it at appropriate section in the file  S1_CourseGrade.cpp created by you. 
 ***
-
 
 <a name="declare_vars"/></a>
-## Section 1: Declaration of Variables
+## Declaration of Variables
 #  
-As the first step lets learn how to declare variables. As mentioned above the parameters to compute volume of Rectangular Car are Length, Breadth and Height while the parameters that compute the volume of Tank Car are Radius and the Length. These parameters are nothing but Variables in C/C++
+As the first step lets learn how to declare variables. Variables are containers that can store different values. In C, variables are statically typed, which means that you must explicitly state what kind of value they will hold.  
 
 The format for Veriable Definition is as shown below
 
-![Declare Variables](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareVariables.png) 
+</br>  
+![Declare Variables](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/DeclareVariables.png "Declare Variables") 
+<!--
+![Declare Variables](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareVariables.png "Declare Variables") 
+-->
+</br>  
 
 **Data Type** can be C++ built-in data types are char, short, int, long, float, double, etc or User Defined Data Types.
 
@@ -107,38 +132,58 @@ If you are curious about how much memory your C++ implementation allocates for t
 
 **Main Program**
 
-Lets declare the variables for the Problem Statement
+As you can see in the [Problem Statement](#problem), we would like to store the values of number of students passed, failed and got different grades. These are nothing but Variables in C/C++. Please copy and appropriately paste in section 3 in the [**Program**](#main_code) defined above.
 
-        // Section 1 - Declaration of Variables 
-        
+        // Section 3 - Variables for number of students with A, B, C, and D Grade
+
         /* 
          1. The Vairbles defined below are Local Variables and are local to this 
             main function. 
-         2. All Variables are of data type double(holds 8 bytes or 64 bits memory) 
-            and intialized to 0.0
+         2. All Variables are of data type int(holds 4 bytes or 32 bits memory) 
+            and intialized to 0
         */
-        
-        // Variabes for Box Car
-        double length = 0.0, breadth = 0.0, height = 0.0;
-        
-        // Vairables for Tank Car which is a Cylinder
-        double radius = 0.0, cylLength = 0.0;
+
+        // Variabes to hold number of students with A, B, C, and D grade and also 
+        // number of students passed and failed 
+        int numAGrade = 0, numBGrade = 0, numCGrade = 0, numDGrade = 0;
+        int numPassed = 0, numFailed = 0;
+
+        // Variable to hold marks provided as user input   
+        int marks = 0;
 
 
-<a name="local_global_vars"/></a>
-## Section 2: Local and Global Variables
-#  
-**Local Vairable -** 
+<a name="var_types"/></a>
+# Section 2: Variable Types
+  
+This section discusses different variable types. This includes 
+
+1. **Local Variable** 
+2. **Global Vairable**
+3. **Constants**
+4. **Macros**
+5. **Typedef**
+ 
+#### Local Vairable  
 
 1. A variable declared inside a function definition is said to be a **local variable**.
 2. The memory allocated for Function Parameters and Local Variables are **reallocated** as soon as the corresponding function has finished executing, so parameters and local variables are said to have **dynamic extent**.
 3. Function Parameters and local variables can be evaluated and assigned only in the function in which they are declared. Accordingly, parameters and local variables are said to have **local scope**.
 
-**Global Vairable -** 
+#### Global Vairable 
 
 1. A variable defined outside of any function definition is said to be a **global variable**.
 2. The memory set aside for a global variable is never reallocated, so global variables are said to have **static extent**.
 3. Global variables can be evaluated and assigned at any point in a program after they are defined, so global variables are said to have **universal scope**. 
+
+#### Constants
+</br>
+The const variable modifier can be used to tell the compiler that a variable is never allowed to change. For example, defining a constant called pi and then trying to alter it will result in a compiler error:
+
+`double const pi = 3.14159;`</br>
+`pi = 42001.0;  // Result in Compiler error`
+
+This is often used in function parameters to inform the caller that they can safely assume whatever value they pass will not be altered by the function.
+
 
 **Main Program**
 
@@ -271,14 +316,14 @@ When output operator used with the **cout** output-place specification, the outp
 
 **SIDE STEP**
 
-This program Input Output Operators
+This program demonstrated Input and Output Operators
 
 	//
     //  Program Name - S1_UserInputs.cpp
     //  Series: GetOnToC++ Step: 1
     //
     //  Purpose: This program picks up an integer from the console and assigns  
-    //           that integer to a variable to compute 
+    //           that integer to a variable to compute volume
     //
     //  Compile: g++ S1_UserInputs.cpp -o S1_UserInputs
     //  Execute: ./S1_UserInputs
@@ -324,14 +369,34 @@ Sr.No | Operators   		| Associativity | Explanation
 4     | << (Output)        | Left to Right | e.g. cout << "res = " << 6 * 6 * 10; res = 360
 5     | = (Assignment) 		| Right to Left | Lowest Precedence
 
+**Main Program**
+
+The following code uses the input operator to read user inputs to populate the variables needed to calculate volume of the Box Car and the Tank Car.  Please copy and appropriately paste in section 3 in the [**Program**](#main_code) defined above.
+
+        // Section 3 - Output & Input Operators
+
+        // Reading the User inputs and setting the values of length, width and
+        // height of the Box Car
+        cout << "Please Enter the Length, Width and Height of the Box Car." 
+             << endl;
+        cin >> length >> width >> height;  
+        
+        // Reading the User inputs and setting the values of radius and length
+        // of the Tank Car
+        cout << "Please Enter the Radius and Length of the Tank Car." << endl;
+        cin >> radius >> lengthOfTankCar;  
+
 <a name="write_functions"/></a>
-## Section 4: Write Functions
-#  
+## Section 4: Functions
+</br>
 
 A function is a group of statements that together perform a task. Every C++ program has at least one function which is main(). Looking into the problem statement, we can see we have to compute the volume of the Box Car and the Tank Car. Since the volume will be computed for varying length, breadth and height as well as for varying cylindrical length and radius, its best this computation is done in a volume computing function. The function definition is as follows: 
 
-![Function Declaration](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareFunctions.png) 
+![Function Declaration](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/DeclareFunctions.png "Function Declaration") 
 
+<!--
+[Function Declaration](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareFunctions.png "Function Declaration") 
+-->
 **Procedure Abstraction** is achieved when computational detail are moved into a function. The benifits are: 
 
 1. Easy to reuse your programs
@@ -339,11 +404,93 @@ A function is a group of statements that together perform a task. Every C++ prog
 3. Easy to debug program
 4. Easy to change and improve code
 
+Function Definition consists of Function Prototypes and Function Body. It is required by the compiler that function be defined before the function is called. So either the Function is to be defined in full or function prototypes needs to be  defined.
+
+**SIDE STEP**
+
+This program demonstrates writing a function prototype and function body to calculate maximum of 3 numbers
+
+    //
+    //  Program Name - S1_FunctionDemo.cpp
+    //  Series: GetOnToC++ Step: 1
+    //
+    //  Purpose: This program demonstrates writing a function prototype and 
+    //           function body to calculate maximum of 3 numbers
+    //
+    //  Compile: g++ S1_FunctionDemo.cpp -o S1_FunctionDemo
+    //  Execute: ./S1_FunctionDemo
+    //
+    //  Created by Narayan Mahadevan on 18/08/13.
+    //  Copyright (c) 2013 MakeTechEz. All rights reserved.
+    //
+
+    #include <iostream>
+    using namespace std;
+
+    int maximum( int, int, int ); // function prototype 
+
+    int main ( ) 
+    { 
+        int a, b, c; // variables to store user inputs
+        
+        cout << "Enter three integers: "; 
+        cin >> a >> b >> c; 
+
+        // a, b and c below are arguments to the maximum function call
+        cout << "Maximum is: " << maximum( a, b, c ) << endl;
+
+        return 0;
+    }
+
+    // Function maximum definition x, y and z below are parameters to the 
+    // maximum function definition
+
+    int maximum( int x, int y, int z )
+    {
+        int max = x; // setting the maximum value to x
+        
+        // Using the if condition statement to check y and z are greater then max
+        if (y > max) max = y;
+        if (z > max) max = z;
+
+        return max; // Returning the max value
+    }
+
+***
+**S1_FunctionDemo.cpp program execution and results**
+
+	$ g++ S1_FunctionDemo.cpp -o S1_FunctionDemo
+	$ ./S1_FunctionDemo 
+	Enter three integers: 23 12 45
+	Maximum is: 45
+
+***
+
+#### Function Prototypes 
+
+Function Prototypes is also referred as **Function Declaration**. Its one of the very useful feature of C++. It improves readability of the program. It tells the compiler the name of the function, the type of data returned by the function and the order and number of parameters the function should except. The compiler uses this to validate the function call.
+
 **Main Program**
 
-Lets declare the functions to compute the volume of the Box Car and the Tank Car
+The following code defines the function prototype to calculate volume of the Box Car and the Tank Car.  Please copy and appropriately paste in section 4A in the [**Program**](#main_code) defined above.
 
-    // Section 4 - Write Functions
+    // Section 4A - Function Prototype
+
+    // The function prototype or declaration to calculate the Volume of the Box Car
+    double calcBoxCarVolume(double, double, double);
+
+    // The function prototype to calculate the Volume of the Tank Car
+    double calcTankCarVolume(double, double);
+
+#### Function Body 
+
+Function Body is the place where the code for actual computation or the logic is written. Once the place holder in the function prototype is defined for compiler to validate the program, the function body can be written after the main. Or else the function body has to written before the function call otherwise there would be compilation error.
+
+**Main Program**
+
+The following code declares the function body to calculate volume of the Box Car and the Tank Car.  Please copy and appropriately paste in section 4B in the [**Program**](#main_code) defined above.
+
+    // Section 4B - Function Body
 
     /*
      * This function calculates the Volume of the Box Car
@@ -392,27 +539,52 @@ Lets declare the functions to compute the volume of the Box Car and the Tank Car
 ***
 **NOTE:** When the scope of function parameters are local to the function and not available outside the function, such parameters are called **call-by-value**. The scope and extent to which Memory is available for Function Parameters are similar to Local Variable.  
 ***
+
+<a name="call_functions"/></a>
+## Function Call
+#  
+
+The function is invoked by a function call.      The function is called by the name along with the parameters as specified in the function prototype. Finally the code in the Main Program below demonstrates function calling.
  
 **Main Program**
 
 Lets complete the program by taking user inputs and correspondingly calling the functions calcBoxCarVolume and calcTankCarVolume to get the volume of the Box Car and the Tank Car
 
-        // Section 3 - Output & Input Operators
-
+        // Section 5 - Function Call
+        
         // Calling Function calcBoxCarVolume to calculate the Volume of Box Car
-        cout << "Please Enter the Length, Width and Height of the Box Car." 
-             << endl;
-        cin >> length >> width >> height;  
         double boxCarVol = calcBoxCarVolume(height, width, length);
         cout << "The volume of the Box Car is " << boxCarVol << endl; 
  
         // Calling Function calcTankCarVolume to calculate the Volume of Tank Car
-        cout << "Please Enter the Radius and Length of the Tank Car." << endl;
-        cin >> radius >> lengthOfTankCar;  
         double tankCarVol = calcTankCarVolume(radius, lengthOfTankCar);
         cout << "The volume of the Tank Car is " << tankCarVol << endl; 
 
-## Certification Program
-#  
+<a name="result"/></a>
+# Display Program Result  
 
+The following displays the Compilation, Execution, Inputs and Outputs of the [**Main Program**](#main_code) developed in this step
+
+***
+	$ g++ S1_ComputeVolume.cpp -o S1_ComputeVolume
+	$ ./S1_ComputeVolume 
+	Please Enter the Length, Width and Height of the Box Car.
+	10 10 10
+	The volume of the Box Car is 1000
+	Please Enter the Radius and Length of the Tank Car.
+	10 10
+	The volume of the Tank Car is 3141.59
+
+***
+
+<a name="practice"/></a>
+# Practice Problem for Development  
+
+1. Write a function `int calcFlatCarVolume(int length);` to calculate volume of the the flat cars if they are loaded to a maximum length of 8.25 feet. Note that the flat car height and width are exactly 1 feet.
+
+2. Write a fuction `float c_to_f(float);` to calculate fahrenheit given the celcius. The formulae is **°C x 9/5 + 32 = °F **
+`
+3. Write a function `float f_to_c(float);` to calculate celcius given the fahrenheit 
+
+4. Write a function `double energyOfMovingMass(float, float);` to calculate energy of the moving mass given its weight and speed. The energy of a moving mass is given by the formula **E =  ½mv²** 
 

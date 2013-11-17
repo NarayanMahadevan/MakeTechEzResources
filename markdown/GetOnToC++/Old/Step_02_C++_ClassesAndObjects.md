@@ -97,12 +97,12 @@ A class definition starts with the keyword class followed by the class name; and
 	}
 
 The Circle class is implemented in [**Side Step: 4**](#side_step_4). Here is the diagram representation of class definition:
-#  
-![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/ClassDefinition.png "Class Definition") 
-<!--
+</br>  
 ![Class Definition](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/ClassDefinition.png "Class Definition") 
+<!--
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/ClassDefinition.png "Class Definition") 
 -->
-#  
+</br>  
 
 ***
 **Note:** The keyword public determines the access attributes of the members of the class that follow it. A public member can be accessed from outside the class anywhere within the scope of the class object. You can also specify the members of a class as private or protected which we will discuss in later steps.

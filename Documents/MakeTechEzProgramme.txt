@@ -1,0 +1,99 @@
+Slide 1: 
+    MTZ Get Onto Technology Programme for Fresh Engineers
+
+Slide 2:
+    Engineers, Are They Employable?
+
+    - According to the National Employability Report (NER) 2011, while India produces more than 500,000 engineers annually, only a miniscule 3.51 per cent are appropriately trained to be directly deployed on projects. Further, only 2.68 per cent are employable in IT product companies. 
+
+Slide 3:
+
+    Experts Opinion
+
+    - Dr Sameer Prabhu director of Industry Marketing, MathWorks, says, “While engineering education in India has evolved over the last few years, there is still a considerable skills gap when it comes to industry requirements. Product Engineering companies are unable to hire as it requires greater understanding of computer science and algorithms among students. Another main reasons is lack of exposure to industry-standard tools and software."
+
+    - Raghu Panicker, country sales director, Mentor Graphics, says, “Fresh engineering graduates who get hired by leading companies have to go through induction on product engineering oriented or process engineering oriented or focused in-house training programmes. These programmes are usually driven and guided by internal engineers, managers and product/process specialists, and run for over four to six months. These programmes involve a lot of effort, time and costs for any corporate. This is where finishing schools come in.”
+
+    - Col. N.C. Pande from EFY Tech Center, says, “While the colleges make a theoretical background for the students, finishing schools teach them the practical aspects of things. In India, a vast majority of engineering colleges and universities have not updated their curriculum to incorporate the current needs of the industry with respect to exposure to new technologies, products and processes across sectors. Hence the need for this supplementary training that can enhance ‘job readiness’ and hence cut down the time required by companies to make the fresh hires productive.”
+
+
+Slide 4: 
+
+    What is Finishing School
+
+    - Finishing school is a supplementary training school that attempts to compensate for the deficiencies of colleges by providing specialised technology training (hard skills) or personality development programmes (soft skills). 
+
+Slide 4B:
+    
+    What role do finishing schools play?
+
+1. Increase the industry-readiness of the fresh engineering graduates so that they are productive from day one
+2. Bridge the industry and education sector gap by catering to the needs of VLSI and semiconductor industry
+3. Create a path where the industry and educational sector can synergise efforts to train better manpower
+4. Develop the requisite industry know-how for students to facilitate better employability
+5. Ensure more number of industry-ready engineers are available for the industry to recruit
+
+
+Slide 5:
+
+    Key Ingredients of Training Programme
+
+    - According to Rajeev Kabra, chief executive officer and director, Cognitel Technologies, “There are three important ingredients for disseminating knowledge on any topic: content design and development that is current and relevant, content delivery through well-qualified teachers/trainers, and content delivery infrastructure through use of physical or virtual classroom, labs, etc."
+
+Slide 5:
+    
+    Challenges
+
+    - Content Design - Should be predominantly Lab Based and Practical. 
+    - Qualified Trainers that can deliver this content and keep themselves updated with latest technology trends. 
+    - Need for infrastructure that can be used to provide hands-on experience to students, particularly in technical education. 
+    - One-on-One Guide to work with Fresh Engineers so that knowledge gap can be well understood and guided appropriately. Rather then Classroom learning which is done in ample in Engineering Schools
+
+Slide 6:
+
+    How MTZ Get Onto Technology Works
+
+    - Content Design
+        - Introduces Concepts Mainly by writing and compiling lot of programs than reading lot of theory. Its learning by practice. 
+        - Its a 18 Step Process which can be completed in flat 2 - 4 weeks time.
+        - Every Step introduces 5 - 10 concepts and each concepts is demonstrated with a sample code which are built, compiled and executed by engineers
+        - At the End of the Training Programme, Engineers would have written any-where between 150 - 200 Programs
+
+    - Content Menotring
+        - Mentoring Process is One Skill - One Mentor - One Student Philosophy. This helps to idenify skill gaps in the engineer and guide appropriately.
+        - After Every Step mentors cross examing one-on-one with the Engineers to check the level of understanding and gives practise program to be written by engineers.
+
+    - Content Delivery
+        - Online Training Content
+        - Mentor and Engineer connect using Google Hangout or Skype One-on-One where-in Mentor can see the shared desktop of engineer, ask questions on concepts and give Practise Program from the pre-defined list
+
+Slide 7:
+
+    Hows its different
+
+    - Its One Skill - One Mentor - One Student Training Programme
+    - Completely Streamlined Online Platform and Not Classroom Based
+    - Lot of Lab Work and Programming and less of theory
+    - Easily reachable and available to wide range engineers from different locations 
+    - Skilled Mentors from industry will be available unlike in training institutes 
+    - Realtime use of technology and concepts will be delivered unlike Bookish Knowledge however updated.
+    
+Slide 8:
+
+    Benifit to Corporates
+
+    - Corporate on an average spend Rs 60000 - Rs 90000 on training the fresh engineers. Make Tech Ez encorages the engineers to take the training. So Corporates not only gets trained staff but also get confident and motivated Engineers who are ready to dive into programming.
+
+    - Companies can cut the non-productive time of fresh recruits. They can expect the fresh recuits to get productive on the first or second month itself instead of usual 4 to 6 months.
+
+    - Companies will have a pool of fresh engineers who come with requisite programming skills which earlier they have to seek out by visiting campuses.
+
+
+    Benifit to Student
+
+    - Fresh Engineers who have taken the Training Programme will have a competitive edge over others who have just a college degree to rely upon.
+
+    - MTZ Program will connect the Engineers with the Industry that requires fresh staff.
+
+
+

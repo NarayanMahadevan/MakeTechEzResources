@@ -66,7 +66,6 @@ The intent of this article is to cover all you need to know about Business Proce
 
 This part is a quick introduction of Business Process Management. This part not only defines BPM in a simplified manner but also takes you through typical BPM Projects and BPM Roadmap. In its simplest form, BPM is software that enables you to automate, execute and monitor business processes from beginning to end by connecting people, applications and data. BPM takes rigid, independent processes and transforms them into flexible, choreographed business services that work together to create substantial business value. This transformation help Organization to achieve **PDF i.e. Productivity, Decision Making and Flexibility**.
 
-</br>
 <a name="define_bpm"/></a>
 ### Define BPM
 </br>
@@ -74,7 +73,6 @@ This part is a quick introduction of Business Process Management. This part not 
 In a dynamic business environment, organisations need to be agile to respond to changes. BPM provides that agility by giving you more direct control over your operational processes. Practices such as Six Sigma and Lean Six Sigma as well as the work done in quality control are fully incorporated in BPM methodology.
 BPM leverages software and services to provide total visibility into the organization. BPM Lifecycle involves Discovery of Business Processes, Documentation of Business Processes, Automation of Business Process, and continuous improvement of business processes to increase efficiency and reduce costs.
 
-</br>
 <a name="why_bpm"/></a>
 ### Why BPM?………… Achieves *PDF*
 </br>
@@ -85,7 +83,7 @@ At its core, BPM takes rigid, independent processes and transforms them into fle
 3. Improved **F**lexibility - Change Business Processes and Decision Making in accordance to Market
 
 <a name="bpm_projects"/></a>
-## Typical BPM Projects
+### Typical BPM Projects
 </br>
 Content management, workflow, and collaboration capabilities between departments and across the enterprise are good choices for BPM projects relating to the authoring, assembly, distribution, and maintenance of documents. 
 Content management, workflow, and collaboration capabilities are very appropriate when retention & records management are important parts of the business such as in litigation and compliance, audit support, etc. 
@@ -104,13 +102,13 @@ Content management, workflow, and collaboration capabilities between departments
 6. **Lightweight processes**	 common in many companies for handling relatively simple activities such as on-boarding a new employee, booking travel, customer feedbacks, customer satisfaction survey, etc. are ideal for BPM Projects.  
 
 #  
+</br>
 <a name="fin_serv_bpm"/></a>
 ### BPM Projects in Financial Services
 </br>
 BPM Processes can be effectively used from the way customers are acquired, on-boarded and serviced, to the speed with which new products are brought to market, and the means by which financial firms assess risk and ensure compliance across the lifetime of a customer. 
 
-</br>
-#### New Customer and Asset On-Boarding 
+### New Customer and Asset On-Boarding 
 </br>
 **Business Process:** This involves business processes to get Customer and asset on-board as they are critical for customer satisfaction and getting assets under management sooner so net fee income is increased. 
 
@@ -121,8 +119,7 @@ BPM Processes can be effectively used from the way customers are acquired, on-bo
 1. A BPM suite can drive a customer-centric on-boarding experience that creates a strong positive first impression. 
 2. Visibility into activities and their status can be shared not only with employees to increase efficiency, but directly with customers as well, bringing them into the process and keeping them informed of any information they need to supply, next steps, and ultimate resolution.       
 
-#  
-#### Financial Case Management 
+### Financial Case Management 
 </br>
 **Business Process:** This involves managing individual cases which essentially are customer interaction points such as customer support issue, Credit Request, up-sell new financial products, etc.
 
@@ -133,8 +130,10 @@ BPM Processes can be effectively used from the way customers are acquired, on-bo
 1. A BPM platform with an integrated content management system will allow integration of all customer interactions and related documents across all products. 
 2. Alert and escalation capabilities  as well as Comprehensive analytics and reporting capabilities with-in in the BPM platform can help keeping customer satisfaction index high, manage regulatory compliance and successful positioning of new products     
 
+#  
+</br>
 <a name="bpm_roadmap"/></a>
-## High level BPM Roadmap - Just *BSE*
+### High level BPM Roadmap - Just *BSE*
 </br>Successful BPM implementation is essentially an Agile Development Methodology consisting of many small iterations. Each iteration are short-term well defined goals achieving clear business values. Typical roadmap of BPM is as shown in figure below.
 </br>  
 ![Roadmap of BPM][1]
@@ -150,19 +149,24 @@ BPM Processes can be effectively used from the way customers are acquired, on-bo
 a. Loan processing time was reduced by 40 percent   
 b. Each loan processor was able to successfully complete 25 percent more loans
 c. Loan Processing Department costs were reduced by 20 percent
-d. Loan Application over Internet doubled </br>
+d. Loan Application over Internet doubled </br></br>
    
+#  
+</br>
 **Step: 2 Succeed with Short-term projects -** Process improvement initiatives must deliver quantifiable successes for stakeholder. By working on manageable project, one can deliver value to the business quickly, ensuring commitment, funding, and success of subsequent projects. Identifying Processes that will deliver quick results is very important. Such as :-
 
 a. Processes that have high Customer dissatisfaction
 b. Processes that have huge Bottlenecks and where lot of pile-on of work happens
 c. Processes that are heavily manual and where efficient process handling can save money
 d. Internal Processes where Employee Satisfaction can be improved
-e. Processes that can be easily streamlined, etc </br>**Step: 3 Extend process improvements -** It is important to continuously expand with short-term measurable BPM projects across the business. Leverage and share experience along the way to truly build a process improvement program within the business.
+e. Processes that can be easily streamlined, etc </br></br>**Step: 3 Extend process improvements -** It is important to continuously expand with short-term measurable BPM projects across the business. Leverage and share experience along the way to truly build a process improvement program within the business.
 
-<a name="bpm_proj_failure"/></a>
-## Reasons for BPM Project failure
+#  
 </br>
+<a name="bpm_proj_failure"/></a>
+### Reasons for BPM Project failure
+</br>  
+
 Any one of the following elements can spell disaster for your BPM project. Upfront planning needs to take each of these elements into account to ensure success.
 
 1. Choosing the wrong project
@@ -205,22 +209,20 @@ Process Design encompasses both the identification of existing processes and the
 
 ####Modeling  
 
-Modeling takes the theoretical process design and introduces combinations of variables to check how business react to various conditions. In essence it involves running [**Process Simulations**](#bpm_prcs_simulation) for "what-if analysis" on the processes. </br></br>
+Modeling takes the theoretical process design and introduces combinations of variables to check how business react to various conditions. In essence it involves running [**Process Simulations**](#bpm_prcs_simulation) for "what-if analysis" on the processes. 
 
 ####Execution  
 
 For execution of BPM Project, its important to understand the required [**Specification for Implementation**](#bpm_impl) as discussed in following section. The best way to execute BPM Projects is to use [BPM software vendors](#bpm_vendors). The [**Major Software Components**](#bpm_platform) that are required in a BPM Platform is discussed in a separate section.
 
-#  
 ####Monitoring  
 
-Monitoring encompasses the tracking of individual processes, so that information on their state can be easily seen, and statistics on the performance of one or more processes can be provided. Business Process Monitoring and Business Analytics are key functionalities supported in End User Interface of BPM Software. </br></br>
+Monitoring encompasses the tracking of individual processes, so that information on their state can be easily seen, and statistics on the performance of one or more processes can be provided. Business Process Monitoring and Business Analytics are key functionalities supported in End User Interface of BPM Software.
 
 ####Optimization
 
-Process optimization includes retrieving process performance information from modeling or monitoring phase; identifying the potential or actual bottlenecks and the potential opportunities for cost savings or other improvements; and then, applying those enhancements in the design of the process. Overall, this creates greater business value. 
+Process optimization includes retrieving process performance information from modeling or monitoring phase; identifying the potential or actual bottlenecks and the potential opportunities for cost savings or other improvements; and then, applying those enhancements in the design of the process. Overall, this creates greater business value.
 
-</br>
 <a name="bpm_impl"/></a>
 ### BPM Implementation Plan - Be *FASTER*
 </br>
@@ -281,9 +283,10 @@ The figure below shows high-level overview of BPM Platform. </br>
 -->
 </br>  
 
+#  
+</br>
 As can be seen in the figure the following are some of the major software components that make up BPM Platform. 
-</br>
-#### Process Participant Components 
+### Process Participant Components 
 
 This include :-
 1. **Web UI -** This is the Workspace Component for process monitoring, management dashboards, and task inboxes. Further this helps Process Participants to track process trends, show bottlenecks and make suggestions for dealing with bottlenecks.
@@ -291,7 +294,7 @@ This include :-
 2. **Enterprise Mobility -** This is the Mobile interface that enables employees secured access to key business processes, tasks, data, and reports in realtime and  on-the-go.
 
 3. **Collaboration Tools —** Facilitates effective communication for both intra- and inter departmental, through discussion forums, dynamic workspaces, and message boards.
-#### Execution Environment Components
+### Execution Environment Components
 
 This include :-
 1. **Workflow Processor** is the execution of Process Model where in the Business Process Engine executes individual process and Business Rule Engine executes the logic flow between the processes. The workflow engine is the key to building a process management application that will organize, control and monitor the work on every process during the execution of a process instance. 
@@ -302,29 +305,29 @@ This include :-
 
 4. **Business Event Processor** is used to send, receive and process message events for asynchronous process communication. Business Event Processor enables an organization to set Rules and Timers to detect and send events taking place during the execution of the Business Process Model as well as receive and process messages to trigger relevant business processes. More details in Business Event Processing.
 
-5. **Analytics Engine** assists in **Predictive Analytics** to create prediction models for future process activities, real-time analysis and reporting. Analytics Engine is also useful for **Postmortem Analytics** of process models to view inefficiencies and bottlenecks measured against key performance indicators (KPIs). 
+5. **Analytics Engine** assists in **Predictive Analytics** to create prediction models for future process activities, real-time analysis and reporting. Analytics Engine is also useful for **Postmortem Analytics** of process models to view inefficiencies and bottlenecks measured against key performance indicators (KPIs). </br>
 
-#### Designer Toolbox
+#  
+### Designer Toolbox
 
-Designer Toolbox enables process modeling, business rule definition, event specifications, definition of  key performance indicators (KPI’s), process development, and design of user interfaces. Most BPM Vendors have separate  designer tool for Business People and Technical People.</br></br>
+Designer Toolbox enables process modeling, business rule definition, event specifications, definition of  key performance indicators (KPI’s), process development, and design of user interfaces. Most BPM Vendors have separate  designer tool for Business People and Technical People.
 
-#### Process Monitoring Tool
+### Process Monitoring Tool
 
-Process Monitoring Tool is part of designer tool to generate the monitoring models necessary for run-time monitoring of BPM processes together with reporting and analysis facilities, executive dashboards, etc.</br></br>
+Process Monitoring Tool is part of designer tool to generate the monitoring models necessary for run-time monitoring of BPM processes together with reporting and analysis facilities, executive dashboards, etc.
 
-#### Metadata Repository
+### Metadata Repository
 
 Metadata Repository that contains process repository, rules and events repository. For appropriate management of repository, its important that BPM platform supports version control, hierarchical categorization, search, and role-based security for controlled access.
 
-#  
 <a name="bpm_prcs_simulation"/></a>
-#### Process Simulation
+### Process Simulation
 
-Process Simulation component allows to test your processes before going live with them. Its also useful to run the processes through what-if scenarios for adjustments and fine-tuning of the model. Process simulation is one of the iterative steps in the development of an effective BPM system. Typically the importance is discovered by analyzing the results of the simulation, making necessary changes, and rerunning the simulation — possibly several times.</br></br>
-#### Document Management
-Document Management component provides a system for storing and securing electronic documents, images, and other files. Full text search and quick content filters ensure one can quickly find key documents to share in processes and tasks. Version Control, Sharing, Document Generation, Mobile Access, etc are other key features of Document Management System.</br></br>
+Process Simulation component allows to test your processes before going live with them. Its also useful to run the processes through what-if scenarios for adjustments and fine-tuning of the model. Process simulation is one of the iterative steps in the development of an effective BPM system. Typically the importance is discovered by analyzing the results of the simulation, making necessary changes, and rerunning the simulation — possibly several times.
+### Document Management
+Document Management component provides a system for storing and securing electronic documents, images, and other files. Full text search and quick content filters ensure one can quickly find key documents to share in processes and tasks. Version Control, Sharing, Document Generation, Mobile Access, etc are other key features of Document Management System.
 
-#### Integration Component
+### Integration Component
 Integration Component that integrates easily using SOA, Web Services, Messaging Systems, etc to enterprise systems as well as external systems. This is important to protect the investments done by enterprise on Technology Assets and leverage them to create an Integrated BPM Solution.   
 <a name="bpm_process_design"/></a>
 ## Process Design
@@ -342,8 +345,8 @@ Business Process Model and Notation (BPMN) is a standard for business process mo
 
 The objective of BPMN is to support business process management, for both technical users and business users, by providing a notation that is intuitive to business users, yet able to represent complex process semantics. 
 
-The BPMN specification also provides a mapping between the graphics of the notation and the underlying constructs for execution, particularly Business Process Execution Language (BPEL).</br>
-</br>
+The BPMN specification also provides a mapping between the graphics of the notation and the underlying constructs for execution, particularly Business Process Execution Language (BPEL).
+
 ### BPMN Elements
 </br>
 BPMN models consist of simple diagrams constructed from a limited set of graphical elements. For both business users and developers, they simplify understanding business activities flow and process. BPMN's four basic element categories are:
@@ -351,21 +354,22 @@ BPMN models consist of simple diagrams constructed from a limited set of graphic
 1. [**Flow Objects**](#bpmn_flow_objects)
 2. [**Connecting Objects**](#bpmn_connecting_objects)
 3. [**Swimlanes**](#bpmn_swim_lanes)
-4. [**Artifacts**](#bpmn_artifacts)</br>
+4. [**Artifacts**](#bpmn_artifacts)
 
-#  
 <a name="bpmn_flow_objects"/></a>
 ###Flow objects 
-</br>
+
 Flow objects are the main describing elements within BPMN, and consist of three core elements:
 
 1. [**Events**](#bpmn_events)
 2. [**Activities**](#bpmn_activities)
-3. [**Gateways**](#bpmn_gateways)</br> 
+3. [**Gateways**](#bpmn_gateways) 
 
+#  
+</br>
 <a name="bpmn_events"/></a>
 #### Events
-</br>
+
 Events are anything that "happens" during the course of a business process. Events can be a Process Trigger and/or a Process Result. Events are also classified as Catching (for example, if catching an incoming message starts a process) or Throwing (such as throwing a completion message when a process ends). 
 
 An Event is represented by a circle in a Business Process Model. There are three types of Events based on when they occur in the flow of a process - **Start, Intermediate, and End** represented as 
@@ -375,10 +379,10 @@ An Event is represented by a circle in a Business Process Model. There are three
 <!--
 [img_bpmn_event]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriseArchPlan/BPMN_Event_Types.png "BPMN Event Notation"     
 -->
-</br>
+
 <a name="bpmn_activities"/></a>
 #### Activities
-</br>
+
 An activity is any work that is being performed in a process. An Activity is represented by a rounded-corner rectangle in a Business Process Model. Activity can be a Task or a Sub-process. Sub-process can be either Transaction or Call Activity as shown in the figure below :-
 
 ![Event Notation][img_bpmn_activity]. 
@@ -387,6 +391,8 @@ An activity is any work that is being performed in a process. An Activity is rep
 <!--
 [img_bpmn_activity]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GK_EnterpriseArchPlan/BPMN_Event_Types.jpg "BPMN Activities"     
 -->
+
+#  
 </br>
 <a name="bpmn_gateways"/></a>
 #### Gateways
@@ -408,6 +414,7 @@ A Gateway is used to control the flow of a process. Gateways handle the forking,
 7. **Parallel Event Based -**Parallel process are started based on an event without any evaluation.
 
 #  
+</br>
 <a name="bpmn_connecting_objects"/></a>
 ###Connecting objects 
 </br>
@@ -425,6 +432,7 @@ Flow Objects are connected together using Connecting Objects. There are three ty
 3. **Association -** An Association is used to show relationships between data, text and other Artifacts and flow objects in a process. It is represented by a dotted line.
 
 #  
+</br>
 <a name="bpmn_swim_lanes"/></a>
 ###Swimlanes 
 </br>
@@ -441,6 +449,7 @@ Swimlanes serve as a mechanism to organize activities and responsibilities on a 
 2. **Lanes -** A Lane is a sub-partition within a Pool. Sequence Flow can cross the lines of a Lane. However, it is not accepted to have Message Flow crossing between objects in Lanes of the same pool. 
 
 #  
+</br>
 <a name="bpmn_artifacts"/></a>
 ###Artifacts
 </br>
@@ -457,8 +466,10 @@ Artifacts allow developers to bring some more information into the model/diagram
 2. **Group -** A Group is used to document the grouping of any type of process objects. Groupings can cross lanes as needed. Groupings are represented by a rounded rectangle with a dashed line.
 3. **Annotation -** Annotations can be used to add textual comments within a process diagram. 
 
+#  
+</br>
 <a name="bpm_buss_rule"/></a>
-## Business Rule Management
+### Business Rule Management
 </br>
 The basic operational value proposition of BPM is the ability to process more for less effort with higher predictability and consistency. To achieve this, automation of high value Operational Decision is a must. This Decisions are based on Business Rules that are based on policies and procedures as well as derived from current Business Analytics and future Predictive Analytics.  
 
@@ -490,7 +501,7 @@ Types of Event Supported are :-
 
 2. **Rule Based Events -** These events are triggered based on the execution of Business Rule. Like any other events, Rule Based Events also triggers Asynchronous Process Communication.
 
-3. **Message Events -** Message Events are events that are detected, received or intercepted by Event Processor and processed based on rules enabling automated decision making. Message events can be unstructured data such as client letters and communications, emails, policies, media attachments, event feeds, social networking feeds, etc.
+3. **Message Events -** Message Events are events that are detected, received or intercepted by Event Processor and processed based on rules enabling automated decision making. Message events can be unstructured data such as client letters and communications, emails, policies, media attachments, event feeds, social networking feeds, and a range of real-time collaboration tools.
 
 #  
 </br>
@@ -512,6 +523,8 @@ This section is an overview of 3 different Software Vendors who specialize in de
 
 Here is a brief overview of some of the Software Vendors who offer BPM Platform as their Product and Solution Offering. Here 3 prominent BPM solution providers are studied at a high level. The intention is to pull out salient points of each solution, rather than to provide an exhaustive, in-depth analysis of each solution. 
 The following write up is purely the author's opinion and the readers are expected to do their own due deligence.
+
+
 
 1. [**Appian BPM**](#appian) 
 2. [**Oracle BPM**](#oracle) 
@@ -581,21 +594,23 @@ Oracle has brought together a number of different technologies under its Fusion 
 
 9. **Oracle BAM** provides a full range of business activity monitoring facilities for monitoring processes and reporting through dashboards.
 
+
 Following are the author's view of Oracle BPM Offerings :-
 
-1. Oracle BPM offers **Multiple tools for Process Design**, they are Oracle BPM Studio and Oracle Business Process Composer. The Composer is primarily intended for Business Users. While the Studio is intended for developers to build on the initial process design done on Composer and implement the necessary technical components and integration. There is also an additional tool for Process Participants to collaborate using Process Workspace. All the 3 tools are based on roles, which adds usability but sometimes due to interchangeability of the tools can cause problems.
+1. Oracle BPM offers **Multiple tools for Process Design**, they are Oracle BPM Studio and Oracle Business Process Composer. The Composer is primarily intended for Business Users and offers a more user-friendly interface with lower technical skills requirements. Where in the Process Designers in a collaborative environment can create the initial process design as a Process Blueprint which can now be passed to Studio for the developers to implement the necessary technical components and integration. There is also an additional tool for Process Participants to collaborate using Process Workspace. All the 3 tools are based on roles, which adds usability but sometimes due to interchangeability of the tools can cause problems.
 
 2. On the **Integration** front, Oracle provides a range of adapters within its Oracle SOA Suite, and these can be leveraged by Oracle BPM by plugging them into the process design flow. Oracle offers adapters to its own applications and SAP, as well as a number of legacy environments such as IBM’s CICS application system.
 
 3. **Import/export** facilities are good between the different Oracle environments. As seen in point 1 the process design can be shared across multiple tools. Also the Integration Adapters built in the Oracle SOA Suite can be reused in the process design environments. In addition, Oracle’s use of standards ensures wider third-party import/export capabilities.
 
-4. Oracle is able to leverage the extensive functionality in its WebLogic Java application server environment, enabling high levels of **Scalability and Availability**. 
+4. Oracle is able to leverage the extensive functionality in its WebLogic Java application server environment, enabling high levels of **Scalability and Availability**. End-to-end performance monitoring of processes helps to ensure that run-time performance can be optimized as much as possible. 
 
 5. Oracle BPM suite is built on **Standards**. Process design is BPMN 2.0 compliant, and XPDL can also be used to pass models around between different tools. Portal products can pick up the JSF-compliant web-based user interfaces for display. Artefacts can be imported and exported between most components in industry standard formats. Even at the lower levels, Oracle supports a wide range of SOA and web services standards too for integration purposes. 
 
+
 6. **Limited Usability of Human Task -** The human task flow doesn't seem to fit  comfortably with the Oracle business process design. This is because User Interface for human workflow is separate from the process design tools. 
 
-7. **Limitation of Dynamic Process Change -** There is also a limited capability to change the processes dynamically; although the process definitions can be changed. Process Composer does enable business rules to be altered at runtime, offering a degree of flexibility. 
+7. **Limitation of Dynamic Process Change -** There is also a limited capability to change the processes dynamically; although the process definitions can be changed, Process Composer does enable business rules to be altered at runtime, offering a degree of flexibility. 
 
 8. **Complicated Oracle packaging -** Users will need to completely understand what licenses they will need to purchase in order to properly evaluate Oracle offerings. 
 
@@ -604,11 +619,11 @@ Following are the author's view of Oracle BPM Offerings :-
 <a name="ibm"/></a>
 ## IBM BPM
 </br>
-IBM has been involved in BPM for a number of years, with its solutions being a natural extension of the underlying WebSphere-based SOA platform. The new IBM Business Process Manager represents the merging of the WebSphere Process Server BPM capabilities with the Lombardi technology, the company IBM acquired. IBM’s approach to BPM is focused around the process, and this is reinforced by the substantial pool of template processes it has assembled across a wide range of industries. The key components that make up the IBM BPM Offerings are :- 
-</br>
+IBM has been involved in BPM for a number of years, with its solutions being a natural extension of the underlying WebSphere-based SOA platform. The new IBM Business Process Manager represents the merging of the WebSphere Process Server BPM capabilities with the Lombardi technology, the company IBM acquired. IBM’s approach to BPM is focused around the process, and this is reinforced by the substantial pool of template processes it has assembled across a wide range of industries. The key components that make up the IBM BPM Offerings are: 
+
 ### Process Designer 
 
-This is one of the two Process Design Tool that IBM Provides. The other being Integration Developer. Here are the salient features of this Process Design Tool
+This is one of the two Process Design Tool that IBM Provides. The other being Integration Developer. Here are salient features of Process Design Tool
 
 1. Process Designer is the BPMN-based **Process Modelling Tool** for building business processes. 
 2. Process Designer is meant for **Business Users** such as business analysts and process designers. 
@@ -618,11 +633,12 @@ This is one of the two Process Design Tool that IBM Provides. The other being In
 
 ### Integration Developer 
 
-This is the other Process Design Tool meant for technical IT staff. Integration Developer is the Business Process Execution Language (BPEL) based tool for designing SOA service and back-end orchestration at the application to application level. The key integration between the two design tool is that the process flow designed in the Integration Developer can be plugged into the processes created with Process Designer. Integration Developer is additionally used to define and assemble SOA services and record in Process Center.
-</br>
+This is other Process Design Tool meant for technical IT staff. Integration Developer is the Business Process Execution Language (BPEL) based tool for designing SOA service and back-end orchestration at the application to application level. The key integration between the two design tool is that the process flow designed in the Integration Developer can be plugged into the processes created with Process Designer. Integration Developer is additionally used to define and assemble SOA services and record in Process Center.
+
 ### Process Center 
 
-Process Center component provides a number of powerful facilities to aid in process design. </br>They are :- 
+Process Center component provides a number of powerful facilities to aid in process design. 
+</br> They are :-
 
 1. Process Center is the IBM Business Process Manager **Asset Repository** where all process activity is stored including the Business Rules, and from where processes are deployed.
 2. Various created components like integration flows generated by Integration Designer can be placed in **Toolkits** with-in Process Center and can be shared with other users across multiple different process design projects.
@@ -632,16 +648,18 @@ Process Center component provides a number of powerful facilities to aid in proc
 6. Process Center supports both **Process Replay and Simulation**. The replay function allows a process designer to immediately try the part of the process that is currently being developed to check if it is correct, and then the full process can be simulated with varying degrees of load. 
 7. **Versioning** support is all managed and governed from Process Center and allows Roll Backward and Forward Capability through the different versions to make comparisons. 
 
+#  
 ### IBM Process Server 
 
 At run-time, BPM processing for both BPMN and BPEL flows is carried out by IBM Process Server. This BPM engine runs within a WebSphere application server, and handles execution of all the deployed processes. IBM Process Server provides access to the integration infrastructure, process monitoring, events processing and rules execution. Process Server includes a wide range of adapters to different packages and back-end systems, and these can be brought into the flow through the Integration Developer.
 
 ### IBM Business Process Manager 
 
-IBM Business Process Manager supports a range of standards, with BPMN 2.0 for process modelling and exchange, and SOA standards like WS-Security for lower-level integrations. This also provides federated task list support that offers visibility across all process participants.</br>
-</br>
+IBM Business Process Manager supports a range of standards, with BPMN 2.0 for process modelling and exchange, and SOA standards like WS-Security for lower-level integrations. This also provides federated task list support that offers visibility across all process participants.
+</br> </br> 
 
-Following are the author's view on IBM BPM Offerings :-
+
+Following are the **author's view** of IBM BPM Offerings :-
 
 1. The decoupling of Process Designer and Integration Developer ensures that business users designing processes with Process Designer can hand off any technical integration work needed to the development teams, and then pick up and plug in the resulting artefact that will have been created by the developers with Integration Developer. 
 
@@ -649,7 +667,7 @@ Following are the author's view on IBM BPM Offerings :-
 
 3. Process Designer uses layered approach to provides all the functionality expected in a BPM design tool, such as swim lanes, forms creation, BPMN models and drag-and-drop facilities. This avoids complexity, where in the average process designer is offered a simplified environment, with the additional layers of functionality accessible through individual properties.
 
-4. Process Center allows Collaborative editing facility, it is based on library merge capabilities rather than check-in/check-out; as a result, all participants can freely edit the process as required without waiting for someone else to put the model back before making changes. 
+4. Process Center allows Collaborative editing facility. It is based on library merge capabilities rather than check-in/check-out; as a result, all participants can freely edit the process as required without waiting for someone else to put the model back before making changes. 
 
 5. Process Center holds all the process-related assets, and the same repository is used for both design time and run-time needs, hence deployment is easy and fast.  In fact, a new process can be deployed with a single click. 
 
@@ -661,13 +679,12 @@ Following are the author's view on IBM BPM Offerings :-
 
 9. IBM offers a wide range of industry specific and generic process templates together with assets such as documentation and guidance. 
 
-10. IBM Cloud platform 'Blueworks Live', provides an environment where users across the world can collaborate on process discovery and design through forums, bulletin boards, access to template libraries and other social networking facilities. Further IBM also offers process automation in the Cloud through Blueworks, which is mainly targeted at lightweight processes common in many companies such as on-boarding a new employee or booking travel.
-
-</br> 
+10. IBM cloud platform 'Blueworks Live' provides an environment where users across the world can collaborate on process discovery and design through forums, bulletin boards, access to template libraries and other social networking facilities. Further IBM also offers process automation in the Cloud through Blueworks, which is mainly targeted at lightweight processes common in many companies for handling relatively simple activities such as on-boarding a new employee or booking travel.
+ 
 <a name="bpm_vendors_summary"/></a>
-### Summary
+## Summary
 </br>
-Here is the brief summary of the 3 BPM solution analysed here :-
+Here is the brief summary of the 3 BPM solution analysed here :- 
 
 1. Appian is a fast and effective solution for departmental-style, personal productivity processes where the focus is on optimizing human interaction, particularly with the aid of the latest social networking technologies. 
 2. Oracle provides a solid BPM implementation especially for their Fusion Middleware users looking to build up some BPM capabilities for their processes. 
@@ -684,13 +701,12 @@ Here is the brief summary of the 3 BPM solution analysed here :-
 -->
 </br>  
 
-BPM In Action takes a look at some of the use cases of BPM. For every use case it specifies the Business Problem, the participants in the Business Process, new BPM Process and the Benefits of using BPM. Here are the list of uses cases :- 
+BPM In Action takes look at some of the use cases of BPM. For every use case it specifies the Business Problem, the participants in the Business Process, new BPM Process and the Benefits of using BPM. Here are the list of uses cases: 
 
 1. [**BPM for Insurance Claims**](#bpm_ins_claims)
 2. [**BPM for Loan Applications**](#bpm_loan_appln)
 3. [**BPM for Employee Onboarding**](#bpm_emp_onboard)
 
-</br>
 <a name="bpm_ins_claims"/></a>
 ### BPM for Insurance Claims
 </br>
@@ -709,7 +725,6 @@ BPM In Action takes a look at some of the use cases of BPM. For every use case i
 
 **BPM Process Benefits:** The benefits using BPM system in Claim Process is that there is a clear process visibility and control - to guarantee that the right contractor is assigned, that the repair workflow proceeds smoothly, that service quality meets high standards, and that proper internal and customer reporting occurs at every stage. 
 
-</br>
 <a name="bpm_loan_appln"/></a>
 ### BPM for Loan Applications
 </br>
@@ -717,7 +732,7 @@ BPM In Action takes a look at some of the use cases of BPM. For every use case i
 
 **Process Participants:** Loan agents and officers,bank resources from credit evaluation, underwriting, fulfilment, and Senior Management 
 
-**BPM Process Improvement:** The following are the Process Steps :- 
+**BPM Process Improvement:** The following are the Process Steps :-
 
 1. Customer applies for a loan using standardized forms created using BPM System
 2. A BPM platform with an integrated document management system integrates all customer interactions and related customers documents across all products. The system automates the creation of the highly-detailed loan application binder that the customer receives. 
@@ -730,7 +745,6 @@ BPM In Action takes a look at some of the use cases of BPM. For every use case i
 2. BPM increased efficiency by the ability to track applications through the entire loan approval system. 
 3. Customers not only have clear visibility of the status but also since it frees up the agents, they also receive additional time and attention from their agents.
 
-#  
 <a name="bpm_emp_onboard"/></a>
 ### BPM for Employee Onboarding
 </br>
