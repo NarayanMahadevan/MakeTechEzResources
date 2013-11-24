@@ -1,14 +1,14 @@
 # Step 1: Get On To C/C++ Intro
 </br>
 
-This objective of this step is to introduce typical C++ development enviromnet, to be able to write simple programs in C++, to understand variable declaration and scope, look into input and output operators as wells as arthmatic operators. Note that all the concepts are introduced using **Side Program** to explain the concept. The Concepts introduced in this step are:
+This objective of this step is to introduce typical C++ development environment, to be able to write simple programs in C++, to understand variable declaration and scope, look into input and output operators as wells as arithmatic operators. Note that all the concepts are introduced using **Side Program** to explain the concept. The Concepts introduced in this step are:
 
 1. [**C++ Development Environment**](#c++_dev_env)
 2. [**Setup C++ Environment**](#c++_setup) 
 3. [**Overview of C++**](#c++_overview)
 4. [**Helloworld C++ Program**](#c++_helloworld)
 5. [**Compile and Run Helloworld Program**](#c++_execute)
-6. [**Decalration of Variables**](#declare_vars)
+6. [**Declaration of Variables**](#declare_vars)
 7. [**Type and Scope of Variables**](#var_scope)
 8. [**Output & Input Operators**](#output_input_oper)
 9. [**Arithmatic Operators**](#arth_oper) 
@@ -51,7 +51,7 @@ Before you start programming in C++, it is important you have the environment to
 </br>
 This will be used to type your program. Examples of few editors include Windows Notepad, OS Edit command, Brief, Epsilon, EMACS, and vim or vi. 
 
-Our recomendation is [**gedit**](https://projects.gnome.org/gedit/) from GNOME. Its a free software. Linux fans will already be familiar with the world of GNOME but gedit has brought it to a wider audience by providing the default GNOME editor on Windows and Mac. This can be **downloaded** from <http://gedit.en.softonic.com>. The advantages are:
+Our recommendation is [**gedit**](https://projects.gnome.org/gedit/) from GNOME. Its a free software. Linux fans will already be familiar with the world of GNOME but gedit has brought it to a wider audience by providing the default GNOME editor on Windows and Mac. This can be **downloaded** from <http://gedit.en.softonic.com>. The advantages are:
 
 * One Editor for multiple OS Environment
 * Wide range of languages supported by Gnome include C, C++, Java, HTML, XML, Python and Perl. 
@@ -91,12 +91,12 @@ While installing MinWG, at a minimum, install gcc-core, gcc-g++, binutils, and t
 <a name="c++_overview"/></a>
 ## Overview of C++
 </br>
-The C++ programming language is built on C as indicated by increment operator ++. C++ is an Object Oriented Programming Language. Just like C, C++ built-in data types are char, short, int, long, float, double, etc. Further C++ encourges building your own data type and data type heirarchies to describe effectively the real-world problems.  
+The C++ programming language is built on C as indicated by increment operator ++. C++ is an Object Oriented Programming Language. Just like C, C++ built-in data types are char, short, int, long, float, double, etc. Further C++ encourages building your own data type and data type hierarchies to describe effectively the real-world problems.  
 
-So C++ encourages you to think in terms of Objects which is associated with the user defined data type stored in a chunck of memory. So essentially C++ is made up of
+So C++ encourages you to think in terms of Objects which is associated with the user defined data type stored in a chunk of memory. So essentially C++ is made up of
 
 1. **Class** - This is essentially a User Defined Data Type. e.g. We can define a class called Dog which is essentially an Animal. We can describe Dog by its Color, Breed, Name, etc as well as Dogs behaviour by Barking, Wagging, Eating, etc.
-2. **Object** - This is an instance of a Class having a chunck of memory. So taking the same e.g. of Dog Class - Dog with Name - Slash, Breed - Labrador, Color - White is an Object with proper value for all the attributes describing the Dog.
+2. **Object** - This is an instance of a Class having a chunk of memory. So taking the same e.g. of Dog Class - Dog with Name - Slash, Breed - Labrador, Color - White is an Object with proper value for all the attributes describing the Dog.
 3. **Methods** - This are basically behaviours or actions defined in the class. So taking the example of Dog, the behaviours are Barking, Wagging, Eating, etc.
 4. **Variables** - Variables describes the attributes of class. So for Dog, the attributes are Color, Breed, Name, etc. 
 
@@ -105,7 +105,7 @@ So C++ as an Object Oriented Language supports
 1. **Abstraction** - This can be Data Abstraction or Method Abstraction which are hiding and showing the necessary attributes and behaviours of the class.
 2. **Encapsulation** - Encapsulation is placing the data and the functions that work on that data in the same place. As you can see the example of Dog - the attributes and behaviours of the Dog are defined in the Class
 3. **Inheritance** - Helps in code re-usability. As the name suggests Inheritance is the process of forming a new class from an existing class. So we could have Animal as the Base Class or Parent Class and Dog inheriting from the Animal.
-4. **Polymorphism** - Poly means many so C++ allows users to define the same behavior many time with different method parameters. So for e.g. in Dog class, as we know Dog barks differently at different times based on Hunger, excitement, On seeing Strangers, etc. Thus we could define same method Barking for different scenarios. 
+4. **Polymorphism** - Poly means many so C++ allows users to define the same behaviour many time with different method parameters. So for e.g. in Dog class, as we know Dog barks differently at different times based on Hunger, excitement, On seeing Strangers, etc. Thus we could define same method Barking for different scenarios. 
 5. **Overloading** - This is similar to Polymorphism where in Operator or Function is overloaded.
 
 <a name="c++_helloworld"/></a>
@@ -168,7 +168,7 @@ This command compiles hello.cpp directly into an executable program named "hello
 
 	$ g++ -c hello.cpp
 
-The command transaltes the source code hello.cpp to hello.o object code file.  This is the advantage of the Method 2, in that only the changed files can be compiled to its corresponsing object code file. 
+The command translates the source code hello.cpp to hello.o object code file.  This is the advantage of the Method 2, in that only the changed files can be compiled to its corresponding object code file. 
 
 **Step 3:** Its applicable to Method 2 where in all the Object Code file can be linked to produce executable code. Here hello.o is linked to produce hello executable program. For more information refer [Compiling C++ * Program link](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html).
   
@@ -186,7 +186,7 @@ Hello World
 #  
 As the first step lets learn how to declare variables. Variables are containers that can store different values. In C, variables are statically typed, which means that you must explicitly state what kind of value they will hold.  
 
-The format for Veriable Definition is as shown below
+The format for Variable Definition is as shown below
 
 </br>  
 ![Declare Variables](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/DeclareVariables.png "Declare Variables") 
@@ -247,18 +247,18 @@ If you are curious about how much memory your C++ implementation allocates for t
 This section discusses different variable types. This includes 
 
 1. **Local Variable** 
-2. **Global Vairable**
+2. **Global Variable**
 3. **Constants**
 4. **Macros**
 5. **Typedef**
  
-#### Local Vairable  
+#### Local Variable  
 
 1. A variable declared inside a function definition is said to be a **local variable**.
 2. The memory allocated for Function Parameters and Local Variables are **reallocated** as soon as the corresponding function has finished executing, so parameters and local variables are said to have **dynamic extent**.
 3. Function Parameters and local variables can be evaluated and assigned only in the function in which they are declared. Accordingly, parameters and local variables are said to have **local scope**.
 
-#### Global Vairable 
+#### Global Variable 
 
 1. A variable defined outside of any function definition is said to be a **global variable**.
 2. The memory set aside for a global variable is never reallocated, so global variables are said to have **static extent**.
@@ -365,7 +365,7 @@ Write a Program where unsigned int is assigned as ColorComponent and ColorCompon
 Lets see how C++ handles output statements essentially cout and the output operator (<<). 
 
 a. **cout** - cout is actually a variable, and like all variables, it is the name of a chunk of memory
-b. **Output Operator "<<"** - The chunk of memory held by cout vairable is only useful to output operator to display on the console.
+b. **Output Operator "<<"** - The chunk of memory held by cout variable is only useful to output operator to display on the console.
 
 ***
 
@@ -375,7 +375,7 @@ For e.g.
 
 Output Operator is evaluated from Left to Right. So cout first stores the String "The volume of the box car is " then after display it replaces the String with the value of the expression  10 * 9 * 40 and then endl i.e. new line.  
 
-Also Note that the **Output Operator has precendence lower than the Arithmetic Operator** and hence the volume 10 * 9 * 40 is computed first before assigning to cout variable.
+Also Note that the **Output Operator has precedence lower than the Arithmetic Operator** and hence the volume 10 * 9 * 40 is computed first before assigning to cout variable.
 ***
 
 #### Format the Output
@@ -492,7 +492,7 @@ Arithmetic Operators are either
 
 C++ Expressions are evaluated first on Precedence and than if operators have same Precedence then on Associativity i.e. either the expression is evaluated left to right or right to left. 
 
-* **Precedence** - Unary Operators have highest precedense followed by "*, /, %" operators and than by "+ or -" operators. 
+* **Precedence** - Unary Operators have highest precedence followed by "*, /, %" operators and than by "+ or -" operators. 
 * **Associativity** - Unary Operators are evaluated from Right to Left and the remaining Arithmetic Operators Left to Right.
 
 #### SIDE PROGRAM: &nbsp;6
@@ -519,23 +519,23 @@ This program shows how C++ handles precedence and associativity.
     main ( ) { 
 
         // Equivalent to 6 + (3 * 2) = 12 And not (6 + 3) * 2 = 18
-        cout << "Expression = 6 + 3 * 2, with Higher Precedense: " 
+        cout << "Expression = 6 + 3 * 2, with Higher Precedence: " 
              << 6 + 3 * 2 << endl; 
 
         // Equivalent to 6 - (-3) = 9 
-        cout << "Expression = 6 - -3, with Unary Opetrator -3: " 
+        cout << "Expression = 6 - -3, with Unary Operator -3: " 
              << 6 - -3 << endl; 
 
-        // Equivalet to: (6 / 3) / 2 = 1
-        cout << "Expression = 6 / 3 / 2, with Same Precedense (L to R): " 
+        // Equivalent to: (6 / 3) / 2 = 1
+        cout << "Expression = 6 / 3 / 2, with Same Precedence (L to R): " 
              << 6 / 3 / 2 << endl;       
            
         // Equivalent to (6 / 3) * 2 = 4 And not 6 / (3 * 2) = 1     
-        cout << "Expression = 6 / 3 * 2, with Same Precedense (L to R): " 
+        cout << "Expression = 6 / 3 * 2, with Same Precedence (L to R): " 
              << 6 / 3 * 2  << endl;
 
         // Equivalent to (6 * 3) / 2 = 9 And not 6 * (3 / 2) = 6    
-        cout << "Expression = 6 * 3 / 2, with Same Precedense (L to R): " 
+        cout << "Expression = 6 * 3 / 2, with Same Precedence (L to R): " 
              << 6 * 3 / 2  << endl;
     }
 
@@ -594,9 +594,9 @@ Determine the value of global variable a using expression `a = 2/3*b + c*c - c%c
         cout << "Enter any two values: \a";
         cin >> b >> c;
 
-        // Use Arthmatic Expression to find value of a
+        // Use Arithmetic Expression to find value of a
         // Checkout the Operator Precedence and associativity to understand how
-        // compiler resolves arthmatic expression.
+        // compiler resolves arithmatic expression.
         a = 2/3*b + c*c - c % c + PERC_VAL(b, c);
 
         // Output the Result

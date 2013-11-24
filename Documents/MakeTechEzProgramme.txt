@@ -6,6 +6,12 @@ Slide 2:
 
     - According to the National Employability Report (NER) 2011, while India produces more than 500,000 engineers annually, only a miniscule 3.51 per cent are appropriately trained to be directly deployed on projects. Further, only 2.68 per cent are employable in IT product companies. 
 
+Slide 2A:
+
+    Engineers, Are They Employable?
+
+    - According to a survey conducted by US-based EC-Council (International Council for E-Commerce Consultants), By 2015, India needs at least 500,000 cyber professionals. Yet 99% Indian IT students incapable of secure coding. Further the report went on to say that only around 13% of IT students in India have some understanding of concepts, and that they can be trained in information security. While over 86% of them do not have requisite skills
+
 Slide 3:
 
     Experts Opinion

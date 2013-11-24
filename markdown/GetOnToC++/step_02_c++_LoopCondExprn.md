@@ -5,9 +5,9 @@ The Objective of this step is to introduce to C++ Predicates, Conditional Statem
 
 1. [**Boolean Expression**](#c++_bool_expr)
 2. [**One and Two way Conditional Statements**](#if_else_loop)
-3. [**The while Repitition Loop**](#while_loop)
+3. [**The while Repetition Loop**](#while_loop)
 4. [**do...while Repetition Statement**](#do_while_loop)
-5. [**The for Repitition Loop**](#for_loop)
+5. [**The for Repetition Loop**](#for_loop)
 6. [**Multi-way Conditional Statement**](#switch_loop)
 7. [**Logical Operators**](#logical_oper)
 
@@ -17,7 +17,7 @@ Finally the end of the section specifies a [**Programming Problem**](#prog_probl
 ## Boolean Expression
 </br>
 
-Boolean expression is an expression that produces a true or false result. In C++, a Boolean expression is an expression that produces either 0, meaning false, or any other integer, meaning true. C++ offers several expressions that test the relationship between pairs of numbers. They are categorized as Relational Operators and Equality Operators. The relational operators all have the same level of precedence and associate left to right. The equality operators both have the same level of pre- cedence, which is lower than that of the relational operators, and associate left to right.
+Boolean expression is an expression that produces a true or false result. In C++, a Boolean expression is an expression that produces either 0, meaning false, or any other integer, meaning true. C++ offers several expressions that test the relationship between pairs of numbers. They are categorized as Relational Operators and Equality Operators. The relational operators all have the same level of precedence and associate left to right. The equality operators both have the same level of precedence, which is lower than that of the relational operators, and associate left to right.
 
 ![Equality and Relational Operator][1]
 
@@ -53,7 +53,7 @@ Write a Program that tests the Equality and Relational operator between two numb
         int i = 50; 
         double d = 50.0; 
 
-        // Note that either the int is caseted as double or viceversa to apply 
+        // Note that either the int is casted as double or vice-versa to apply 
         // equal and relational operator between the two numbers
 
         cout << "i == (int) d    yields " << (i == (int) d)    << endl; 
@@ -140,7 +140,7 @@ Write a Program that reads the mark as input and outputs grades as well as pass 
     
 
 <a name="while_loop"/></a>
-## The while Repitition Loop
+## The while Repetition Loop
 </br>
 
 C++'s iteration statements enable functions to do computations over and over until a test has been satisfied. C++'s while statement, for example, consists of a Boolean expression, in parentheses, followed by an embedded statement:
@@ -201,10 +201,10 @@ Write a Program that reads a number and its corresponding power as inputs to cal
 	2 to power of 6 is: 64
 
 <a name="do_while_loop"/></a>
-## do...while Repitition Loop
+## do…while Repetition Loop
 </br>
 
-The do...while repetition statement is similar to the while statement. In the while state- ment, the loop-continuation condition test occurs at the beginning of the loop before the body of the loop executes. The do...while statement tests the loop-continuation con- dition after the loop body executes; therefore, the loop body always executes at least once.
+The do...while repetition statement is similar to the while statement. In the while statement, the loop-continuation condition test occurs at the beginning of the loop before the body of the loop executes. The do...while statement tests the loop-continuation condition after the loop body executes; therefore, the loop body always executes at least once.
 
 ##### SIDE PROGRAM # &nbsp;3
 
@@ -236,7 +236,7 @@ Write a Program that prints the 1 through 10 using do…while loop
 
 
 <a name="for_loop"/></a>
-## The for Repitition Loop
+## The for Repetition Loop
 </br>
 
 As you would see in while loops, the details that govern the looping appear in three places: the place where the counting variable is initialized, the place where it is tested, and the place where it is reassigned. Such distribution makes the looping difficult to understand. In case of for loop, there is an entry expression, followed by Boolean Expression, followed by continuation expression. 
@@ -365,14 +365,14 @@ C++ provides logical operators that are used to form more complex conditions by 
 
 ### Logical AND (&&) Operator
 
-Logical AND (&&) Operator is used to ensure that the two conditions are both true. For e.g. Student Grade is A if Semister Mark and Final Mark are greater then 90
+Logical AND (&&) Operator is used to ensure that the two conditions are both true. For e.g. Student Grade is A if Semester Mark and Final Mark are greater then 90
 
 	￼if ( ( semesterMark >= 90 ) && ( finalMark >= 90 ) ) 
 		cout << "Student grade is A" << endl;
 		
 ### Logical OR (||) Operator
 
-Logical OR (||) Operator is used to ensure atleast one of the two conditions are true. For e.g. Student Grade is A if atleast the Semister Mark or Final Mark is 90 or more
+Logical OR (||) Operator is used to ensure atleast one of the two conditions are true. For e.g. Student Grade is A if atleast the Semester Mark or Final Mark is 90 or more
 
 	￼if ( ( semesterMark >= 90 ) || ( finalMark >= 90 ) ) 
 		cout << "Student grade is A" << endl;
@@ -469,7 +469,7 @@ Write a program that takes student marks as user inputs. Checks if it is pass, f
         double percMark = 0.0;
         char grade;
 
-        // Variabes to hold number of students with A, B, C, and D grade and also 
+        // Variables to hold number of students with A, B, C, and D grade and also 
         // number of students passed and failed 
         int numAGrade = 0, numBGrade = 0, numCGrade = 0, numDGrade = 0;
         int numPassed = 0, numFailed = 0;

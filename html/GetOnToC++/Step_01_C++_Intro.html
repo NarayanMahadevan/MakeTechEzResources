@@ -1,0 +1,896 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Step 1: Get On To C/C++ Intro</title>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$$$','$$$']]}});</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>Step 1: Get On To C/C++ Intro</h1>
+
+<p></br></p>
+
+<p>This objective of this step is to introduce typical C++ development environment, to be able to write simple programs in C++, to understand variable declaration and scope, look into input and output operators as wells as arithmatic operators. Note that all the concepts are introduced using <strong>Side Program</strong> to explain the concept. The Concepts introduced in this step are:</p>
+
+<ol>
+<li><a href="#c++_dev_env"><strong>C++ Development Environment</strong></a></li>
+<li><a href="#c++_setup"><strong>Setup C++ Environment</strong></a></li>
+<li><a href="#c++_overview"><strong>Overview of C++</strong></a></li>
+<li><a href="#c++_helloworld"><strong>Helloworld C++ Program</strong></a></li>
+<li><a href="#c++_execute"><strong>Compile and Run Helloworld Program</strong></a></li>
+<li><a href="#declare_vars"><strong>Declaration of Variables</strong></a></li>
+<li><a href="#var_scope"><strong>Type and Scope of Variables</strong></a></li>
+<li><a href="#output_input_oper"><strong>Output &amp; Input Operators</strong></a></li>
+<li><a href="#arth_oper"><strong>Arithmatic Operators</strong></a></li>
+<li><a href="#oper_precdence"><strong>Operators Precedence</strong></a></li>
+</ol>
+
+
+<p>Finally the end of the section specifies a <a href="#prog_problem"><strong>Programming Problem</strong></a> that will try to use all the concepts covered in this step</p>
+
+<p><a name="c++_dev_env"/></a></p>
+
+<h2>C++ Development Environment and Setup</h2>
+
+<p></br></p>
+
+<p>C++ program goes through typically go through six phases to be executed as shown in figure below. They are <strong>edit, preprocess, compile, link, load and execute</strong></p>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/C++DevEnv1.png" title="C++ Development Environment" alt="C++ Development Environment" /></p>
+
+<!--
+[1]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/C++DevEnv1.png "C++ Development Environment" 
+-->
+
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/C++DevEnv2.png" title="C++ Development Environment" alt="C++ Development Environment" /></p>
+
+<!--
+[2]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/C++DevEnv2.png "C++ Development Environment" 
+-->
+
+
+<p><a name="c++_setup"/></a></p>
+
+<h2>Setup C++ Environment</h2>
+
+<p></br>
+Before you start programming in C++, it is important you have the environment to</p>
+
+<ol>
+<li>Type the C++ program i.e. Text Editor and</li>
+<li>The compiler to compile and run the C++ Program</li>
+</ol>
+
+
+<p><a name="editor"/></a></p>
+
+<h3>Text Editor</h3>
+
+<p></br>
+This will be used to type your program. Examples of few editors include Windows Notepad, OS Edit command, Brief, Epsilon, EMACS, and vim or vi.</p>
+
+<p>Our recommendation is <a href="https://projects.gnome.org/gedit/"><strong>gedit</strong></a> from GNOME. Its a free software. Linux fans will already be familiar with the world of GNOME but gedit has brought it to a wider audience by providing the default GNOME editor on Windows and Mac. This can be <strong>downloaded</strong> from <a href="http://gedit.en.softonic.com">http://gedit.en.softonic.com</a>. The advantages are:</p>
+
+<ul>
+<li>One Editor for multiple OS Environment</li>
+<li>Wide range of languages supported by Gnome include C, C++, Java, HTML, XML, Python and Perl.</li>
+</ul>
+
+
+<h3>C++ Compiler</h3>
+
+<p></br>
+This is actual C++ compiler which will be used to compile source code into final executable program.</p>
+
+<p>Most C++ compilers don't care what extension is given to the C++ program and many will use .cpp by default</p>
+
+<p>Most frequently used and free available compiler is <a href="http://gcc.gnu.org"><strong>GNU C/C++ compiler</strong></a>.</p>
+
+<h4>Installing GNU C++ Compiler</h4>
+
+<h5>Unix/Linux Installation</h5>
+
+<p>For Linux or Unix to check if GCC is installed, enter the following command from the command line:</p>
+
+<pre><code>$ g++ -v
+</code></pre>
+
+<p>If GCC is installed proper message with version number will be displayed. Else command not found will be displayed. If GCC is not installed, then install it from <a href="http://gcc.gnu.org/install/">http://gcc.gnu.org/install/</a></p>
+
+<h5>Mac OSX Installation</h5>
+
+<p>The easiest way to obtain GCC is to download the Xcode development environment from Apple's web site and follow the simple installation instructions.</p>
+
+<p>Xcode is currently available at <a href="http://developer.apple.com/technologies/tools/">http://developer.apple.com/technologies/tools/</a>.</p>
+
+<p>The article <a href="http://www.mkyong.com/mac/how-to-install-gcc-compiler-on-mac-os-x/">How To Install Gcc Compiler On Mac OS X</a> provides a good walkthrough to install GCC on Mac</p>
+
+<h5>Windows Installation</h5>
+
+<p>To install GCC for Windows install <a href="http://www.mingw.org"><strong>MinGW</strong></a>, and follow the link to the MinGW download page. Download the latest version of the MinGW installation program.</p>
+
+<p>While installing MinWG, at a minimum, install gcc-core, gcc-g++, binutils, and the MinGW runtime. Then add the bin subdirectory of MinGW installation to PATH environment variable so that gcc, g++, etc compiler can be run from the Windows command line.</p>
+
+<p><a name="c++_overview"/></a></p>
+
+<h2>Overview of C++</h2>
+
+<p></br>
+The C++ programming language is built on C as indicated by increment operator ++. C++ is an Object Oriented Programming Language. Just like C, C++ built-in data types are char, short, int, long, float, double, etc. Further C++ encourages building your own data type and data type hierarchies to describe effectively the real-world problems.</p>
+
+<p>So C++ encourages you to think in terms of Objects which is associated with the user defined data type stored in a chunk of memory. So essentially C++ is made up of</p>
+
+<ol>
+<li><strong>Class</strong> - This is essentially a User Defined Data Type. e.g. We can define a class called Dog which is essentially an Animal. We can describe Dog by its Color, Breed, Name, etc as well as Dogs behaviour by Barking, Wagging, Eating, etc.</li>
+<li><strong>Object</strong> - This is an instance of a Class having a chunk of memory. So taking the same e.g. of Dog Class - Dog with Name - Slash, Breed - Labrador, Color - White is an Object with proper value for all the attributes describing the Dog.</li>
+<li><strong>Methods</strong> - This are basically behaviours or actions defined in the class. So taking the example of Dog, the behaviours are Barking, Wagging, Eating, etc.</li>
+<li><strong>Variables</strong> - Variables describes the attributes of class. So for Dog, the attributes are Color, Breed, Name, etc.</li>
+</ol>
+
+
+<p>So C++ as an Object Oriented Language supports</p>
+
+<ol>
+<li><strong>Abstraction</strong> - This can be Data Abstraction or Method Abstraction which are hiding and showing the necessary attributes and behaviours of the class.</li>
+<li><strong>Encapsulation</strong> - Encapsulation is placing the data and the functions that work on that data in the same place. As you can see the example of Dog - the attributes and behaviours of the Dog are defined in the Class</li>
+<li><strong>Inheritance</strong> - Helps in code re-usability. As the name suggests Inheritance is the process of forming a new class from an existing class. So we could have Animal as the Base Class or Parent Class and Dog inheriting from the Animal.</li>
+<li><strong>Polymorphism</strong> - Poly means many so C++ allows users to define the same behaviour many time with different method parameters. So for e.g. in Dog class, as we know Dog barks differently at different times based on Hunger, excitement, On seeing Strangers, etc. Thus we could define same method Barking for different scenarios.</li>
+<li><strong>Overloading</strong> - This is similar to Polymorphism where in Operator or Function is overloaded.</li>
+</ol>
+
+
+<p><a name="c++_helloworld"/></a></p>
+
+<h2>Helloworld C++ Program</h2>
+
+<p></br>
+Let us look at a simple code that would print the words Hello World on the console.</p>
+
+<pre><code>//
+//  hello.cpp
+//
+//  Created by MakeTechEz on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+// Uses the header iostream to read and write to the command line
+#include &lt;iostream&gt;
+
+// Tells the Compiler to use std namespace
+using namespace std;
+
+// main() is where program execution begins.
+int main()
+{
+    // prints Hello World
+    cout &lt;&lt; "Hello World"; 
+
+    //Terminates main() function
+    return 0;
+}
+</code></pre>
+
+<ol>
+<li>The C++ language defines several headers, which contain information that is either necessary or useful to your program. For this program, the header <iostream> is needed.</li>
+<li>The line using namespace std; tells the compiler to use the std namespace.</li>
+<li>The line int main() is the main function where program execution begins.</li>
+<li>The next line cout &lt;&lt; "Hello World."; causes the message "Hello World" to be displayed on the Console.</li>
+<li>The next line return 0; terminates main( )function and causes it to return the value 0 to the calling process.</li>
+</ol>
+
+
+<p><a name="execute"/></a></p>
+
+<h2>Compile and Run Helloworld Program</h2>
+
+<p></br>
+<img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/C++CompileAndRunFlow.png" title="C++ Compile and Run" alt="C++ Compile and Run" /></p>
+
+<!--
+[3]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/C++CompileAndRunFlow.png "C++ Compile and Run" 
+-->
+
+
+<p><strong>Step 1:</strong> Write the program hello.cpp using any <a href="@editor">Text Editor</a></p>
+
+<p><strong>Step 2:</strong> Compile the program, translating it into machine instructions. In its
+original form, the program is text or source code. Once translated, the source code becomes Object Code. If there are any Compilation error, fix the code and again compile the program. There are 2 Methods to compile.</p>
+
+<p><strong>Method 1:</strong></p>
+
+<pre><code>$ g++ hello.cpp -o hello
+</code></pre>
+
+<p>This command compiles hello.cpp directly into an executable program named "hello" that can be run by typing 'hello' at the command line.</p>
+
+<p><strong>Method 2:</strong></p>
+
+<pre><code>$ g++ -c hello.cpp
+</code></pre>
+
+<p>The command translates the source code hello.cpp to hello.o object code file.  This is the advantage of the Method 2, in that only the changed files can be compiled to its corresponding object code file.</p>
+
+<p><strong>Step 3:</strong> Its applicable to Method 2 where in all the Object Code file can be linked to produce executable code. Here hello.o is linked to produce hello executable program. For more information refer <a href="http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html">Compiling C++ * Program link</a>.</p>
+
+<pre><code>$ g++ hello.o -o hello
+</code></pre>
+
+<p><strong>Step 4:</strong> Finally, run the executable code</p>
+
+<pre><code>$ ./hello
+Hello World
+</code></pre>
+
+<p><a name="declare_vars"/></a></p>
+
+<h2>Declaration of Variables</h2>
+
+<h1></h1>
+
+<p>As the first step lets learn how to declare variables. Variables are containers that can store different values. In C, variables are statically typed, which means that you must explicitly state what kind of value they will hold.</p>
+
+<p>The format for Variable Definition is as shown below</p>
+
+<p></br><br/>
+<img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/DeclareVariables.png" title="Declare Variables" alt="Declare Variables" /></p>
+
+<!--
+![Declare Variables](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareVariables.png "Declare Variables") 
+-->
+
+
+<p><strong>Data Type</strong> can be C++ built-in data types are char, short, int, long, float, double, etc or User Defined Data Types.</p>
+
+<p>A <strong>Variable</strong> with name length refers to chunk of computer memory. The variable's data type determines the size of the memory. Here variable belongs to the double data type, the chunk of memory involved is likely to contain 64 bits (1 byte = 8 bits).</p>
+
+<p>The <strong>Assignment Operator (=)</strong> assigns value to the variable length,</p>
+
+<p>The double <strong>Value</strong> of 20.5 is stored in the variable length.</p>
+
+<h5>SIDE PROGRAM # &nbsp;1</h5>
+
+<p>If you are curious about how much memory your C++ implementation allocates for the various data types, you can compile and execute the following program, which uses the sizeof operator to determine data-type size:</p>
+
+<pre><code>//
+//  Program Name - S1_SP_SizeOfVar.cpp
+//  Series: GetOnToC++ Step: 1 Side Program
+//
+//  Purpose: This program outputs the size of C++ in built data types using  
+//           sizeof operator 
+//
+//  Compile: g++ S1_SizeOfVar.cpp -o S1_SizeOfVar
+//  Execute: ./S1_SizeOfVar
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+main ( ) { 
+    cout &lt;&lt; "Data Type    Bytes" &lt;&lt; endl 
+         &lt;&lt; "char         " &lt;&lt; sizeof(char) &lt;&lt; endl 
+         &lt;&lt; "short        " &lt;&lt; sizeof(short) &lt;&lt; endl 
+         &lt;&lt; "int          " &lt;&lt; sizeof(int) &lt;&lt; endl 
+         &lt;&lt; "long         " &lt;&lt; sizeof(long) &lt;&lt; endl 
+         &lt;&lt; "float        " &lt;&lt; sizeof(float) &lt;&lt; endl 
+         &lt;&lt; "double       " &lt;&lt; sizeof(double) &lt;&lt; endl 
+         &lt;&lt; "long double  " &lt;&lt; sizeof(long double) &lt;&lt; endl; 
+}
+</code></pre>
+
+<hr />
+
+<p><strong>NOTE:</strong> You can include comments in C++ programs in two ways.</p>
+
+<ol>
+<li>// short comments that appear in single line</li>
+<li>/* Long Comments that appear in multiple lines */</li>
+</ol>
+
+
+<hr />
+
+<p><a name="var_types"/></a></p>
+
+<h1>Section 2: Variable Types</h1>
+
+<p>This section discusses different variable types. This includes</p>
+
+<ol>
+<li><strong>Local Variable</strong></li>
+<li><strong>Global Variable</strong></li>
+<li><strong>Constants</strong></li>
+<li><strong>Macros</strong></li>
+<li><strong>Typedef</strong></li>
+</ol>
+
+
+<h4>Local Variable</h4>
+
+<ol>
+<li>A variable declared inside a function definition is said to be a <strong>local variable</strong>.</li>
+<li>The memory allocated for Function Parameters and Local Variables are <strong>reallocated</strong> as soon as the corresponding function has finished executing, so parameters and local variables are said to have <strong>dynamic extent</strong>.</li>
+<li>Function Parameters and local variables can be evaluated and assigned only in the function in which they are declared. Accordingly, parameters and local variables are said to have <strong>local scope</strong>.</li>
+</ol>
+
+
+<h4>Global Variable</h4>
+
+<ol>
+<li>A variable defined outside of any function definition is said to be a <strong>global variable</strong>.</li>
+<li>The memory set aside for a global variable is never reallocated, so global variables are said to have <strong>static extent</strong>.</li>
+<li>Global variables can be evaluated and assigned at any point in a program after they are defined, so global variables are said to have <strong>universal scope</strong>.</li>
+</ol>
+
+
+<h4>Constants</h4>
+
+<p></br>
+The const variable modifier can be used to tell the compiler that a variable is never allowed to change. For example, defining a constant called pi and then trying to alter it will result in a compiler error:</p>
+
+<p><code>double const pi = 3.14159;</code></br>
+<code>pi = 42001.0;  // Result in Compiler error</code></p>
+
+<p>This is often used in function parameters to inform the caller that they can safely assume whatever value they pass will not be altered by the function.</p>
+
+<h4>Macros</h4>
+
+<p></br></p>
+
+<p>Macros are a low-level way to define symbolic constants and space-saving abbreviations. The #define directive maps a macro name to an expansion, which is an arbitrary sequence of characters. Before the compiler tries to parse the code, the preprocessor replaces all occurrences of the macro name with its expansion. In other words, it’s a straightforward search-and-replace:</p>
+
+<h5>SIDE PROGRAM # &nbsp;2</h5>
+
+<p>Define a Macro to convert Radians to Degree</p>
+
+<pre><code>//
+//  Program Name - S1_SP_RadToDeg.cpp
+//  Series: GetOnToC++ Step: 1 Side Program
+//
+//  Purpose: Write a Program to convert Radians to Degrees using a Macro.
+//           The formulae is deg = rad * (180/pi)
+//
+//  Compile: g++ S1_SP_RadToDeg.cpp -o S1_SP_RadToDeg
+//  Execute: ./S1_SP_RadToDeg
+//
+//  Created by Narayan Mahadevan on 10/11/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Defining a Macro to specify the value of pi. 
+#define PI 3.14159
+
+// Defining a Macro to convert Radians to Degrees
+#define RAD_TO_DEG(radians) (radians * (180.0 / PI))
+
+main ( ) { 
+    double angle = PI / 2; 
+    cout &lt;&lt; "Radians to Degree is: " &lt;&lt; RAD_TO_DEG(angle) &lt;&lt; endl;
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>Radians to Degree is: 90 
+</code></pre>
+
+<h4>Typedef</h4>
+
+<p></br></p>
+
+<p>The typedef keyword lets you create new data types or redefine existing ones. After typedef’ing an unsigned int in the following example, we can use ColorComponent just like we would use char, int, double, or any other built-in type</p>
+
+<h5>SIDE PROGRAM # &nbsp;3</h5>
+
+<p>Write a Program where unsigned int is assigned as ColorComponent and ColorComponent is used as any other datatype</p>
+
+<pre><code>//
+//  Program Name - S1_SP_TypedefEg.cpp
+//  Series: GetOnToC++ Step: 1 Side Program
+//
+//  Purpose: Write a Program where unsigned int is assigned as ColorComponent   //            and ColorComponent is used as any other datatype
+//
+//  Compile: g++ S1_SP_TypedefEg.cpp -o S1_SP_TypedefEg
+//  Execute: ./S1_SP_TypedefEg
+//
+//  Created by Narayan Mahadevan on 10/11/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Creating a new Data Type ColorComponent of unsigned char
+typedef unsigned int ColorComponent;
+
+main ( ) { 
+    // Setting the RGB color value        
+    ColorComponent red = 255;
+    ColorComponent green = 160;
+    ColorComponent blue = 0;    
+
+    cout &lt;&lt; "Paint job has R value: " &lt;&lt; red &lt;&lt; " G value: " &lt;&lt; green 
+         &lt;&lt; " and B value: " &lt;&lt; blue &lt;&lt; endl;
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>Paint job has R value: 255 G value: 160 and B value: 0    
+</code></pre>
+
+<p><a name="output_input_oper"/></a></p>
+
+<h2>Output &amp; Input Operators</h2>
+
+<h1></h1>
+
+<h4>Output Operator</h4>
+
+<p>Lets see how C++ handles output statements essentially cout and the output operator (&lt;&lt;).</p>
+
+<ol type="a">
+<li><strong>cout</strong> - cout is actually a variable, and like all variables, it is the name of a chunk of memory</li>
+<li><strong>Output Operator "&lt;&lt;"</strong> - The chunk of memory held by cout variable is only useful to output operator to display on the console.</li>
+</ol>
+
+
+<hr />
+
+<p>For e.g.</p>
+
+<p><code>cout &lt;&lt; "The volume of the box car is " &lt;&lt; 10 * 9 * 40 &lt;&lt; endl;</code></p>
+
+<p>Output Operator is evaluated from Left to Right. So cout first stores the String "The volume of the box car is " then after display it replaces the String with the value of the expression  10 * 9 * 40 and then endl i.e. new line.</p>
+
+<p>Also Note that the <strong>Output Operator has precedence lower than the Arithmetic Operator</strong> and hence the volume 10 * 9 * 40 is computed first before assigning to cout variable.</p>
+
+<hr />
+
+<h4>Format the Output</h4>
+
+<p>C++ uses the escape character "\" to format the output. The figure below shows some of the common escape sequence</p>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/C++EscapeSeq.png" title="C++ Format Output" alt="C++ Format Output" /></p>
+
+<!--
+[4]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/C++EscapeSeq.png "C++ Format Output" 
+-->
+
+
+<h4>SIDE PROGRAM: &nbsp;4</h4>
+
+<p>This simple program demonstrates Printing a Hollow Box</p>
+
+<pre><code>//
+//  Program Name - S1_SP_PrintBox.cpp
+//  Series: GetOnToC++ Step: 1 Side Program
+//
+//  Purpose: This program demonstrates printing a hollow box
+//
+//  Compile: g++ S1_SP_PrintBox.cpp -o S1_SP_PrintBox
+//  Execute: ./S1_SP_PrintBox
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+main ( ) { 
+    cout &lt;&lt; "Display a Hollow Box" &lt;&lt; endl;        
+    cout &lt;&lt; "*********\n";
+    cout &lt;&lt; "*\t*\n";
+    cout &lt;&lt; "*\t*\n";
+    cout &lt;&lt; "*\t*\n";
+    cout &lt;&lt; "*********\n";
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S1_SP_PrintBox
+Display a Hollow Box
+*********
+*       *
+*       *
+*       *
+*********
+</code></pre>
+
+<h4>Input Operator</h4>
+
+<p>The input operator, >>, also known as the extraction operator, is the complement of the output operator.</p>
+
+<p>When output operator used with the <strong>cout</strong> output-place specification, the output operator displays the value of an expression on your screen. Similarly when input operator used with the <strong>cin</strong> input-place specification, the input operator picks up a value for a variable by watching whats typed on the keyboard.</p>
+
+<h4>SIDE PROGRAM: &nbsp;5</h4>
+
+<p>This program demonstrated Input and Output Operators</p>
+
+<pre><code>//
+//  Program Name - S1_SP_UserInputs.cpp
+//  Series: GetOnToC++ Step: 1 Side Program
+//
+//  Purpose: This program picks up an integer from the console and assigns  
+//           that integer to a variable to compute volume
+//
+//  Compile: g++ S1_UserInputs.cpp -o S1_UserInputs
+//  Execute: ./S1_UserInputs
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+main ( ) { 
+      int height, width, length;
+      cout &lt;&lt; "Please type three integers." &lt;&lt; endl;
+      cin &gt;&gt; height;  
+      cin &gt;&gt; width;   
+      cin &gt;&gt; length;  
+      cout &lt;&lt; "The volume of a " 
+           &lt;&lt; " box car is " &lt;&lt; height * width * length &lt;&lt; endl; 
+}
+
+/*
+  On executing the program, the following lines are displayed on screen
+  Please type three integers.                     &lt;-- Your program types 
+  10 9 40                                         &lt;-- You type 
+  The volume of a box car is 3600.                &lt;-- Your program types 
+*/
+</code></pre>
+
+<hr />
+
+<p><strong>NOTE:</strong> In Unix, MAC or Linux OS, the characters typed accumulate temporarily in an input buffer before delivery to the program. Delivery occurs only when a carriage return entered.</p>
+
+<hr />
+
+<p><a name="arth_oper"/></a></p>
+
+<h2>Arithmetic Operators</h2>
+
+<h1></h1>
+
+<p>Arithmetic Operators are either</p>
+
+<ul>
+<li><p><strong>Binary Operator</strong> - Most operators are binary operators; that is, they have two operands. <strong>Binary Operators are +, -, *, / and %</strong> operators for addition, subtraction, multiplication, division, and modulus operator. For e.g.</p>
+
+<ul>
+<li>6 / 3 => In this case "/" is a division operator and 6 and 3 are Operands</li>
+<li>5 % 3 => The Modulus Operator produces the reminder i.e. 2</li>
+<li>5 / 3 => Divide, evaluating to 1, rather than 2 or 1.66667</li>
+<li>5.0 / 3.0 => Divide, evaluating to 1.66667</li>
+</ul>
+</li>
+<li><p><strong>Unary Operators</strong> - Unary operators, such as the negation operator, -, and unary plus, +, have just one operand, found on the immediate right of the operator.  For e.g. 6 - (-3) => The result is 9. "(-3)" is the unary operator. Unary Operator evaluates from right to left and the precedence of the unary operator is higher than that of Binary Operators +, -, *, or /. More in <a href="#precedence_operator"><strong>Operator Precedence</strong></a></p></li>
+</ul>
+
+
+<p>C++ Expressions are evaluated first on Precedence and than if operators have same Precedence then on Associativity i.e. either the expression is evaluated left to right or right to left.</p>
+
+<ul>
+<li><strong>Precedence</strong> - Unary Operators have highest precedence followed by "*, /, %" operators and than by "+ or -" operators.</li>
+<li><strong>Associativity</strong> - Unary Operators are evaluated from Right to Left and the remaining Arithmetic Operators Left to Right.</li>
+</ul>
+
+
+<h4>SIDE PROGRAM: &nbsp;6</h4>
+
+<p>This program shows how C++ handles precedence and associativity.</p>
+
+<pre><code>//
+//  Program Name - S1_SP_ArthmaticExpression.cpp
+//  Series: GetOnToC++  Step: 1 Side Program    
+//
+//  Purpose: This program shows the way C++ handles operator precedence and 
+//           associativity
+//
+//  Compile: g++ S1_ArthmaticExpression.cpp -o S1_ArthmaticExpression
+//  Execute: ./S1_ArthmaticExpression
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+main ( ) { 
+
+    // Equivalent to 6 + (3 * 2) = 12 And not (6 + 3) * 2 = 18
+    cout &lt;&lt; "Expression = 6 + 3 * 2, with Higher Precedence: " 
+         &lt;&lt; 6 + 3 * 2 &lt;&lt; endl; 
+
+    // Equivalent to 6 - (-3) = 9 
+    cout &lt;&lt; "Expression = 6 - -3, with Unary Operator -3: " 
+         &lt;&lt; 6 - -3 &lt;&lt; endl; 
+
+    // Equivalent to: (6 / 3) / 2 = 1
+    cout &lt;&lt; "Expression = 6 / 3 / 2, with Same Precedence (L to R): " 
+         &lt;&lt; 6 / 3 / 2 &lt;&lt; endl;       
+
+    // Equivalent to (6 / 3) * 2 = 4 And not 6 / (3 * 2) = 1     
+    cout &lt;&lt; "Expression = 6 / 3 * 2, with Same Precedence (L to R): " 
+         &lt;&lt; 6 / 3 * 2  &lt;&lt; endl;
+
+    // Equivalent to (6 * 3) / 2 = 9 And not 6 * (3 / 2) = 6    
+    cout &lt;&lt; "Expression = 6 * 3 / 2, with Same Precedence (L to R): " 
+         &lt;&lt; 6 * 3 / 2  &lt;&lt; endl;
+}
+</code></pre>
+
+<p></br>  <br/>
+<a name="oper_precdence"/></a></p>
+
+<h2>Operator Precedence</h2>
+
+<p></br>  <br/>
+The precedences and associativity of the operators are arranged from highest precedence to lowest in the following table. If Precedence of the Operator are same then Associativity Rule is applied</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Sr.No </th>
+<th align="left"> Operators           </th>
+<th align="left"> Associativity </th>
+<th align="left"> Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1     </td>
+<td align="left"> - (Unary) +(Unary) </td>
+<td align="left"> Right to Left </td>
+<td align="left"> Highest Precedence</td>
+</tr>
+<tr>
+<td align="left">2     </td>
+<td align="left"> *, /, %             </td>
+<td align="left"> Left to Right </td>
+<td align="left"> e.g. 6 / 3 / 2 = (6 / 3) / 2 = 1</td>
+</tr>
+<tr>
+<td align="left">3     </td>
+<td align="left"> -, +                </td>
+<td align="left"> Left to Right </td>
+<td align="left"> e.g. 6 + 3 * 2 = 6 + (3 * 2) = 12</td>
+</tr>
+<tr>
+<td align="left">4     </td>
+<td align="left"> &lt;&lt; (Output)        </td>
+<td align="left"> Left to Right </td>
+<td align="left"> e.g. cout &lt;&lt; "res = " &lt;&lt; 6 * 6 * 10; res = 360</td>
+</tr>
+<tr>
+<td align="left">5     </td>
+<td align="left"> = (Assignment)      </td>
+<td align="left"> Right to Left </td>
+<td align="left"> Lowest Precedence</td>
+</tr>
+</tbody>
+</table>
+
+
+<p></br><br/>
+<a name="prog_problem"/></a></p>
+
+<h2>Programming Problem</h2>
+
+<p></br></p>
+
+<p>Determine the value of global variable a using expression <code>a = 2/3*b + c*c - c%c + 50% of b/c</code>. Where b and c are input values taken from the user</p>
+
+<pre><code>//
+//  Program Name - S1_MP_NumberArthmatic.cpp
+//  Series: GetOnToC++ Step: 1 Main Program
+//
+//  Purpose: Determine the value of global variable a using expression 
+//           a = 2/3*b + c*c - c%c + 50% of b/c. Where b and c are input 
+//           values taken from the user
+//
+//  Compile: g++ S1_MP_NumberArthmatic.cpp -o S1_MP_NumberArthmatic
+//  Execute: ./S1_MP_NumberArthmatic
+//
+//  Created by Narayan Mahadevan on 10/11/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Macro to calculate percentage
+#define PERC_VAL(b, c) (0.5 * (b/c))
+
+// Global Variable to hold value a
+double a = 0;
+
+main ( ) { 
+
+    // Local Variables to hold value b and c
+    int b = 0, c = 0;
+
+    // Input Operator to take User Input for course marks
+    cout &lt;&lt; "Enter any two values: \a";
+    cin &gt;&gt; b &gt;&gt; c;
+
+    // Use Arithmetic Expression to find value of a
+    // Checkout the Operator Precedence and associativity to understand how
+    // compiler resolves arithmatic expression.
+    a = 2/3*b + c*c - c % c + PERC_VAL(b, c);
+
+    // Output the Result
+    cout &lt;&lt; "The Value of a = " &lt;&lt; a &lt;&lt; endl;
+
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S1_MP_NumberArthmatic
+Enter any two values: 45 55
+The Value of a = 3025
+</code></pre>
+</body>
+</html>

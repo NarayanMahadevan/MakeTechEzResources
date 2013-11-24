@@ -1,0 +1,786 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Step 2: Loop and Conditional Expressions</title>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$$$','$$$']]}});</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>Step 2: Loop and Conditional Expressions</h1>
+
+<p></br></p>
+
+<p>The Objective of this step is to introduce to C++ Predicates, Conditional Statements, and loops. The concept introduced in this section are:</p>
+
+<ol>
+<li><a href="#c++_bool_expr"><strong>Boolean Expression</strong></a></li>
+<li><a href="#if_else_loop"><strong>One and Two way Conditional Statements</strong></a></li>
+<li><a href="#while_loop"><strong>The while Repetition Loop</strong></a></li>
+<li><a href="#do_while_loop"><strong>do...while Repetition Statement</strong></a></li>
+<li><a href="#for_loop"><strong>The for Repetition Loop</strong></a></li>
+<li><a href="#switch_loop"><strong>Multi-way Conditional Statement</strong></a></li>
+<li><a href="#logical_oper"><strong>Logical Operators</strong></a></li>
+</ol>
+
+
+<p>Finally the end of the section specifies a <a href="#prog_problem"><strong>Programming Problem</strong></a> that will try to use all the concepts covered in this step</p>
+
+<p><a name="c++_bool_expr"/></a></p>
+
+<h2>Boolean Expression</h2>
+
+<p></br></p>
+
+<p>Boolean expression is an expression that produces a true or false result. In C++, a Boolean expression is an expression that produces either 0, meaning false, or any other integer, meaning true. C++ offers several expressions that test the relationship between pairs of numbers. They are categorized as Relational Operators and Equality Operators. The relational operators all have the same level of precedence and associate left to right. The equality operators both have the same level of precedence, which is lower than that of the relational operators, and associate left to right.</p>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/EqualityRelnOper.png" title="Equality and Relational Operator" alt="Equality and Relational Operator" /></p>
+
+<!--
+[1]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/EqualityRelnOper.png "Equality and Relational Operator" 
+-->
+
+
+<h5>SIDE PROGRAM # &nbsp;1</h5>
+
+<p>Write a Program that tests the Equality and Relational operator between two numbers</p>
+
+<pre><code>//
+//  Program Name - S2_SP_TestNumPredicate.cpp
+//  Series: GetOnToC++ Step: 2 Side Program
+//
+//  Purpose: Write a Program that tests the Equality and Relational operator
+//           between an Int and a double value
+//
+//  Compile: g++ S2_SP_TestNumPredicate.cpp -o S2_SP_TestNumPredicate
+//  Execute: ./S2_SP_TestNumPredicate
+//
+//  Created by Narayan Mahadevan on 10/11/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+
+main ( ) { 
+    int i = 50; 
+    double d = 50.0; 
+
+    // Note that either the int is casted as double or vice-versa to apply 
+    // equal and relational operator between the two numbers
+
+    cout &lt;&lt; "i == (int) d    yields " &lt;&lt; (i == (int) d)    &lt;&lt; endl; 
+    cout &lt;&lt; "(double) i != d yields " &lt;&lt; ((double) i != d) &lt;&lt; endl; 
+    cout &lt;&lt; "i &gt; (int) d     yields " &lt;&lt; (i &gt; (int) d)     &lt;&lt; endl; 
+    cout &lt;&lt; "(double) i &lt; d  yields " &lt;&lt; ((double) i &lt; d)  &lt;&lt; endl; 
+    cout &lt;&lt; "i &gt;= (int) d    yields " &lt;&lt; (i &gt;= (int) d)    &lt;&lt; endl; 
+    cout &lt;&lt; "(double) i &lt;= d yields " &lt;&lt; ((double) i &lt;= d) &lt;&lt; endl; 
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S2_SP_TestNumPredicate
+i == (int) d    yields 1
+(double) i != d yields 0
+i &gt; (int) d     yields 0
+(double) i &lt; d  yields 0
+i &gt;= (int) d    yields 1
+(double) i &lt;= d yields 1
+</code></pre>
+
+<p><a name="if_else_loop"/></a></p>
+
+<h2>One and Two way Conditional Statements</h2>
+
+<p></br></p>
+
+<p>An if Statement are one way conditional statements in c++ while the if/else statement are the two way conditional statements. An if statement contains a Boolean expression, in parentheses, followed by an embedded statement:</p>
+
+<pre><code>if (Boolean expression) 
+    if true statement 
+else 
+    if false statement
+</code></pre>
+
+<p>When the Boolean expression of an if statement evaluates to any integer other than 0, C++ considers the expression to be true and executes the embedded statement; otherwise, if the Boolean expression evaluates to 0, C++ considers the expression to be false and executes the else statement</p>
+
+<h5>SIDE PROGRAM # &nbsp;1</h5>
+
+<p>Write a Program that reads the mark as input and outputs grades as well as pass or fail.</p>
+
+<pre><code>//
+//  Program Name - S2_SP_CalcGrade.cpp
+//  Series: GetOnToC++ Step: 2 Side Program
+//
+//  Purpose: Write a Program that reads the mark as input and outputs grades as 
+//           well as pass or fail.
+//
+//  Compile: g++ S2_SP_CalcGrade.cpp -o S2_SP_CalcGrade
+//  Execute: ./S2_SP_CalcGrade
+//
+//  Created by Narayan Mahadevan on 10/11/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Defining a Macro determine pass or fail
+// Note that this alternate way of writing if/else loop
+// The Format: (Boolean Expression ? IF TRUE : IF FALSE)
+#define PASS_FAIL(grade) (grade &gt;= 60 ? "PASSED" : "FAILED")
+
+main ( ) { 
+    // Read the mark from user input        
+    int mark = 0;
+    cout &lt;&lt; "Enter the mark = ";
+    cin &gt;&gt; mark;
+
+    // check the if loop to determine the grade
+    char grade;
+    if (mark &gt;= 90 ) grade = 'A';
+    else if (mark &gt;= 80) grade = 'B';
+    else if (mark &gt;= 70) grade = 'C';
+    else grade = 'D';
+
+    // Printing the result and the grade
+    cout &lt;&lt; "The result is: " &lt;&lt; PASS_FAIL(grade) &lt;&lt; " And Grade is: " 
+         &lt;&lt; grade &lt;&lt; endl;
+
+} 
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S2_SP_CalcGrade
+Enter the mark = 92
+The result is: PASSED And Grade is: A
+</code></pre>
+
+<p><a name="while_loop"/></a></p>
+
+<h2>The while Repetition Loop</h2>
+
+<p></br></p>
+
+<p>C++'s iteration statements enable functions to do computations over and over until a test has been satisfied. C++'s while statement, for example, consists of a Boolean expression, in parentheses, followed by an embedded statement:</p>
+
+<pre><code>while (Boolean expression) 
+    embedded statement 
+</code></pre>
+
+<p>The Boolean expression is evaluated, and if the Boolean expression evaluates to any integer other than 0, the embedded statement is evaluated as well; otherwise, C++ skips the embedded statement. In contrast to an if statement, however, the evaluate-Boolean-expression–evaluate-embedded-statement cycle continues as long as the Boolean expression evaluates to some integer other than 0.</p>
+
+<h5>SIDE PROGRAM # &nbsp;2</h5>
+
+<p>Write a Program that reads a number and its corresponding power as inputs to calculate power of a number. For e.g. 2 power of 5 = 2 x 2 x 2 x 2 x 2 = 32.</p>
+
+<pre><code>//
+//  Program Name - S2_SP_PowerOfCalc.cpp
+//  Series: GetOnToC++ Step: 2 Side Program
+//
+//  Purpose: Write a Program that reads a number and its corresponding power as 
+//           inputs to calculate power of a number. 
+//           For e.g. 2 power of 5 = 2 x 2 x 2 x 2 x 2 = 32
+//
+//  Compile: g++ S2_SP_PowerOfCalc.cpp -o S2_SP_PowerOfCalc
+//  Execute: ./S2_SP_PowerOfCalc
+//
+//  Created by Narayan Mahadevan on 10/11/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+main ( ) { 
+
+    // Read the Base Number and the Power of number
+    int baseNum = 0, powerOf = 0;
+
+    cout &lt;&lt; "Enter Base Number: "; cin &gt;&gt; baseNum;
+    cout &lt;&lt; "Enter the powerOf number: "; cin &gt;&gt; powerOf;
+
+    // result is achieved by multiplying base number n times, 
+    // where n is the powerOf number.
+    int n = powerOf; int result = 1;
+    while (n != 0) {
+        result = result * baseNum;
+        n = n - 1;
+    }
+
+    // Printing the result
+    cout &lt;&lt; baseNum &lt;&lt; " to power of " &lt;&lt; powerOf &lt;&lt; " is: " &lt;&lt; result &lt;&lt; endl;
+
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S2_SP_PowerOfCalc
+Enter Base Number: 2
+Enter the powerOf number: 6
+2 to power of 6 is: 64
+</code></pre>
+
+<p><a name="do_while_loop"/></a></p>
+
+<h2>do…while Repetition Loop</h2>
+
+<p></br></p>
+
+<p>The do...while repetition statement is similar to the while statement. In the while statement, the loop-continuation condition test occurs at the beginning of the loop before the body of the loop executes. The do...while statement tests the loop-continuation condition after the loop body executes; therefore, the loop body always executes at least once.</p>
+
+<h5>SIDE PROGRAM # &nbsp;3</h5>
+
+<p>Write a Program that prints the 1 through 10 using do…while loop</p>
+
+<pre><code>//
+//  Program Name - S2_SP_DoWhileLoopTest.cpp
+//  Series: GetOnToC++ Step: 2 Side Program
+//
+//  Purpose: Write a Program that prints the 1 through 10 using do…while loop
+//
+//  Compile: g++ S2_SP_DoWhileLoopTest.cpp -o S2_SP_DoWhileLoopTest
+//  Execute: ./S2_SP_DoWhileLoopTest
+//
+//  Created by Narayan Mahadevan on 10/11/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int counter = 1; // initialize counter
+    do
+    {   
+        cout &lt;&lt; counter &lt;&lt; " "; // display counter
+        ++counter; // increment counter
+    } while ( counter &lt;= 10 ); // end do...while
+    cout &lt;&lt; endl;
+
+} // end main
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S2_SP_DoWhileLoopTest
+1 2 3 4 5 6 7 8 9 10
+</code></pre>
+
+<p><a name="for_loop"/></a></p>
+
+<h2>The for Repetition Loop</h2>
+
+<p></br></p>
+
+<p>As you would see in while loops, the details that govern the looping appear in three places: the place where the counting variable is initialized, the place where it is tested, and the place where it is reassigned. Such distribution makes the looping difficult to understand. In case of for loop, there is an entry expression, followed by Boolean Expression, followed by continuation expression.</p>
+
+<pre><code>for (entry expression; Boolean expression; continuation expression) 
+    embedded statement 
+</code></pre>
+
+<p>The entry expression is evaluated only once, when the for statement is entered. Once the entry expression is evaluated, the Boolean expression is evaluated, and if the result is not 0, the embedded statement is evaluated, followed by the continuation expression. Then, the Boolean-expression–embedded-statement–continuation-expression evaluation cycle continues until the Boolean expression eventually evaluates to 0.</p>
+
+<h5>SIDE PROGRAM # &nbsp;4</h5>
+
+<p>Write a program to take a number from the user and find the sum of add and even numbers</p>
+
+<pre><code>//
+//  Program Name - S2_SP_ForLoopTest.cpp
+//  Series: GetOnToC++ Step: 2 Side Program
+//
+//  Purpose: Write a Program to Sum the Odd and Even Integers
+//
+//  Compile: g++ S2_SP_ForLoopTest.cpp -o S2_SP_ForLoopTest
+//  Execute: ./S2_SP_ForLoopTest
+//
+//  Created by Narayan Mahadevan on 10/11/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Local Variable for the user defined number and variable to
+    // maintain the sum of odd and even numbers
+    int num = 0, sumOdd = 0, sumEven = 0;
+
+    // Read the Number from the user
+    cout &lt;&lt; "Enter a number: "; cin &gt;&gt; num; 
+
+    for ( int i = 0; i &lt;= num; i++ ) // iterate from 0 to num
+    {
+        if (i%2 == 0) sumEven += i; // Adding Even Numbers
+        else sumOdd += i; // Adding Odd Numbers
+    } // end for
+
+    // Printing the Result
+    cout &lt;&lt; "Sum of Even Numbers: " &lt;&lt; sumEven
+         &lt;&lt; "\nSum of Odd Numbers: " &lt;&lt; sumOdd &lt;&lt; endl;
+} // end main
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S2_SP_ForLoopTest
+Enter a number: 4
+Sum of Even Numbers: 6 // 2 + 4 = 6
+Sum of Odd Numbers: 4 // 1 + 3 = 4
+</code></pre>
+
+<p><a name="switch_loop"/></a></p>
+
+<h2>Multi-way Conditional Statement</h2>
+
+<p></br></p>
+
+<p>The purpose of a switch statement is to execute a particular sequence of statements according to the value of an expression that produces an integer or a character or a constant value. In most switch statements, each anticipated value of the integer-producing expression and the corresponding sequence of statements is sandwiched between a case symbol on one end and a break statement on the other, with a colon separating the anticipated value and the statement sequence:</p>
+
+<pre><code>switch (integer-producing expression) { 
+    case integer constant 1: statements for integer 1 break; 
+    case integer constant 2: statements for integer 2 break; 
+    ... 
+    default: default statements 
+} 
+</code></pre>
+
+<p>When such a switch statement is encountered, the expression is evaluated, producing an integer or a char. That value is compared with the integer or char constants found following the case symbols. As soon as there is a match, evaluation of the following statements begins; it continues up to the first break statement encountered.</p>
+
+<h5>SIDE PROGRAM # &nbsp;5</h5>
+
+<p>Write a Program that reads the grade as input and outputs the marks scored</p>
+
+<pre><code>//
+//  Program Name - S2_SP_SwitchLoopTest.cpp
+//  Series: GetOnToC++ Step: 2 Side Program
+//
+//  Purpose: Write a Program that reads the grade as input and outputs the 
+//           marks scored
+//
+//  Compile: g++ S2_SP_SwitchLoopTest.cpp -o S2_SP_SwitchLoopTest
+//  Execute: ./S2_SP_SwitchLoopTest
+//
+//  Created by Narayan Mahadevan on 10/11/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main ( ) { 
+
+    // Read the grade from user input        
+    char grade;
+    cout &lt;&lt; "Enter the Grade A, B, C, or D = ";
+    cin &gt;&gt; grade;
+
+    switch (grade) {
+        case 'A' : case 'a' :
+            cout &lt;&lt; "Marks Scored is more then 90" &lt;&lt; endl;
+            break;
+        case 'B' : case 'b' : 
+            cout &lt;&lt; "Marks Scored is more then 80" &lt;&lt; endl;
+            break;
+        case 'C' : case 'c' :
+            cout &lt;&lt; "Marks Scored is more then 70" &lt;&lt; endl;
+            break;
+        case 'D' : case 'd' :
+            cout &lt;&lt; "Marks Scored is more then 50" &lt;&lt; endl;
+            break;
+        default :
+            cout &lt;&lt; "Got Failed Marks" &lt;&lt; endl;
+    }
+
+    return 0;
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S2_SP_SwitchLoopTest
+Enter the Grade A, B, C, or D = A
+Marks Scored is more then 90
+</code></pre>
+
+<p><a name="logical_oper"/></a></p>
+
+<h2>Logical Operators</h2>
+
+<p></br></p>
+
+<p>So far simple boolean expressions have been used. These expressions were expressed using relational operators >, &lt;, >= and &lt;=, and the equality operators == and !=. Each decision tested precisely one condition. To test multiple conditions while making a decision, nested if or if...else statements.</p>
+
+<p>C++ provides logical operators that are used to form more complex conditions by combining simple conditions. The logical operators are</p>
+
+<ol>
+<li>Logical AND (&amp;&amp;) Operator</li>
+<li>Logical OR (||) Operator and</li>
+<li>Logical Negation (!) Operator</li>
+</ol>
+
+
+<h3>Logical AND (&amp;&amp;) Operator</h3>
+
+<p>Logical AND (&amp;&amp;) Operator is used to ensure that the two conditions are both true. For e.g. Student Grade is A if Semester Mark and Final Mark are greater then 90</p>
+
+<pre><code>￼if ( ( semesterMark &gt;= 90 ) &amp;&amp; ( finalMark &gt;= 90 ) ) 
+    cout &lt;&lt; "Student grade is A" &lt;&lt; endl;
+</code></pre>
+
+<h3>Logical OR (||) Operator</h3>
+
+<p>Logical OR (||) Operator is used to ensure atleast one of the two conditions are true. For e.g. Student Grade is A if atleast the Semester Mark or Final Mark is 90 or more</p>
+
+<pre><code>￼if ( ( semesterMark &gt;= 90 ) || ( finalMark &gt;= 90 ) ) 
+    cout &lt;&lt; "Student grade is A" &lt;&lt; endl;
+</code></pre>
+
+<h3>Logical Negation (!) Operator</h3>
+
+<p>C++ provides the ! (logical NOT, also called logical negation) operator to “reverse” a condition’s meaning. The unary logical negation operator has only a single condition as an operand.</p>
+
+<h5>SIDE PROGRAM # &nbsp;6</h5>
+
+<p>Write a Program to test Logical Operators</p>
+
+<pre><code>//
+//  Program Name - S2_SP_LogicalOperator.cpp
+//  Series: GetOnToC++ Step: 2 Side Program
+//
+//  Purpose: Write a Program to test Logical Operators
+//
+//  Compile: g++ S2_SP_LogicalOperator.cpp -o S2_SP_LogicalOperator
+//  Execute: ./S2_SP_LogicalOperator
+//
+//  Created by Narayan Mahadevan on 10/11/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main ( ) { 
+
+    // Create truth table for &amp;&amp; (logical AND) operator
+    cout &lt;&lt; "Logical AND (&amp;&amp;)" 
+         &lt;&lt; "\nfalse &amp;&amp; false: " &lt;&lt; (false &amp;&amp; false) 
+         &lt;&lt; "\nfalse &amp;&amp; true: " &lt;&lt; (false &amp;&amp; true) 
+         &lt;&lt; "\ntrue &amp;&amp; false: " &lt;&lt; (true &amp;&amp; false) 
+         &lt;&lt; "\ntrue &amp;&amp; true: " &lt;&lt; (true &amp;&amp; true) &lt;&lt; endl;
+
+    // Create truth table for || (logical OR) operator
+    cout &lt;&lt; "Logical OR (||)" 
+         &lt;&lt; "\nfalse || false: " &lt;&lt; (false || false)
+         &lt;&lt; "\nfalse || true: " &lt;&lt; (false || true)
+         &lt;&lt; "\ntrue || false: " &lt;&lt; (true || false)
+         &lt;&lt; "\ntrue || true: " &lt;&lt; (true || true) &lt;&lt; endl;
+
+    // create truth table for ! (logical negation) operator
+    cout &lt;&lt; "Logical NOT (!)"
+         &lt;&lt; "\n!false: " &lt;&lt; (!false) 
+         &lt;&lt; "\n!true: " &lt;&lt; (!true) &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S2_SP_LogicalOperator
+Logical AND (&amp;&amp;)
+false &amp;&amp; false: 0
+false &amp;&amp; true: 0
+true &amp;&amp; false: 0
+true &amp;&amp; true: 1
+
+Logical OR (||)
+false || false: 0
+false || true: 1
+true || false: 1
+true || true: 1
+
+Logical NOT (!)
+!false: 1
+!true: 0
+</code></pre>
+
+<p></br><br/>
+<a name="prog_problem"/></a></p>
+
+<h2>Programming Problem</h2>
+
+<p></br></p>
+
+<p>Write a program that takes student marks as user inputs. Checks if it is pass, fail, A, B, C or D Grade and outputs number of students passed, failed and have got A, B, C and D grade.</p>
+
+<pre><code>//
+//  Program Name - S2_MP_CourseGrade.cpp
+//  Series: GetOnToC++ Step: 1
+//
+//  Purpose: This program takes user input for course marks &amp; total marks 
+//           and computes the number of students passed, failed and have 
+//           got A, B, C and D grade. 
+//
+//  Compile: g++ S2_MP_CourseGrade.cpp -o S2_MP_CourseGrade
+//  Execute: ./S2_MP_CourseGrade
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Constants for A, B, C and D Grade
+const int  A_GRADE = 90, B_GRADE = 80, C_GRADE = 70, D_GRADE = 60;
+
+// Macros to calculate percentage
+#define PERC_MARK(mark, totalMark) (((double)mark/(double)totalMark)*100)
+
+
+main ( ) { 
+    // Variables to capture Course Mark, Total Mark, Percentage and Grade
+    int mark = 0, totalMark = 0;
+    double percMark = 0.0;
+    char grade;
+
+    // Variables to hold number of students with A, B, C, and D grade and also 
+    // number of students passed and failed 
+    int numAGrade = 0, numBGrade = 0, numCGrade = 0, numDGrade = 0;
+    int numPassed = 0, numFailed = 0;
+
+    // Reading from user input total mark
+    cout &lt;&lt; "Enter Total Marks: "; cin &gt;&gt; totalMark;
+
+    // Processing Phase
+    cout &lt;&lt; "Enter Mark and -1 to end: "; cin &gt;&gt; mark;
+
+    // While loop to take in multiple User Inputs
+    while ( mark != -1 ) {
+
+        // Calculating the percentage
+        percMark = PERC_MARK(mark, totalMark);  
+        cout &lt;&lt; "Total Mark: " &lt;&lt; totalMark 
+             &lt;&lt; " Student Mark: " &lt;&lt; mark
+             &lt;&lt; " Perc Mark = " &lt;&lt; percMark &lt;&lt; endl;       
+
+        // Two Way Conditional loop to determine A, B, C and D Grade
+        if (percMark &gt;= A_GRADE) grade = 'A';
+        else if (percMark &gt;= B_GRADE) grade = 'B';
+        else if (percMark &gt;= C_GRADE) grade = 'C';
+        else if (percMark &gt;= D_GRADE) grade = 'D';
+        else grade = 'F'; 
+
+
+        // Multiway Conditional loop to calc num of A, B, C and D Grade
+        switch (grade) {
+            case 'A' : case 'a' :
+                // Using Increment Operator to increment the number
+                numAGrade++; numPassed++;
+                break;
+            case 'B' : case 'b' : 
+                numBGrade++; numPassed++;
+                break;
+            case 'C' : case 'c' :
+                numCGrade++; numPassed++;
+                break;
+            case 'D' : case 'd' :
+                numDGrade++; numPassed++;
+                break;
+            default :
+                numFailed++;
+        }
+
+        // Entering Another Mark
+        cout &lt;&lt; "Enter Mark and -1 to end: "; cin &gt;&gt; mark;
+    }
+
+    // Print Results
+
+    cout &lt;&lt; "Number of Students: " &lt;&lt; numPassed+numFailed
+         &lt;&lt; " Number Passed: " &lt;&lt; numPassed 
+         &lt;&lt; " And Number Failed: " &lt;&lt; numFailed &lt;&lt; endl;
+
+    cout &lt;&lt; "Number of AGrade Students: " &lt;&lt; numAGrade 
+         &lt;&lt; "\nNumber of BGrade Students: " &lt;&lt; numBGrade 
+         &lt;&lt; "\nNumber of CGrade Students: " &lt;&lt; numCGrade
+         &lt;&lt; "\nAnd Number of DGrade Students: " &lt;&lt; numDGrade &lt;&lt; endl;
+
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S2_MP_CourseGrade
+Enter Total Marks: 150
+Enter Mark and -1 to end: 95
+Total Mark: 150 Student Mark: 95 Perc Mark = 63.3333
+Enter Mark and -1 to end: 125
+Total Mark: 150 Student Mark: 125 Perc Mark = 83.3333
+Enter Mark and -1 to end: 139
+Total Mark: 150 Student Mark: 139 Perc Mark = 92.6667
+Enter Mark and -1 to end: 135
+Total Mark: 150 Student Mark: 135 Perc Mark = 90
+Enter Mark and -1 to end: -1
+Number of Students: 4 Number Passed: 4 And Number Failed: 0
+Number of AGrade Students: 2
+Number of BGrade Students: 1
+Number of CGrade Students: 0
+And Number of DGrade Students: 1
+</code></pre>
+</body>
+</html>

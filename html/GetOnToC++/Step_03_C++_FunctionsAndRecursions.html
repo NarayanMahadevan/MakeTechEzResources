@@ -1,0 +1,1291 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Step 3: C++ Functions and Recursions</title>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$$$','$$$']]}});</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>Step 3: C++ Functions and Recursions</h1>
+
+<p></br></p>
+
+<p>The Objective of this step is to introduce all about functions including function definition, function prototypes, in-line functions, function overload and recursive functions. In the initial part we look into built-in functions provided by C++ Standard Library and Math Lib functions. The concept introduced in this step are as follows:</p>
+
+<ol>
+<li><a href="#c++_std_lib"><strong>C++ Standard Library Headers</strong></a></li>
+<li><a href="#math_lib"><strong>Math Lib Functions</strong></a></li>
+<li><a href="#func_def"><strong>Function Definition</strong></a></li>
+<li><a href="#func_prototype"><strong>Function Prototype and Body</strong></a></li>
+<li><a href="#func_scope_rules"><strong>Function Scope Rules</strong></a></li>
+<li><a href="#recursive_func"><strong>Recursive Functions</strong></a></li>
+<li><a href="#inline_func"><strong>Inline Functions</strong></a></li>
+<li><a href="#func_overload"><strong>Function Overloading</strong></a></li>
+</ol>
+
+
+<p>Finally the end of the section specifies a <a href="#prog_problem"><strong>Programming Problem</strong></a> that will try to use all the concepts covered in this step</p>
+
+<p><a name="c++_std_lib"/></a></p>
+
+<h2>C++ Standard Library Headers</h2>
+
+<p></br></p>
+
+<p>The C++ Standard Library is divided into many portions, each with its own header. The headers contain the function prototypes for the related functions that form each portion of the library. The headers also contain definitions of various class types and functions, as well as constants needed by those functions. The table below discusses the various C++ Library Headers with a brief explanation</p>
+
+<table>
+<thead>
+<tr>
+<th>Standard Library </th>
+<th> Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>iostream</strong>     </td>
+<td> Contains function prototypes for the C++ standard input and output functions</td>
+</tr>
+<tr>
+<td><strong>iomanip</strong>     </td>
+<td> Contains function prototypes for stream manipulators that format streams of data.</td>
+</tr>
+<tr>
+<td><strong>cmath</strong>     </td>
+<td> Contains function prototypes for math library functions</td>
+</tr>
+<tr>
+<td><strong>cstdlib</strong>     </td>
+<td> Contains function prototypes for conversions of numbers to text, text to numbers, memory allocation, random numbers and various other utility functions.</td>
+</tr>
+<tr>
+<td><strong>ctime</strong>     </td>
+<td> Contains function prototypes and types for manipulating the time and date.</td>
+</tr>
+<tr>
+<td><strong>vector, list, deque, queue, stack, map, set, bitset</strong>     </td>
+<td> Standard Template Libraries STL) contain classes that implement the C++ Standard Library containers. Containers store data during a program’s execution.</td>
+</tr>
+<tr>
+<td><strong>cctype</strong>     </td>
+<td> Contains function prototypes for functions that test characters for certain properties as well as functions that can be used to convert lowercase letters to uppercase letters and vice versa.</td>
+</tr>
+<tr>
+<td><strong>cstring</strong>     </td>
+<td> Contains function prototypes for C-style string-processing functions.</td>
+</tr>
+<tr>
+<td><strong>exception, stdexcept</strong>     </td>
+<td> These headers contain classes that are used for exception handling</td>
+</tr>
+<tr>
+<td><strong>fstream</strong>     </td>
+<td> Contains function prototypes for functions that perform input from and output to files on disk</td>
+</tr>
+<tr>
+<td><strong>string</strong>     </td>
+<td> Contains the definition of class string from the C++ Standard Library</td>
+</tr>
+<tr>
+<td><strong>cfloat</strong>     </td>
+<td> Contains the floating-point size limits of the system</td>
+</tr>
+<tr>
+<td><strong>locale</strong>     </td>
+<td> Contains classes and functions normally used by stream processing to process data in the natural form for different languages</td>
+</tr>
+</tbody>
+</table>
+
+
+<h5>SIDE PROGRAM # &nbsp;1</h5>
+
+<p>Write a Program to demonstrate simulation of six-sided dice rolled 20 times using random number generator</p>
+
+<pre><code>//
+//  Program Name - S3_SP_RandomDiceRoll.cpp
+//  Series: GetOnToC++ Step: 1 Side Program
+//
+//  Purpose: To demonstrate rand, simulate 20 rolls of a six-sided die 
+//           and displays the value of each roll. The function prototype 
+//           for the rand function is in &lt;cstdlib&gt;. To produce integers 
+//           in the range 0 to 5, we use the modulus operator (%) with 
+//           rand as follows: rand() % 6
+//
+//  Compile: g++ S3_SP_RandomDiceRoll.cpp -o S3_SP_RandomDiceRoll
+//  Execute: ./S3_SP_RandomDiceRoll
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;cstdlib&gt; // contains function prototype for rand
+
+using namespace std;
+
+int main()
+{
+    // loop 20 times
+    for ( int counter = 1; counter &lt;= 20; ++counter ) {
+        // pick random number from 1 to 6 and output it
+        cout &lt;&lt; setw( 10 ) &lt;&lt; ( 1 + rand() % 6 );
+        // if counter is divisible by 5, start a new line of output
+        if ( counter % 5 == 0 ) cout &lt;&lt; endl;
+    } // end for
+}
+</code></pre>
+
+<p><a name="math_lib"/></a></p>
+
+<h2>Math Lib Functions</h2>
+
+<p></br></p>
+
+<p>Math Lib Functions are defined in cmath standard library. The <strong>cmath</strong> header provides a collection of functions that enable you to perform common mathematical calculations. For example, you can calculate the square root of 900.0 with the function call <code>sqrt( 900.0 )</code> which evaluates to 30.0. Function sqrt takes an argument of type double and returns a double result.</p>
+
+<p>Some math library functions are summarized in Figure below as Part 1 and Part 2. In the figure, the variables x and y are of type double.</p>
+
+<p><strong>Math Library Function Part 1</strong></p>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/MathLibFuncPart1.png" title="Math Library Function Part 1" alt="Math Library Function Part 1" /></p>
+
+<!--
+[1]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/MathLibFuncPart1.png "Math Library Function Part 1" 
+-->
+
+
+<p><strong>Math Library Function Part 2</strong></p>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/MathLibFuncPart2.png" title="Math Library Function Part 2" alt="Math Library Function Part 2" /></p>
+
+<!--
+[1]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/MathLibFuncPart2.png "Math Library Function Part 2" 
+-->
+
+
+<h5>SIDE PROGRAM # &nbsp;2</h5>
+
+<p>Calculate Compound interest based on Principal Amount, Rate of Interest and Duration using the formulae</p>
+
+<pre><code>a = p ( 1 + r )^n where
+p is the original amount invested (i.e., the principal), 
+r is the annual interest rate, 
+n is the number of years and 
+a is the amount on deposit at the end of the nth year.
+</code></pre>
+
+<p>The Program is written below</p>
+
+<pre><code>//
+//  Program Name - S3_SP_CalcCompoundInterest.cpp
+//  Series: GetOnToC++ Step: 3 Side Program
+//
+//  Purpose: Calculate Compound interest based on Principal Amount, Rate of 
+//           Interest and Duration
+//
+//  Compile: g++ S3_SP_CalcCompoundInterest.cpp -o S3_SP_CalcCompoundInterest
+//  Execute: ./S3_SP_CalcCompoundInterest
+//
+//  Created by Narayan Mahadevan on 10/11/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// standard C++ math library
+#include &lt;cmath&gt;
+
+// standard C++ library to format the output
+#include &lt;iomanip&gt;
+
+int main ( ) { 
+
+    // Setting the deposit amount, starting principal and the interest rate
+    double amount = 0.0, principal = 1000.0, rate = .05; 
+
+    // The Width for output Amount on deposit is set to 21
+    cout &lt;&lt; "Year" &lt;&lt; setw( 21 )
+         &lt;&lt; "Amount on deposit" &lt;&lt; endl;
+
+    for(int year = 1; year &lt;= 10; year++ ) { 
+        // Calculating the amount including the principal and interest based
+        // on the year value
+        amount = principal * pow( 1.0 + rate, year );
+
+        // Prints the value of the variable year and amount based on the 
+        // format specified by the parameterized stream manipulator setw, 
+        // setiosflags and setprecision
+
+        // The setw(4) specifies the year will be printed with atleast 
+        // 4 char position. If the value is less then 4 chars then the 
+        // year will be printed right justified by default
+
+        // The call to setiosflags(ios::fixed | ios::showpoint) is used 
+        // to print the amount as fixed point value with a decimal point. 
+
+        // The setprecision is used to set the output to 2 digit precision
+
+        cout &lt;&lt; setw(4) &lt;&lt; year 
+             &lt;&lt; setiosflags( ios::fixed | ios::showpoint ) 
+             &lt;&lt; setw( 21 ) &lt;&lt; setprecision( 2 )
+             &lt;&lt; amount &lt;&lt; endl ;
+    }
+    return 0;
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S2_SP_CalcCompoundInterest
+Year    Amount on deposit
+   1              1050.00
+   2              1102.50
+   3              1157.63
+   4              1215.51
+   5              1276.28
+   6              1340.10
+   7              1407.10
+   8              1477.46
+   9              1551.33
+  10              1628.89
+</code></pre>
+
+<p><a name="func_def"/></a></p>
+
+<h2>Function Definition</h2>
+
+<p></br></p>
+
+<p>A function is a group of statements that together perform a task. Every C++ program has at least one function which is main().</p>
+
+<p>Lets consider an example to compute the volume of the Box Car and the Tank Car. Since the volume will be computed for varying length, breadth and height as well as for varying cylindrical length and radius, its best this computation is done in a volume computing function. The function definition is as follows:</p>
+
+<p><img src="/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/DeclareFunctions.png" title="Function Declaration" alt="Function Declaration" /></p>
+
+<!--!
+[Function Declaration](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareFunctions.png "Function Declaration") 
+-->
+
+
+<p><strong>Procedure Abstraction</strong> is achieved when computational detail are moved into a function. The benefits are:</p>
+
+<ol>
+<li>Easy to reuse your programs</li>
+<li>Makes programs easier to read and enables to concentrate on high-level steps</li>
+<li>Easy to debug program</li>
+<li>Easy to change and improve code</li>
+</ol>
+
+
+<p>Function Definition consists of Function Prototypes and Function Body. It is required by the compiler that function be defined before the function is called. So either the Function is to be defined in full or function prototypes needs to be  defined.</p>
+
+<p><a name="call_functions"/></a></p>
+
+<h3>Function Call</h3>
+
+<h1></h1>
+
+<p>The function is invoked by a function call. The function is called by the name along with the parameters as specified in the function definition.</p>
+
+<h5>SIDE PROGRAM # &nbsp;3</h5>
+
+<p>Write a Program that computes the Volume of the Box Car and the Tank Car</p>
+
+<pre><code>//
+//  Program Name - S3_SP_ComputeVolume.cpp
+//  Series: GetOnToC++ Step: 3 Side Program
+//
+//  Purpose: This program computes the Volume of the Box Car and the Tank Car  
+//
+//  Compile: g++ S3_SP_ComputeVolume.cpp -o S3_SP_ComputeVolume
+//  Execute: ./S3_SP_ComputeVolume
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Use the mathematics library, which contains a declaration for M_PI: 
+#include &lt;math.h&gt;
+
+// Function Definition - The Function Prototype and Body are defined together
+// Before the main
+
+/*
+ * This function calculates the Volume of the Box Car
+ * Input Param are: ht =&gt; height, wt =&gt; width, and lt = length
+ * return: volume of the Box Car
+ * Note: Here the scope of Function Parameters are local to this 
+ * function and is called call-by-value  
+ */    
+double calcBoxCarVolume(double ht, double wt, double lt) {
+    /*
+     * The scope of the boxCarVol variable is local to this function.
+     * This means the memory is not available outside the function.
+     * The local variable boxCarVol stores the volume of the Box Car
+     */        
+    double boxCarVol = 0.0;
+
+    // Box Car Volume Computation using Arithmatic Operations
+    boxCarVol = ht * wt * lt;
+
+    // Returns the Box Car Volume
+    return boxCarVol;
+}
+
+/*
+ * This function calculates the Volume of the Tank Car
+ * Input Param are: rad =&gt; radius, and l = length of the cylinder
+ * return: volume of the Tank Car
+ * Note: Here the scope of Function Parameters are local to this 
+ * function and is called call-by-value  
+ */    
+double calcTankCarVolume(double rad, double l) {
+    /*
+     * The scope of the tankCarVol variable is local to this function.
+     * This means the memory is not available outside the function.
+     * The local variable tankCarVol stores the volume of the Tank Car
+     */        
+    double tankCarVol = 0.0;
+
+    // Tank Car Volume Computation using Arithmatic Operations
+    tankCarVol = M_PI * rad * rad * l;
+
+    // Returns the Tank Car Volume
+    return tankCarVol;
+}
+
+
+main ( ) { 
+
+    // Declaration of Variables 
+
+    /* 
+     1. The Variables defined below are Local Variables and are local to this 
+        main function. 
+     2. All Variables are of data type double(holds 8 bytes or 64 bits memory) 
+        and intialized to 0.0
+    */
+    // Variables for Box Car
+    double length = 0.0, width = 0.0, height = 0.0;
+
+    // Variables for Tank Car which is a Cylinder
+    double radius = 0.0, lengthOfTankCar = 0.0;
+
+    // Output &amp; Input Operators
+
+    // Reading the User inputs and setting the values of length, width and
+    // height of the Box Car
+    cout &lt;&lt; "Please Enter the Length, Width and Height of the Box Car - ";
+    cin &gt;&gt; length &gt;&gt; width &gt;&gt; height;  
+
+    // Reading the User inputs and setting the values of radius and length
+    // of the Tank Car
+    cout &lt;&lt; "Please Enter the Radius and Length of the Tank Car - ";
+    cin &gt;&gt; radius &gt;&gt; lengthOfTankCar;  
+
+    // Function Call
+
+    // Calling Function calcBoxCarVolume to calculate the Volume of Box Car
+    double boxCarVol = calcBoxCarVolume(height, width, length);
+    cout &lt;&lt; "The volume of the Box Car is " &lt;&lt; boxCarVol &lt;&lt; endl; 
+
+    // Calling Function calcTankCarVolume to calculate the Volume of Tank Car
+    double tankCarVol = calcTankCarVolume(radius, lengthOfTankCar);
+    cout &lt;&lt; "The volume of the Tank Car is " &lt;&lt; tankCarVol &lt;&lt; endl; 
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S3_SP_ComputeVolume
+Please Enter the Length, Width and Height of the Box Car - 10 10 10
+Please Enter the Radius and Length of the Tank Car - 10 10
+The volume of the Box Car is 1000
+The volume of the Tank Car is 3141.59
+</code></pre>
+
+<p><a name="func_prototype"/></a></p>
+
+<h2>Function Prototype and Body</h2>
+
+<p></br></p>
+
+<p><strong>Function Prototypes</strong> is also referred as <strong>Function Declaration</strong>. Its one of the very useful feature of C++. It improves readability of the program. It tells the compiler the name of the function, the type of data returned by the function and the order and number of parameters the function should except. The compiler uses this to validate the function call.</p>
+
+<p><strong>Function Body</strong> is the place where the code for actual computation or the logic is written. Once the place holder in the function prototype is defined for compiler to validate the program, the function body can be written after the main. Or else the function body has to written before the function call otherwise there would be compilation error.</p>
+
+<h5>SIDE PROGRAM # &nbsp;4</h5>
+
+<p>This program demonstrates writing a function prototype and function body to calculate maximum of 3 numbers</p>
+
+<pre><code>//
+//  Program Name - S3_SP_FunctionDemo.cpp
+//  Series: GetOnToC++ Step: 1
+//
+//  Purpose: This program demonstrates writing a function prototype and 
+//           function body to calculate maximum of 3 numbers
+//
+//  Compile: g++ S3_SP_FunctionDemo.cpp -o S3_SP_FunctionDemo
+//  Execute: ./S3_SP_FunctionDemo
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int maximum( int, int, int ); // function prototype 
+
+int main ( ) 
+{ 
+    int a, b, c; // variables to store user inputs
+
+    cout &lt;&lt; "Enter three integers: "; 
+    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c; 
+
+    // a, b and c below are arguments to the maximum function call
+    cout &lt;&lt; "Maximum is: " &lt;&lt; maximum( a, b, c ) &lt;&lt; endl;
+
+    return 0;
+}
+
+// Function maximum definition x, y and z below are parameters to the 
+// maximum function definition
+
+int maximum( int x, int y, int z )
+{
+    int max = x; // setting the maximum value to x
+
+    // Using the if condition statement to check y and z are greater then max
+    if (y &gt; max) max = y;
+    if (z &gt; max) max = z;
+
+    return max; // Returning the max value
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S3_SP_FunctionDemo
+Enter three integers: 23 12 45
+Maximum is: 45
+</code></pre>
+
+<h5>SIDE PROGRAM # &nbsp;5</h5>
+
+<p>This is another Side Program that demonstrates taking no function parameters. Up until now all the function were parameterized functions. This program demonstrates random dice Rolling a six-sided dice 6,000,000 times and check the frequency of 1 to 6 faces</p>
+
+<pre><code>//
+//  Program Name - S3_SP_RandomDiceRollDemo.cpp
+//  Series: GetOnToC++ Step: 3 Side Program
+//
+//  Purpose: To demonstrate random dice Rolling a six-sided dice 6,000,000 
+//           times and check the frequency of 1 to 6 faces
+//
+//  Compile: g++ S3_SP_RandomDiceRollDemo.cpp -o S3_SP_RandomDiceRollDemo
+//  Execute: ./S3_SP_RandomDiceRollDemo
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+#include &lt;cstdlib&gt; // contains function prototype for rand
+using namespace std;
+
+// Global Variable
+int frequency1 = 0; // count of 1s rolled
+int frequency2 = 0; // count of 2s rolled
+int frequency3 = 0; // count of 3s rolled
+int frequency4 = 0; // count of 4s rolled
+int frequency5 = 0; // count of 5s rolled
+int frequency6 = 0; // count of 6s rolled
+
+// Function Prototype
+void summarize(void);
+
+int main() {
+
+    summarize();
+
+    cout &lt;&lt; "Face" &lt;&lt; setw( 13 ) &lt;&lt; "Frequency" &lt;&lt; endl; // output headers
+    cout &lt;&lt; "   1" &lt;&lt; setw( 13 ) &lt;&lt; frequency1
+         &lt;&lt; "\n   2" &lt;&lt; setw( 13 ) &lt;&lt; frequency2
+         &lt;&lt; "\n   3" &lt;&lt; setw( 13 ) &lt;&lt; frequency3
+         &lt;&lt; "\n   4" &lt;&lt; setw( 13 ) &lt;&lt; frequency4
+         &lt;&lt; "\n   5" &lt;&lt; setw( 13 ) &lt;&lt; frequency5
+         &lt;&lt; "\n   6" &lt;&lt; setw( 13 ) &lt;&lt; frequency6 &lt;&lt; endl;
+}//endmain
+
+
+void summarize(void) 
+{
+    int face; // stores most recently rolled value
+
+    // summarize results of 6,000,000 rolls of a die
+    for ( int roll = 1; roll &lt;= 6000000; ++roll )
+    {
+        face = 1 + rand()%6; //randomnumberfrom1to6
+        // determine roll value 1-6 and increment appropriate counter
+        switch ( face ) {
+        case 1:
+           ++frequency1; // increment the 1s counter 
+           break;
+        case 2:
+            ++frequency2; // increment the 2s counter 
+            break;
+        case 3:
+            ++frequency3; // increment the 3s counter 
+            break;
+        case 4:
+            ++frequency4; // increment the 4s counter 
+            break;
+        case 5:
+            ++frequency5; // increment the 5s counter 
+            break;
+        case 6:
+            ++frequency6; // increment the 6s counter 
+            break;
+        default: // invalid value
+            cout &lt;&lt; "Program should never get here!";
+        } // end switch
+    } // end for
+}
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S3_SP_RandomDiceRollDemo
+Face    Frequency
+   1      1001548
+   2       998795
+   3       999665
+   4      1000202
+   5       999052
+   6      1000738
+</code></pre>
+
+<p></br>
+<a name="func_scope_rules"/></a></p>
+
+<h2>Function Scope Rules</h2>
+
+<p></br></p>
+
+<p>Up until now we have seen Local Variables and Global Variables. Local Variables retain their scope within the function or the block it is defined. While Global Variables are defined outside the function and retain their values throughout execution of the program. Global variables and global functions can be referenced by any function that follows their declarations or definitions in the source file.</p>
+
+<p>Now lets see static local variable. Local variables declared static are still known only in the function in which they’re declared, but, unlike local variables, static local variables retain their values when the function returns to its caller. The next time the function is called, the static local variables contain the values they had when the function last completed execution. The following statement declares local variable count to be static and to be initialized to 1:
+<code>static int count = 1;</code></p>
+
+<p>It’s possible to declare local and global variables of the same name. C++ provides the <strong>unary scope resolution operator (::)</strong> to access a global variable when a local variable of the same name is in scope. The unary scope resolution operator cannot be used to access a local variable of the same name in an outer block. A global variable can be accessed directly without the unary scope resolution operator if the name of the global variable is not the same as that of a local variable in scope.</p>
+
+<h5>SIDE PROGRAM # &nbsp;6</h5>
+
+<p>This program demonstrates scoping of variables with global variables, local variables and static local variables. Further the global variable is accessed using <strong>unary scope resolution operator (::)</strong></p>
+
+<pre><code>//
+//  Program Name - S3_SP_FunctionScope.cpp
+//  Series: GetOnToC++ Step: 3 Side Program
+//
+//  Purpose: This program demonstrates scoping of variables with global 
+//           variables, local variables and static local variables.
+//
+//  Compile: g++ S3_SP_FunctionScope.cpp -o S3_SP_FunctionScope
+//  Execute: ./S3_SP_FunctionScope
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Function Prototypes
+void useLocal(); 
+void useStaticLocal(); 
+void useGlobal(); 
+
+// Global Variable
+int x = 1;
+
+int main() 
+{
+    cout &lt;&lt; "global x in main is " &lt;&lt; x &lt;&lt; endl;
+
+    int x = 5; // local variable to main
+
+    cout &lt;&lt; "local x in main's outer scope is " &lt;&lt; x &lt;&lt; endl;
+
+    // Inner Block
+
+    { // start new scope
+        int x = 7; // hides both x in outer scope and global x
+        cout &lt;&lt; "local x in main's inner scope is " &lt;&lt; x &lt;&lt; endl;
+    } // end new scope
+
+    cout &lt;&lt; "local x in main's outer scope is " &lt;&lt; x &lt;&lt; endl;
+
+    useLocal(); // useLocal has local x
+    useStaticLocal(); // useStaticLocal has static local x
+    useGlobal(); // useGlobal uses global x
+    useLocal(); // useLocal reinitializes its local x
+    useStaticLocal(); // static local x retains its prior value
+    useGlobal(); // global x also retains its prior value
+
+    cout &lt;&lt; "\nlocal x in main is " &lt;&lt; x &lt;&lt; endl;
+
+} // end main
+
+// useLocal reinitializes local variable x during each call
+void useLocal()
+{
+    int x = 25; // initialized each time useLocal is called
+    cout &lt;&lt; "\nlocal x is " &lt;&lt; x &lt;&lt; " on entering useLocal" &lt;&lt; endl; 
+    ++x;
+    cout &lt;&lt; "local x is " &lt;&lt; x &lt;&lt; " on exiting useLocal" &lt;&lt; endl;
+
+    // Note that the global value of x is accessed using unary scope 
+    // resolution operator ::
+    cout &lt;&lt; "Global int value of x = " &lt;&lt; ::x &lt;&lt; endl;
+
+} // end function useLocal  
+
+// useStaticLocal initializes static local variable x only the 
+// first time the function is called; value of x is saved
+// between calls to this function
+void useStaticLocal()
+{
+    static int x = 50; // initialized first time useStaticLocal is called
+    cout &lt;&lt; "\nlocal static x is " &lt;&lt; x &lt;&lt; " on entering useStaticLocal" 
+         &lt;&lt; endl;
+    ++x;
+    cout &lt;&lt; "local static x is " &lt;&lt; x &lt;&lt; " on exiting useStaticLocal"
+         &lt;&lt; endl;
+} // end function useStaticLocal    
+
+// useGlobal modifies global variable x during each call
+void useGlobal() 
+{
+    cout &lt;&lt; "\nglobal x is " &lt;&lt; x &lt;&lt; " on entering useGlobal" &lt;&lt; endl; 
+    x *= 10;
+    cout &lt;&lt; "global x is " &lt;&lt; x &lt;&lt; " on exiting useGlobal" &lt;&lt; endl;
+} // end function useGlobal
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S3_SP_FunctionScope
+global x in main is 1
+local x in main's outer scope is 5
+local x in main's inner scope is 7
+local x in main's outer scope is 5
+
+local x is 25 on entering useLocal
+local x is 26 on exiting useLocal
+Global int value of x = 1
+
+local static x is 50 on entering useStaticLocal
+local static x is 51 on exiting useStaticLocal
+
+global x is 1 on entering useGlobal
+global x is 10 on exiting useGlobal
+
+local x is 25 on entering useLocal
+local x is 26 on exiting useLocal
+Global int value of x = 10
+
+local static x is 51 on entering useStaticLocal
+local static x is 52 on exiting useStaticLocal
+
+global x is 10 on entering useGlobal
+global x is 100 on exiting useGlobal
+
+local x in main is 5
+</code></pre>
+
+<p></br>
+<a name="recursive_func"/></a></p>
+
+<h2>Recursive Functions</h2>
+
+<p></br></p>
+
+<p>For some problems, it’s useful to have functions call themselves. A recursive function is a function that calls itself, either directly, or indirectly through another functions. This is called recursion step where it calls itself. The recursion step executes while the original call to the function is still “open,” i.e., it has not yet finished executing. The recursion step can result in many more such recursive calls till some condition is met. First the inner-most recursive call is terminated then subsequently all the outer calls terminates up-until the original call.</p>
+
+<h5>SIDE PROGRAM # &nbsp;7</h5>
+
+<p>This program uses recursion to calculate and print the factorials of the integers 0–10.</p>
+
+<pre><code>//
+//  Program Name - S3_SP_Factorial.cpp
+//  Series: GetOnToC++ Step: 3 Side Program
+//
+//  Purpose: This program uses recursion to calculate and print the 
+//           factorials of the integers 0–10.
+//
+//  Compile: g++ S3_SP_Factorial.cpp -o S3_SP_Factorial
+//  Execute: ./S3_SP_Factorial
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+using namespace std;    
+
+unsigned long factorial( unsigned long ); // function prototype
+
+int main() {
+    // calculate the factorials of 0 through 10
+    for ( int counter = 0; counter &lt;= 10; ++counter )
+        cout &lt;&lt; setw( 2 ) &lt;&lt; counter &lt;&lt; "! = " &lt;&lt; factorial( counter )
+             &lt;&lt; endl; 
+} //end main
+
+// recursive definition of function factorial
+unsigned long factorial( unsigned long number )
+{
+    if ( number &lt;= 1 ) // test for base case
+        return 1; // base cases: 0! = 1 and 1! = 1
+    else // recursion step
+        return number * factorial( number - 1 );
+} // end function factorial
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S3_SP_Factorial
+0! = 1
+1! = 1
+2! = 2
+3! = 6
+4! = 24
+5! = 120
+6! = 720
+7! = 5040
+8! = 40320
+9! = 362880
+10! = 3628800
+</code></pre>
+
+<h5>SIDE PROGRAM # &nbsp;8</h5>
+
+<p>The Fibonacci series <code>0, 1, 1, 2, 3, 5, 8, 13, 21, …</code> begins with 0 and 1 and has the property that each subsequent Fibonacci number is the sum of the previous two Fibonacci numbers. The ratio of successive Fibonacci numbers converges on a constant value of 1.618.... This number, too, frequently occurs in nature and has been called the golden ratio or the golden mean.</p>
+
+<p>The Fibonacci series can be defined recursively as follows:</p>
+
+<pre><code>￼fibonacci(0) = 0
+fibonacci(1) = 1
+fibonacci(n) = fibonacci(n – 1) + fibonacci(n - 2)
+</code></pre>
+
+<p>Write a program to calculate the nth Fibonacci number recursively by using function fibonacci.</p>
+
+<pre><code>//
+//  Program Name - S3_SP_Fibonacci.cpp
+//  Series: GetOnToC++ Step: 3 Side Program
+//
+//  Purpose: Write a program to calculate the nth Fibonacci number 
+//           recursively by using function fibonacci
+//
+//  Compile: g++ S3_SP_Fibonacci.cpp -o S3_SP_Fibonacci
+//  Execute: ./S3_SP_Fibonacci
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+unsigned long fibonacci( unsigned long ); // function prototype
+
+int main()
+{
+    // calculate the fibonacci values of 0 through 10
+    for ( int counter = 0; counter &lt;= 10; ++counter )
+        cout &lt;&lt; "fibonacci( " &lt;&lt; counter &lt;&lt; " ) = "
+             &lt;&lt; fibonacci( counter ) &lt;&lt; endl;
+
+    // display higher fibonacci values
+    cout &lt;&lt; "fibonacci( 20 ) = " &lt;&lt; fibonacci( 20 ) &lt;&lt; endl;
+    cout &lt;&lt; "fibonacci( 30 ) = " &lt;&lt; fibonacci( 30 ) &lt;&lt; endl;
+    cout &lt;&lt; "fibonacci( 35 ) = " &lt;&lt; fibonacci( 35 ) &lt;&lt; endl;
+
+} // end of main
+
+// recursive function fibonacci
+unsigned long fibonacci( unsigned long number )
+{
+    if ( ( number == 0 ) || ( number == 1 ) ) // base cases
+        return number;
+    else // recursion step
+        return fibonacci( number - 1 ) + fibonacci( number - 2 );
+} // end function fibonacci
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S3_SP_Fibonacci
+fibonacci( 0 ) = 0
+fibonacci( 1 ) = 1
+fibonacci( 2 ) = 1
+fibonacci( 3 ) = 2
+fibonacci( 4 ) = 3
+fibonacci( 5 ) = 5
+fibonacci( 6 ) = 8
+fibonacci( 7 ) = 13
+fibonacci( 8 ) = 21
+fibonacci( 9 ) = 34
+fibonacci( 10 ) = 55
+fibonacci( 20 ) = 6765
+fibonacci( 30 ) = 832040
+fibonacci( 35 ) = 9227465
+</code></pre>
+
+<p></br>
+<a name="inline_func"/></a></p>
+
+<h2>Inline Functions</h2>
+
+<p></br></p>
+
+<p>Implementing a program as a set of functions is good from a software engineering stand- point, but function calls involve execution-time overhead. C++ provides inline functions to help reduce function call overhead — especially for small functions. Placing the qualifier inline before a function’s return type in the function definition “advises” the compiler to generate a copy of the function’s body code in place (when appropriate) to avoid a function call. The trade-off is that multiple copies of the function code are inserted in the program (often making the program larger) rather than there being a single copy of the function to which control is passed each time the function is called.</p>
+
+<h5>SIDE PROGRAM # &nbsp;9</h5>
+
+<p>Use an inline function to calculate the volume of a cube.</p>
+
+<pre><code>//
+//  Program Name - S3_SP_InlineFunctionTest.cpp
+//  Series: GetOnToC++ Step: 3 Side Program
+//
+//  Purpose: This program uses an inline function to calculate the volume 
+//           of a cube.
+//
+//  Compile: g++ S3_SP_InlineFunctionTest.cpp -o S3_SP_InlineFunctionTest
+//  Execute: ./S3_SP_InlineFunctionTest
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Definition of inline function cube. Definition of function appears
+// before function is called, so a function prototype is not required.
+// First line of function definition acts as the prototype.
+inline double cube( const double side )
+{
+    return side * side * side; // calculate cube
+} // end function cube
+
+int main() 
+{
+    double sideValue; // stores value entered by user
+    cout &lt;&lt; "Enter the side length of your cube: ";
+    cin &gt;&gt; sideValue; // read value from user
+
+    // calculate cube of sideValue and display result
+    cout &lt;&lt; "Volume of cube with side "
+         &lt;&lt; sideValue &lt;&lt; " is " &lt;&lt; cube( sideValue ) &lt;&lt; endl;
+} // end main
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S3_SP_InlineFunctionTest
+Enter the side length of your cube: 10
+Volume of cube with side 10 is 1000
+</code></pre>
+
+<p></br>
+<a name="func_overload"/></a></p>
+
+<h2>Function Overloading</h2>
+
+<p></br></p>
+
+<p>C++ enables several functions of the same name to be defined, as long as they have different signatures. This is called <strong>Function Overloading</strong>. The C++ compiler selects the proper function to call by examining the number, types and order of the arguments in the call.</p>
+
+<h5>SIDE PROGRAM # &nbsp;10</h5>
+
+<p>Use overloaded square functions to calculate the square of an int and the square of a double</p>
+
+<pre><code>//
+//  Program Name - S3_SP_FuncOverloadTest.cpp
+//  Series: GetOnToC++ Step: 3 Side Program
+//
+//  Purpose: Use overloaded square functions to calculate the square of an int 
+//           and the square of a double 
+//
+//  Compile: g++ S3_SP_FuncOverloadTest.cpp -o S3_SP_FuncOverloadTest
+//  Execute: ./S3_SP_FuncOverloadTest
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// Function Prototype to calculate square of int and double value
+int square( int x );
+double square( double y );
+
+int main() 
+{
+    cout &lt;&lt; square( 7 ); // calls int version
+    cout &lt;&lt; endl;
+    cout &lt;&lt; square( 7.5 ); // calls double version
+    cout &lt;&lt; endl;
+} // end main
+
+// function square for int values
+int square( int x )
+{
+    cout &lt;&lt; "square of integer " &lt;&lt; x &lt;&lt; " is ";
+    return x * x;
+} // end function square with int argument
+
+// function square for double values
+double square( double y )
+{
+    cout &lt;&lt; "square of double " &lt;&lt; y &lt;&lt; " is ";
+    return y * y;
+} // end function square with double argument
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S3_SP_FuncOverloadTest
+square of integer 7 is 49
+square of double 7.5 is 56.25
+</code></pre>
+
+<p></br><br/>
+<a name="prog_problem"/></a></p>
+
+<h2>Programming Problem</h2>
+
+<p></br></p>
+
+<p>One of the most popular games of chance is a dice game known as “craps,” which is played in casinos and back alleys worldwide. Write a program that will simulate the Craps Game</p>
+
+<p><strong>Rules:</strong> A player rolls two dice. Each die has six faces. These faces contain 1, 2, 3, 4, 5 and 6 spots. After the dice have come to rest, the sum of the spots on the two upward faces is calculated. If the sum is 7 or 11 on the first roll, the player wins. If the sum is 2, 3 or 12 on the first roll (called “craps”), the player loses (i.e., the “house” wins). If the sum is 4, 5, 6, 8, 9 or 10 on the first roll, then that sum becomes the player’s “point.” To win, you must continue rolling the dice until you “make your point.” The player loses by rolling a 7 before making the point.</p>
+
+<pre><code>//
+//  Program Name - S3_MP_CrapsDiceGame.cpp
+//  Series: GetOnToC++ Step: 3 Main Program
+//
+//  Purpose: One of the most popular games of chance is a dice game known 
+//           as “craps,” which is played in casinos and back alleys 
+//           worldwide. This program will simulate the Craps Game
+//
+//  RULES: A player rolls two dice. Each die has six faces. These faces 
+//         contain 1, 2, 3, 4, 5 and 6 spots. After the dice have come 
+//         to rest, the sum of the spots on the two upward faces is 
+//         calculated. If the sum is 7 or 11 on the first roll, the player 
+//         wins. If the sum is 2, 3 or 12 on the first roll (called “craps”), 
+//         the player loses (i.e., the “house” wins). If the sum is 4, 5, 6, 
+//         8, 9 or 10 on the first roll, then that sum becomes the player’s 
+//         “point.” To win, you must continue rolling the dice until you 
+//         “make your point.” The player loses by rolling a 7 before making 
+//         the point.
+//
+//  Compile: g++ S3_MP_CrapsDiceGame.cpp -o S3_MP_CrapsDiceGame
+//  Execute: ./S3_MP_CrapsDiceGame
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  Copyright (c) 2013 MakeTechEz. All rights reserved.
+//
+
+#include &lt;iostream&gt;
+#include &lt;cstdlib&gt; // contains prototypes for functions srand and rand
+#include &lt;ctime&gt; // contains prototype for function time
+using namespace std;
+
+// Function Prototype rollsdice, calculates and displays sum 
+int rollDice(); 
+
+int main() {
+    // enumeration with constants that represent the game status
+    enum Status { CONTINUE, WON, LOST }; // all caps in constants
+
+    int myPoint; // point if no win or loss on first roll 
+    Status gameStatus; // can contain CONTINUE, WON or LOST
+
+    // randomize random number generator using current time
+    srand( time( 0 ) );
+
+    int sumOfDice = rollDice(); // first roll of the dice
+
+    // determine game status and point (if needed) based on first roll
+    switch ( sumOfDice ) {
+        case 7: // win with 7 on first roll
+        case 11: // win with 11 on first roll
+            gameStatus = WON; 
+            cout &lt;&lt; "Player Rolled: " &lt;&lt; sumOfDice &lt;&lt; " Hence Wins." &lt;&lt; endl;
+            break;
+        case 2: // lose with 2 on first roll
+        case 3: // lose with 3 on first roll
+        case 12: // lose with 12 on first roll
+            gameStatus = LOST;
+            cout &lt;&lt; "Player Rolled: " &lt;&lt; sumOfDice &lt;&lt; " Hence Lost." &lt;&lt; endl;
+            break;
+        default: // did not win or lose, so remember point
+            gameStatus = CONTINUE; // game is not over 
+            myPoint = sumOfDice; // remember the point 
+            cout &lt;&lt; "Player Rolled: " &lt;&lt; sumOfDice &lt;&lt; " Hence Continue." 
+                 &lt;&lt; endl;
+            cout &lt;&lt; "Point To Reproduce to Win is: " &lt;&lt; myPoint &lt;&lt; endl; 
+            break; // optional at end of switch
+    } // end switch
+
+    // while game is not complete not won not lost
+    while ( gameStatus == CONTINUE ) {
+        sumOfDice = rollDice(); // roll dice again
+
+        // determine game status
+
+        // win by making point 
+        if ( sumOfDice == myPoint ) {
+            gameStatus = WON;
+            cout &lt;&lt; "Point Reproduced again. Hence Won" &lt;&lt; endl;
+            break; // breaking the loop
+        } 
+
+        // lose by rolling 7 before point
+        if ( sumOfDice == 7 ) {
+            gameStatus = LOST;
+            cout &lt;&lt; "Lost by Rolling 7" &lt;&lt; endl;
+            break; // breaking the loop
+        } 
+    }//end while
+
+    // display won or lost message
+    if( gameStatus == WON )
+        cout &lt;&lt; "Player wins" &lt;&lt; endl;
+    else cout &lt;&lt; "Player Losses" &lt;&lt; endl;
+
+} // end main
+
+/*
+ * Function Body - rollDice
+ * This function calculate sum and display results
+ * Input Param are: -NA-
+ * return: the sum of 2 dice
+ */    
+int rollDice() {
+    // pick random die values
+    int die1 = 1 + rand() % 6; // first die roll 
+    int die2 = 1 + rand() % 6; // second die roll    
+
+    int sum = die1 + die2; // compute sum of die values
+
+    // display results of this roll
+    cout &lt;&lt; "Player rolled " &lt;&lt; die1 &lt;&lt; "+" &lt;&lt; die2 &lt;&lt; "=" &lt;&lt; sum &lt;&lt;endl;
+    return sum; // end function rollDice 
+} // end function rollDice
+</code></pre>
+
+<p><strong>RESULT:</strong></p>
+
+<pre><code>$ ./S3_MP_CrapsDiceGame
+Player rolled 3+3=6
+Player Rolled: 6 Hence Continue.
+Point To Reproduce to Win is: 6
+Player rolled 4+1=5
+Player rolled 3+6=9
+Player rolled 6+6=12
+Player rolled 1+1=2
+Player rolled 5+4=9
+Player rolled 5+5=10
+Player rolled 2+1=3
+Player rolled 1+4=5
+Player rolled 1+5=6
+Point Reproduced again. Hence Won
+Player wins
+
+$ ./S3_MP_CrapsDiceGame
+Player rolled 5+2=7
+Player Rolled: 7 Hence Wins.
+Player wins
+
+$ ./S3_MP_CrapsDiceGame
+Player rolled 4+1=5
+Player Rolled: 5 Hence Continue.
+Point To Reproduce to Win is: 5
+Player rolled 2+4=6
+Player rolled 5+2=7
+Lost by Rolling 7
+Player Losses
+</code></pre>
+
+<hr />
+
+<p><strong>Note:</strong> The enum keyword is used to create an enumerated type, which is a collection of related constants. In the above example to indicate Game Status of Won, Lost or Continue. Enum is covered in more detail in the next step</p>
+
+<hr />
+</body>
+</html>

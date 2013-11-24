@@ -10,7 +10,7 @@ The Objective of this step is to introduce all about functions including functio
 5. [**Function Scope Rules**](#func_scope_rules)
 6. [**Recursive Functions**](#recursive_func)
 7. [**Inline Functions**](#inline_func)
-8. [**Function Oveloading**](#func_overload)
+8. [**Function Overloading**](#func_overload)
 
 Finally the end of the section specifies a [**Programming Problem**](#prog_problem) that will try to use all the concepts covered in this step 
 
@@ -75,7 +75,7 @@ Write a Program to demonstrate simulation of six-sided dice rolled 20 times usin
 ## Math Lib Functions
 </br>
 
-Math Lib Functions are defined in cmath standard library. The **cmath** header provides a collection of functions that enable you to perform common mathematical calculations. For example, you can calculate the square root of 900.0 with the function call `sqrt( 900.0 )` which evaluates to 30.0. Function sqrt takes an argument of type dou- ble and returns a double result. 
+Math Lib Functions are defined in cmath standard library. The **cmath** header provides a collection of functions that enable you to perform common mathematical calculations. For example, you can calculate the square root of 900.0 with the function call `sqrt( 900.0 )` which evaluates to 30.0. Function sqrt takes an argument of type double and returns a double result. 
 
 Some math library functions are summarized in Figure below as Part 1 and Part 2. In the figure, the variables x and y are of type double.
 
@@ -190,7 +190,7 @@ Lets consider an example to compute the volume of the Box Car and the Tank Car. 
 [Function Declaration](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareFunctions.png "Function Declaration") 
 -->
 
-**Procedure Abstraction** is achieved when computational detail are moved into a function. The benifits are: 
+**Procedure Abstraction** is achieved when computational detail are moved into a function. The benefits are: 
 
 1. Easy to reuse your programs
 2. Makes programs easier to read and enables to concentrate on high-level steps
@@ -281,15 +281,15 @@ Write a Program that computes the Volume of the Box Car and the Tank Car
         // Declaration of Variables 
 
         /* 
-         1. The Vairbles defined below are Local Variables and are local to this 
+         1. The Variables defined below are Local Variables and are local to this 
             main function. 
          2. All Variables are of data type double(holds 8 bytes or 64 bits memory) 
             and intialized to 0.0
         */
-        // Variabes for Box Car
+        // Variables for Box Car
         double length = 0.0, width = 0.0, height = 0.0;
         
-        // Vairables for Tank Car which is a Cylinder
+        // Variables for Tank Car which is a Cylinder
         double radius = 0.0, lengthOfTankCar = 0.0;
 
         // Output & Input Operators
@@ -389,14 +389,14 @@ This program demonstrates writing a function prototype and function body to calc
 
 ##### SIDE PROGRAM # &nbsp;5
 
-This is another Side Program that demonstrates taking no function parameters. Up until now all the function were parameterized functions. This program demonstrates random dice Rolling a six-sided dice 6,000,000 times and check the frequency of 1 to 6 faces appearing
+This is another Side Program that demonstrates taking no function parameters. Up until now all the function were parameterized functions. This program demonstrates random dice Rolling a six-sided dice 6,000,000 times and check the frequency of 1 to 6 faces
 
     //
     //  Program Name - S3_SP_RandomDiceRollDemo.cpp
     //  Series: GetOnToC++ Step: 3 Side Program
     //
     //  Purpose: To demonstrate random dice Rolling a six-sided dice 6,000,000 
-    //           times and check the frequency of 1 to 6 faces appearing
+    //           times and check the frequency of 1 to 6 faces
     //
     //  Compile: g++ S3_SP_RandomDiceRollDemo.cpp -o S3_SP_RandomDiceRollDemo
     //  Execute: ./S3_SP_RandomDiceRollDemo
@@ -454,9 +454,9 @@ This is another Side Program that demonstrates taking no function parameters. Up
 ## Function Scope Rules
 </br>
 
-Up until now we have seen Local Variables and Global Variables. Local Variables retain their scope within the function or the block it is defined. While Global Variables are defined outside the function and retain their values throughout execution of the program. Global variables and global functions can be referenced by any function that follows their decla- rations or definitions in the source file.
+Up until now we have seen Local Variables and Global Variables. Local Variables retain their scope within the function or the block it is defined. While Global Variables are defined outside the function and retain their values throughout execution of the program. Global variables and global functions can be referenced by any function that follows their declarations or definitions in the source file.
 
-Now lets see static local variable. Local variables declared static are still known only in the function in which they’re declared, but, unlike local variables, static local variables retain their values when the function returns to its caller. The next time the function is called, the static local vari- ables contain the values they had when the function last completed execution. The following statement declares local variable count to be static and to be initialized to 1:`static int count = 1;`
+Now lets see static local variable. Local variables declared static are still known only in the function in which they’re declared, but, unlike local variables, static local variables retain their values when the function returns to its caller. The next time the function is called, the static local variables contain the values they had when the function last completed execution. The following statement declares local variable count to be static and to be initialized to 1:`static int count = 1;`
 
 It’s possible to declare local and global variables of the same name. C++ provides the **unary scope resolution operator (::)** to access a global variable when a local variable of the same name is in scope. The unary scope resolution operator cannot be used to access a local variable of the same name in an outer block. A global variable can be accessed directly without the unary scope resolution operator if the name of the global variable is not the same as that of a local variable in scope.
 
@@ -613,14 +613,14 @@ The Fibonacci series can be defined recursively as follows:
 
 	￼fibonacci(0) = 0	fibonacci(1) = 1	fibonacci(n) = fibonacci(n – 1) + fibonacci(n - 2)
 
-Write a program to calculate the nth Fibonacci number recursively by using func- tion fibonacci.
+Write a program to calculate the nth Fibonacci number recursively by using function fibonacci.
 
     //
     //  Program Name - S3_SP_Fibonacci.cpp
     //  Series: GetOnToC++ Step: 3 Side Program
     //
     //  Purpose: Write a program to calculate the nth Fibonacci number 
-    //           recursively by using func- tion fibonacci
+    //           recursively by using function fibonacci
     //
     //  Compile: g++ S3_SP_Fibonacci.cpp -o S3_SP_Fibonacci
     //  Execute: ./S3_SP_Fibonacci

@@ -12,9 +12,9 @@ The purpose of this **Get On To C++** Self Paced Programme is to help you learn 
 
 4. Whats most Important is in the end you will be a **Confident Developer of C++ Language having written any-where between 150 - 200 Programs.**
 
-Optinally their is mentoring programme that you can sign up. Here are the details
+Optionally their is mentoring programme that you can sign up. Here are the details
 
-1. Mentoring Process is **One Skill - One Mentor - One Student** Philosophy. This helps to idenify skill gaps in the engineer and guide appropriately.
+1. Mentoring Process is **One Skill - One Mentor - One Student** Philosophy. This helps to identify skill gaps in the engineer and guide appropriately.
 
 2. After Every Step mentors cross examine one-on-one with the Engineers to check the level of understanding and gives practise program to be written by engineers.
 
@@ -27,27 +27,27 @@ Optinally their is mentoring programme that you can sign up. Here are the detail
 <a name="steps_overview"/></a>
 ## Overview of Get On To C++
 #  
-Get On To C++ is divided into 3 main parts and each part has 6 steps. So in-total there are 18 steps. Each Step introduces around 5 - 10 concepts. Each concept is explained with a sample program. So at the end of self paced study you would have understood around 120-150 concepts and would have written around 150 - 200 programs. The essential parts and steps of Get Onto C++ Selfpaced Study are
+Get On To C++ is divided into 3 main parts and each part has 6 steps. So in-total there are 18 steps. Each Step introduces around 5 - 10 concepts. Each concept is explained with a sample program. So at the end of self paced study you would have understood around 120-150 concepts and would have written around 150 - 200 programs. The essential parts and steps of Get Onto C++ Self-paced Study are
 
 **Part 1:** **Get Onto C/C++ Basics**
 
-- **Step 1:**&nbsp;&nbsp;  -> Get Onto **C++ Basics**
-- **Step 2:**&nbsp;&nbsp;  -> Get Onto **C++ Loops and Conditional Expressions**
-- **Step 3:**&nbsp;&nbsp;  -> Get Onto **C++ Functions and Recursions**
-- **Step 4:**&nbsp;&nbsp;  -> Get Onto **C++ Arrays**
-- **Step 5:**&nbsp;&nbsp;  -> Get Onto **C++ Pointers and Strings**
-- **Step 6:**&nbsp;&nbsp;  -> Get Onto **C++ Structures and Classes**
+- **Step 1:**&nbsp;&nbsp;  -> Get Onto **C/C++ Basics**
+- **Step 2:**&nbsp;&nbsp;  -> Get Onto **C/C++ Loops and Conditional Expressions**
+- **Step 3:**&nbsp;&nbsp;  -> Get Onto **C/C++ Functions and Recursions**
+- **Step 4:**&nbsp;&nbsp;  -> Get Onto **C/C++ Arrays**
+- **Step 5:**&nbsp;&nbsp;  -> Get Onto **C/C++ Pointers**
+- **Step 6:**&nbsp;&nbsp;  -> Get Onto **C/C++ Bits, Characters and Strings**
 
-**Part 2:** **Get Onto C/C++ Intermediate**
+**Part 2:** **Get Onto C++ Intermediate**
 
-- **Step 7:**&nbsp;&nbsp;  -> Get Onto **C++ Data Abstractions and Encapsulations**
-- **Step 8:**&nbsp;&nbsp;  -> Get Onto **C++ Objects and Pointers**
-- **Step 9:**&nbsp;&nbsp;  -> Get Onto **C++ Inheritance and Class Heirarchy**
-- **Step 10:**    -> Get Onto **C++ Inheritance and Class Heirarchy**
-- **Step 11:**    -> Get Onto **C++ Vertual Function and Polymorphism**
+- **Step 7:**&nbsp;&nbsp;  -> Get Onto **C++ Structures and Classes**
+- **Step 8:**&nbsp;&nbsp;  -> Get Onto **C++ Data Abstractions and Encapsulations**
+- **Step 9:**&nbsp;&nbsp;  -> Get Onto **C++ Objects and Pointers**
+- **Step 10:**    -> Get Onto **C++ Inheritance and Class Hierarchy**
+- **Step 11:**    -> Get Onto **C++ Virtual Function and Polymorphism**
 - **Step 12:**    -> Get Onto **C++ Operator Overloading**
    
-**Part 2:** **Get Onto C/C++ Advanced**
+**Part 2:** **Get Onto C++ Advanced**
 
 - **Step 13:**    -> Get Onto **C++ Exception Handling**
 - **Step 14:**    -> Get Onto **C++ File Processing**
