@@ -850,7 +850,7 @@ The following figure illustrates a two-dimensional array, a. The array contains 
 [2]: /Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/2DArray.png "2D Array"
 
 <!--
-[1]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/2DArray.png "2D Array"
+[2]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/2DArray.png "2D Array"
 -->
 
 Every element in array a is identified in the above Figure by an element name of the form a[ i ][ j ], where a is the name of the array, and i and j are the subscripts that uniquely identify each element in a

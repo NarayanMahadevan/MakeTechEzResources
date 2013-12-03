@@ -11,7 +11,11 @@ Tags: Business Process Management, BPM, BPM Software Components, Process Design,
 Narayan Mahadevan is a Strong Technologist and an Entrepreneur with nearly 2 decades of experience equally divided between USA and India. He has strong Product Engineering background and has been successful to build engineering out of India firstly for EFI Inc. and then for his own start-ups in last 10 years.
 He has hands-on experience in developing Front End Technologies (Mobile, Web and Desktop), Middleware and Server Side Technologies that includes Internet Systems, e-Commerce Systems, Workflow Systems, MIS Systems, Mobile Apps, SOA, SaaS Service, PDF and Image Personalization Systems.
 
-He is also involved in writing technical blogs and eBooks mainly on Enterprise Application - BPM, CRM, ERP, etc., Enterprise Architecture - Architecture Patterns, Designs Patterns, Performance, Security, Delivery, etc. and Enterprise Technologies.
+He is also involved in writing technical blogs and eBooks mainly on 
+
+- Programming - C/C++, Java, Mobile, Web and Server Side Programming, 
+- Enterprise Technologies - BPM, CRM, ERP, etc., 
+- Enterprise Architecture - Architecture Patterns, Designs Patterns, Performance, Security, Delivery, etc. 
 <!--
 He is currently involved in [**MakeTechEz**](http://maketechez.wordpress.com), a single place **to know, to learn, and to hack Technology**. The sole motto is to make Technology Easy to Understand and Use. MakeTechEz focuses on three areas, they are: 
 1.	**Get On To Technology (GOT)** Blogs focused on learning different technologies through lot of programming and less theory, 

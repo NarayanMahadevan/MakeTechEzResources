@@ -13,7 +13,7 @@ The Objective of this step is to explain the basic pointer concepts - pointer de
 
 4. [**Using Const Qualifier with Pointers**](#const_ptr)
 
-5. [**Relationship between Pointer and Array**](#ptr_and_array)
+5. [**Relationship between Pointers and Arrays**](#ptr_and_array)
 
 6. [**Arrays of Pointers**](#array_ptrs)
 
@@ -68,7 +68,7 @@ Write a program that demonstrates pointer declaration and assignment.
 
     //
     //  Program Name - S5_SP_PointerDemo.cpp
-    //  Series: GetOnToC++ Step: 4 Side Program
+    //  Series: GetOnToC++ Step: 5 Side Program
     //
     //  Purpose: This program demonstrates pointer declaration and assignment.
     //
@@ -157,13 +157,25 @@ The Pointer Operators are the
 		// Dereferencing the pointer may also be used to receive input value
 		cin >> *countPtr;
 
+####Operator precedence and associativity
+
+</br>
+![Operator precedence and associativity][4]
+
+[4]: /Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/S5OperatorAssociativity.png "Operator precedence and associativity"
+
+<!--
+[4]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/S5OperatorAssociativity.png "Operator precedence and associativity"
+-->
+</br>
+
 ##### SIDE PROGRAM # &nbsp;2
 
 Write a program that demonstrates & (address) and *(dereferencing) pointer operators.
 
     //
     //  Program Name - S5_SP_PointerOperatorDemo.cpp
-    //  Series: GetOnToC++ Step: 4 Side Program
+    //  Series: GetOnToC++ Step: 5 Side Program
     //
     //  Purpose: This program demonstrates & and * pointer operators.
     //
@@ -247,12 +259,511 @@ Write a program that demonstrates & (address) and *(dereferencing) pointer opera
 ## Calling Function by Reference
 </br>
 
+There are two ways in C++ to pass arguments to a function pass-by-value and pass-by-reference also referred as call-by-value and call-by-reference. When function arguments are passed by reference, either the memory address of the variable can be passed or the pointer can be directly passed. Such arguments enable the called function to modify the original values of the arguments in the caller. Reference arguments also enable programs to pass large data objects to a function and avoid the overhead of passing the objects by value.
+
+When calling a function with an argument that should be modified, the address of the argument is passed. This is normally accomplished by applying the address operator (&) to the name of the variable whose value will be modified. In such a scenario the indirection operator (*) is used in the function definition and the body to form a synonym for the name of the variable. This pointer variable in turn can be used to modify the variable’s value at that location in the caller’s memory. Call by Value and Call by  reference is illustrated in the Side Program # 3.
+
+As seen in Step 4, arrays are not passed using operator &, because the name of the array is the pointing to the starting memory location of the array (i.e., an array name is already a pointer). The name of the array i.e. arrayName is equivalent to `&arrayName[0]`. 
+
+##### SIDE PROGRAM # &nbsp;3
+
+Write a program that demonstrates passing arguments to a function using pass-by-value and pass-by-reference
+
+    //
+    //  Program Name - S5_SP_PassByRefDemo.cpp
+    //  Series: GetOnToC++ Step: 5 Side Program
+    //
+    //  Purpose: This program demonstrates passing arguments to a function using
+    //           pass-by-value and pass-by-reference
+    //
+    //  Compile: g++ S5_SP_PassByRefDemo.cpp -o S5_SP_PassByRefDemo
+    //  Execute: ./S5_SP_PassByRefDemo
+    //
+    //  Created by Narayan Mahadevan on 18/08/13.
+    //  Copyright (c) 2013 MakeTechEz. All rights reserved.
+    //
+
+
+    #include <iostream>    using namespace std;
+    // Function  Prototype
+
+    // This function demonstrates passing variable by value
+    int cubeByValue( int ); 
+
+    // This function demonstrates passing variable by reference
+    void cubeByReference( int * );
+
+    // This function demonstrates important rule of passing variable by reference
+    void passByReferenceTest( int * );
+    int main()    {
+        int number = 5;        cout << "The original value of number is " << number 
+             << "\nAnd Memory Address: " << &number << endl;
+
+        // Pass number by value to cubeByValue        number = cubeByValue( number );         cout << "\nThe new value of number is " << number 
+             << "\nAnd Memory Address: " << &number << endl;
+
+        // Resetting the number back to 5
+        number = 5;
+
+        // Pass number address to cubeByReference        
+        cubeByReference( &number );         cout << "\nThe new value of number is " << number
+             << "\nAnd Memory Address: " << &number << endl;
+
+        // Passing By Reference Test
+        cout << "\nPassing By Reference Test" 
+             << "\n-------------------------" << endl;
+
+        int y = 10, *yPtr = &y;
+        cout << "\nThe updated value of y is: " << y 
+             << " And Memory Address is: " << &y
+             << "\nThe value of yPtr is: " << *yPtr 
+             << " And Memory Address is: " << yPtr << endl;
+
+        passByReferenceTest(yPtr);
+
+        cout << "\nThe value of y is: " << y 
+             << " And Memory Address is: " << &y
+             << "\nThe value of yPtr is: " << *yPtr 
+             << " And Memory Address is: " << yPtr << endl;
+    } //end main
+
+    // This function demonstrates passing variable by value.
+    // This function calculates and return cube of integer argument    int cubeByValue( int n )    {
+        cout << "\nIn cubeByValue( int n ) function:"
+             << "\n----------------------------------" 
+             << "\nThe value of n passed by value is " 
+             << n << "\nAnd Memory Address: " << &n << endl;
+        return n * n * n; // cube local variable n and return result    } // end function cubeByValue
+
+    // This function demonstrates passing variable by reference
+    // calculate cube of *nPtr; modifies variable number in main    void cubeByReference( int *nPtr )    {        cout << "\nIn cubeByReference( int *nPtr ) function: "
+             << "\n-------------------------------------------" 
+             << "\nThe value of nPtr passed by reference is " << *nPtr 
+             << "\nAnd Memory Address: " << nPtr << endl;
+        *nPtr = *nPtr * *nPtr * *nPtr; // cube *nPtr    } // end function cubeByReference
+
+    // This function demonstrates important rule of passing variable by reference
+    //
+    // Notice 1: Since it is pass by reference xPtr can modify the value and the 
+    //           same value will be reflected by variable y and the yPtr   
+    //
+    // Notice 2: xPtr points to the same memory location as yPtr. xPtr can 
+    //           legally point to new Memory address but will not affect the yPtr
+    //
+    void passByReferenceTest( int *xPtr ) 
+    {
+        cout << "\nIn Function passByReferenceTest(): "
+             << "\n----------------------------------" 
+             << "\nThe value of xPtr is " << *xPtr 
+             << " And Memory Address is: " << xPtr << endl;
+
+        // The value is modified to 50 through the dereferenced pointer
+        *xPtr = 50;         cout << "The updated value of xPtr is " << *xPtr 
+             << " And Memory Address is: " << xPtr << endl;
+
+        // xPtr is modified to point to variable b
+        int b = 100;
+        xPtr = &b; 
+        cout << "The value of updated xPtr is " << *xPtr 
+             << " And Memory Address is: " << xPtr << endl;
+    } // end function passByReferenceTest
+
+
+**RESULT:**
+
+    ./S5_SP_PassByRefDemo
+    The original value of number is 5
+    And Memory Address: 0x7fff5e599b04
+
+    In cubeByValue( int n ) function:
+    ----------------------------------
+    The value of n passed by value is 5
+    And Memory Address: 0x7fff5e599a7c
+
+    The new value of number is 125
+    And Memory Address: 0x7fff5e599b04
+
+    In cubeByReference( int *nPtr ) function: 
+    -------------------------------------------
+    The value of nPtr passed by reference is 5
+    And Memory Address: 0x7fff5e599b04
+
+    The new value of number is 125
+    And Memory Address: 0x7fff5e599b04
+
+    Passing By Reference Test
+    -------------------------
+
+    The updated value of y is: 10 And Memory Address is: 0x7fff5e599b00
+    The value of yPtr is: 10 And Memory Address is: 0x7fff5e599b00
+
+    In Function passByReferenceTest(): 
+    ----------------------------------
+    The value of xPtr is 10 And Memory Address is: 0x7fff5e599b00
+    The updated value of xPtr is 50 And Memory Address is: 0x7fff5e599b00
+    The value of updated xPtr is 100 And Memory Address is: 0x7fff5e599a74
+
+    The value of y is: 50 And Memory Address is: 0x7fff5e599b00
+    The value of yPtr is: 50 And Memory Address is: 0x7fff5e599b00
+
+
+***
+**Note:** We can see the following in the Side Program above
+
+1. Memory Address of variable `int number` defined in main is: 0x7fff5e781b04
+2. Memory Address of variable `int n` defined in cubeByValue is: 0x7fff5e781aac
+3. Memory Address of variable `int *nPtr` defined in cubeByReference is: 0x7fff5e781b04
+4. **Notice # 1:** The memory address of variable n in cubeByValue is different from the memory address of variable number defined in main. This means a new memory is created for variable n and the value is copied. This is pass-by-value 
+5. **Notice # 2:** The memory address of variable nPtr in cubeByReference is same as the memory address of variable number defined in main. This means the memory is shared or the same for variable nPtr and number. This is pass-by-reference
+6. **Notice # 3:** As you can see in `passByReferenceTest()` function, xPtr points to the same memory location as yPtr. xPtr can legally point to new Memory address but will not affect the yPtr
+***
 
 </br>
 <a name="const_ptr"/></a>
 ## Using Const Qualifier with Pointers
 </br>
 
+As already seen const inform the compiler that the value of a particular variable should not be modified. This section discusses how to combine const with pointer declarations. Many possibilities exist for using (or not using) const with function parameters or pointer declarations. Each combination provides a different level of access privilege. There are four ways to pass a pointer to a function: 
+
+1. A Nonconstant Pointer to Nonconstant Data, 
+2. A Nonconstant Pointer to Constant Data, 
+3. A Constant Pointer to Nonconstant Data and 
+4. A Constant Pointer to Constant Data. 
+
+#### A Nonconstant Pointer to Nonconstant Data
+
+The highest access is granted by a nonconstant pointer to nonconstant data — the data can be modified through the dereferenced pointer, and the pointer can be modified to point to other data. Such a pointer’s declaration does not include const.
+
+	int *countPtr;
+
+***
+**IMPORTANT NOTE:** The declaration `int *countPtr;` is read from right to left as *“countPtr is a pointer to an integer”*.
+***
+
+##### SIDE PROGRAM # &nbsp;3
+
+Write a program that demonstrates Nonconstant Pointer to Nonconstant Data
+
+    //
+    //  Program Name - S5_SP_NonConstPointers.cpp
+    //  Series: GetOnToC++ Step: 5 Side Program
+    //
+    //  Purpose: This program demonstrates Nonconstant Pointer to Nonconstant Data
+    //
+    //  Compile: g++ S5_SP_NonConstPointers.cpp -o S5_SP_NonConstPointers
+    //  Execute: ./S5_SP_NonConstPointers
+    //
+    //  Created by Narayan Mahadevan on 18/08/13.
+    //  Copyright (c) 2013 MakeTechEz. All rights reserved.
+    //
+
+    #include <iostream>    using namespace std;
+    // Function Prototype
+
+    // This function demonstrates Nonconstant Pointer to Nonconstant Data
+    void f1( int * ); 
+
+    int main()
+    {
+        int x = 25, y = 10, *yPtr = &y;        cout << "The original value of y is: " << y 
+             << " And Memory Address is: " << &y
+             << "\nThe value of yPtr is: " << *yPtr 
+             << " And Memory Address is: " << yPtr << endl;
+
+        // Passing Nonconstant Pointer to a function that takes Nonconstant Data 
+        cout << "\nDemonstrating Nonconstant Pointer to Nonconstant Data";
+        cout << "\n------------------------------------------------------";
+
+        f1( yPtr );
+
+        cout << "\nThe value of y is " << y << " And Memory Address: " << &y
+             << "\nThe value of yPtr is " << *yPtr 
+             << " And Memory Address: " << yPtr << endl;
+
+    } // end main
+
+
+    // This function demonstrates Nonconstant Pointer to Nonconstant Data
+    //
+    // Notice 1: Since it is pass by reference xPtr can modify the value and the 
+    //           same value will be reflected by variable y and the yPtr   
+    // Notice 2: xPtr points to the same memory location as yPtr. xPtr can 
+    //           legally point to new Memory address but will not affect the yPtr
+    // Notice 3: Such Pointer declarion does not include const and the highest 
+    //           access is granted 
+    //
+    void f1( int *xPtr ) 
+    {
+        cout << "\nIn Function f1(): "
+             << "\n-----------------" 
+             << "\nThe value of xPtr is " << *xPtr 
+             << " And Memory Address is: " << xPtr << endl;
+
+        // The value is modified to 200 hrough the dereferenced pointer
+        *xPtr = 50; 
+        cout << "The UPDATED value of xPtr is " << *xPtr 
+             << " And Memory Address is: " << xPtr << endl;
+
+        // xPtr is modified to point to variable b
+        int b = 100;
+        xPtr = &b; 
+        cout << "The value of xPtr is " << *xPtr 
+             << " And UPDATED Memory Address is: " << xPtr << endl;
+    } // end function f1
+
+**RESULT:**
+
+    $ ./S5_SP_NonConstPointers
+    The original value of y is: 10 And Memory Address is: 0x7fff5f43db00
+    The value of yPtr is: 10 And Memory Address is: 0x7fff5f43db00
+
+    Demonstrating Nonconstant Pointer to Nonconstant Data
+    ------------------------------------------------------
+    In Function f1(): 
+    -----------------
+    The value of xPtr is 10 And Memory Address is: 0x7fff5f43db00
+    The UPDATED value of xPtr is 50 And Memory Address is: 0x7fff5f43db00
+    The value of xPtr is 100 And UPDATED Memory Address is: 0x7fff5f43da44
+
+    The value of y is 50 And Memory Address: 0x7fff5f43db00
+    The value of yPtr is 50 And Memory Address: 0x7fff5f43db00
+
+***
+**NOTE # 1:** In the above side program both the data as well as the pointer pointing to a new data in function f1 is possible. 
+
+**Note # 2:** In pass-by-reference only the data value change can be reflected in the main function and not the pointer reference change. Hence as you will see in the **Result** when xptr changed the data value to 50, y and yptr in main function have the new value. But when xptr points new memory address no change is reflected on either y or yptr.
+***
+
+
+#### A Nonconstant Pointer to Constant Data, 
+
+A nonconstant pointer to constant data is a pointer that can be modified to point to any data item of the appropriate type, but the data to which it points cannot be modified through that pointer. Such a pointer might be used to receive an array argument to a function that will process each array element, but should not be allowed to modify the data. Any attempt to modify the data in the function results in a compilation error. The declaration for such a pointer places const to the left of the pointer’s type, as in
+
+	const int *countPtr;
+
+***
+**IMPORTANT NOTE:** The declaration `const int *countPtr;` is read from right to left as *“countPtr is a pointer to an integer constant”*.
+
+**Programming Tip # 1:** If it is not needed to be modified by the called function, pass large objects using pointers to constant data or references to constant data, to obtain the performance benefits of pass-by-reference.
+
+**Programming Tip # 2:** Pass large objects using pointers to constant data, or references to constant data, to obtain the security of pass-by-value.
+***
+
+##### SIDE PROGRAM # &nbsp;4
+
+Write a program that demonstrates Nonconstant Pointer to Constant Data
+
+    //
+    //  Program Name - S5_SP_NonConstPtrConstData.cpp
+    //  Series: GetOnToC++ Step: 5 Side Program
+    //
+    //  Purpose: This program demonstrates const pointers
+    //
+    //  Compile: g++ S5_SP_NonConstPtrConstData.cpp -o S5_SP_NonConstPtrConstData
+    //  Execute: ./S5_SP_NonConstPtrConstData
+    //
+    //  Created by Narayan Mahadevan on 18/08/13.
+    //  Copyright (c) 2013 MakeTechEz. All rights reserved.
+    //
+
+    #include <iostream>    using namespace std;
+    // Function Prototype
+
+    // This function demonstrates Nonconstant Pointer to Constant Data
+    void testNonConstPtrConstData( const int * ); 
+
+    int main()
+    {
+        int x = 25, y = 10, *yPtr = &y;        cout << "The original value of y is: " << y 
+             << " And Memory Address is: " << &y
+             << "\nThe value of yPtr is: " << *yPtr 
+             << " And Memory Address is: " << yPtr << endl;
+
+        // Passing Nonconstant Pointer to a function that takes Constant Data 
+        cout << "\nDemonstrating Nonconstant Pointer to Constant Data";
+        cout << "\n------------------------------------------------------";
+        testNonConstPtrConstData( yPtr );
+
+        cout << "\nThe value of y is: " << y << " And Memory Address is: " << &y 
+             << "\nThe value of yPtr is: " << *yPtr 
+             << " And Memory Address is: " << yPtr << endl;
+
+    } // end main
+
+    //
+    // This function demonstrates Nonconstant Pointer to Constant Data
+    // Notice 1: xPtr cannot modify the value of constant variable to which 
+    //           it points
+    // Notice 2: xPtr is passed by reference and points to the same memory 
+    //           location as yPtr. xPtr can legally point to new Memory address
+    //           or any data item of the appropriate type. But this will not 
+    //           affect the yPtr. 
+    // Notice 3: Pointer reference can be chaged because as per the declaration
+    //           const int * the data is Constant but the pointer is Nonconstant 
+    //
+    void testNonConstPtrConstData( const int *xPtr ) 
+    {
+        int b = 100;
+        cout << "\nIn Function testNonConstPtrConstData():"
+             << "\n---------------------------------------" 
+             << "\nThe value of xPtr is " << *xPtr 
+             << " And Memory Address is: " << xPtr << endl;
+
+        // *xPtr = 100; // error: cannot modify a const object        xPtr = &b; 
+
+        cout << "The value of xPtr is " << *xPtr 
+             << " And UPDATED Memory Address is: " << xPtr << endl;
+    } // end function testNonConstPtrConstData
+
+
+**RESULT:**
+
+    $ ./S5_SP_NonConstPtrConstData
+    The original value of y is: 10 And Memory Address is: 0x7fff5f43db00
+    The value of yPtr is: 10 And Memory Address is: 0x7fff5f43db00
+
+    Demonstrating Nonconstant Pointer to Constant Data
+    ------------------------------------------------------
+    In Function testNonConstPtrConstData():
+    ---------------------------------------
+    The value of xPtr is 50 And Memory Address is: 0x7fff5f43db00
+    The value of xPtr is 100 And UPDATED Memory Address is: 0x7fff5f43da44
+
+    The value of y is: 50 And Memory Address is: 0x7fff5f43db00
+    The value of yPtr is: 50 And Memory Address is: 0x7fff5f43db00
+
+***
+**Note:** The declaration of Nonconstant Pointer to Constant Data is `const int *`.  Please notice in the side program the data cannot be modified but the Pointer reference can be chaged.
+***
+
+#### A Constant Pointer to Nonconstant Data
+
+A constant pointer to nonconstant data is a pointer that always points to the same memory location; the data at that location can be modified through the pointer. An example of such a pointer is an array name, which is a constant pointer to the beginning of the array. All data in the array can be accessed and changed by using the array name and array subscripting. The declaration for such a pointer places const to the right of the pointer, as in
+
+	int * const countPtr;
+
+***
+**IMPORTANT NOTE:** The declaration `int * const countPtr;` is read from right to left as *“countPtr is a constant pointer to a nonconstant integer”*.
+
+**Programming Tip # 1:** Not initializing a pointer that’s declared const is a compilation error.
+***
+
+##### SIDE PROGRAM # &nbsp;5
+
+Write a program that demonstrates Constant Pointer to Nonconstant Data
+
+    //
+    //  Program Name - S5_SP_ConstPtrNonConstData.cpp
+    //  Series: GetOnToC++ Step: 5 Side Program
+    //
+    //  Purpose: This program demonstrates Constant Pointer to Nonconstant Data
+    //
+    //  Compile: g++ S5_SP_ConstPtrNonConstData.cpp -o S5_SP_ConstPtrNonConstData
+    //  Execute: ./S5_SP_ConstPtrNonConstData
+    //
+    //  Created by Narayan Mahadevan on 18/08/13.
+    //  Copyright (c) 2013 MakeTechEz. All rights reserved.
+    //
+
+    #include <iostream>    using namespace std;
+
+    int main()
+    {
+        int x = 25, y = 10;
+        
+        // ptr is a constant pointer to an integer that can be modified through        // ptr, but ptr always points to the same memory location.        int * const ptr = &y; // const pointer must be initialized
+        cout << "\nThe original value of y is: " << y 
+        	 << " And Memory Address is: " << &y 
+             << "\nThe value of ptr is: " << *ptr 
+             << " And Memory Address is: " << ptr << endl;
+
+        // Attempting to modify a constant pointer to nonconstant data.
+        cout << "\nDemonstrating Constant Pointer to Nonconstant Data";
+        cout << "\n------------------------------------------------------";
+
+        // Attempting to modify a constant pointer to constant data.
+        *ptr = 100; // allowed: *ptr is not const and data can be changed
+        cout << "\nThe value of y is: " << y << " And Memory Address is: " << &y 
+             << "\nThe UPDATED value of ptr is: " << *ptr 
+             << " And Memory Address is: " << ptr << endl;
+        // ptr = &x; // error: ptr is const; cannot assign to it a new address        
+	} // end main
+
+**RESULT:**
+
+    $ ./S5_SP_ConstPtrNonConstData
+
+    The original value of y is: 10 And Memory Address is: 0x7fff5f43db00
+    The value of ptr is: 10 And Memory Address is: 0x7fff5f43db00
+
+    Demonstrating Constant Pointer to Nonconstant Data
+    ------------------------------------------------------
+    The value of y is: 100 And Memory Address is: 0x7fff5f43db00
+    The UPDATED value of ptr is: 100 And Memory Address is: 0x7fff5f43db00
+
+***
+**Note:** The declaration of Constant Pointer to Nonconstant Data is `int * const`.  Please notice in the side program the data can be modified but the Pointer reference cannot be chaged.
+***
+
+#### A Constant Pointer to Constant Data 
+
+The minimum access privilege is granted by a constant pointer to constant data. Such a pointer always points to the same memory location, and the data at that location cannot be modified via the pointer. This is how an array should be passed to a function that only reads the array, using array subscript notation, and does not modify the array. The declaration for such a pointer places const to the right of the pointer as well as a const to the left of the pointer’s type, as in
+
+	const int * const countPtr;
+
+***
+**IMPORTANT NOTE:** The declaration `const int * const countPtr;` is read from right to left as *“countPtr is a constant pointer to a integer constant”*.
+***
+
+##### SIDE PROGRAM # &nbsp;6
+
+Write a program that demonstrates Constant Pointer to Constant Data
+
+    //
+    //  Program Name - S5_SP_ConstPointerAndData.cpp
+    //  Series: GetOnToC++ Step: 5 Side Program
+    //
+    //  Purpose: This program demonstrates Constant Pointer to Constant Data
+    //
+    //  Compile: g++ S5_SP_ConstPointerAndData.cpp -o S5_SP_ConstPointerAndData
+    //  Execute: ./S5_SP_ConstPointerAndData
+    //
+    //  Created by Narayan Mahadevan on 18/08/13.
+    //  Copyright (c) 2013 MakeTechEz. All rights reserved.
+    //
+
+    #include <iostream>    using namespace std;
+
+    int main()
+    {
+        // ptr is a constant pointer to a constant integer.        cout << "\nDemonstrating Constant Pointer to Constant Data";
+        cout << "\n-------------------------------------------------";
+        
+        int x = 25;
+        // xptr always points to the same location; the integer        // at that location cannot be modified.
+        const int *const xptr = &x;
+        cout << "\nThe value of x is: " << x << " And Memory Address is: " << &x 
+             << "\nThe value of xptr is: " << *xptr 
+             << " And Memory Address is: " << xptr << endl;
+		cout << "The value of const pointer and const data xptr can only be " 
+			 << "printed but no updates are possible"
+    	￼￼￼￼// *xptr = 7; // error: *xptr is const; cannot assign new value    	￼￼￼￼// xptr = &y; // error: xptr is const; cannot assign new address
+        
+	} // end main
+
+**RESULT:**
+
+    $ ./S5_SP_ConstPointerAndData
+    
+    Demonstrating Constant Pointer to Constant Data
+    -------------------------------------------------
+    The value of x is: 25 And Memory Address is: 0x7fff5f43db04
+    The value of xptr is: 25 And Memory Address is: 0x7fff5f43db04
+	The value of const pointer and const data xptr can only be printed but no 	updates are possible
+
+***
+**Note:** The declaration of Constant Pointer to Constant Data is `const int * const`.  Please notice in the side program the data can neither be modified nor the Pointer reference can be chaged.
+***
 
 
 </br>

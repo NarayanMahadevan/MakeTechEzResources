@@ -12,11 +12,11 @@ Narayan Mahadevan is a Strong Technologist and an Entrepreneur with nearly 2 dec
 He has hands-on experience in developing Front End Technologies (Mobile, Web and Desktop), Middleware and Server Side Technologies that includes Internet Systems, e-Commerce Systems, Workflow Systems, MIS Systems, Mobile Apps, SOA, SaaS Service, PDF and Image Personalization Systems.
 
 He is also involved in writing technical blogs and eBooks mainly on Enterprise Application - BPM, CRM, ERP, etc., Enterprise Architecture - Architecture Patterns, Designs Patterns, Performance, Security, Delivery, etc. and Enterprise Technologies.
-<!--
+
 He is currently involved in [**MakeTechEz**](http://maketechez.wordpress.com), a single place **to know, to learn, and to hack Technology**. The sole motto is to make Technology Easy to Understand and Use. MakeTechEz focuses on three areas, they are: 
 1.	**Get On To Technology (GOT)** Blogs focused on learning different technologies through lot of programming and less theory, 
 2.	**Get To Know Technology (GK)** Blogs are focused on knowing technologies in a quick and an easy manner, and 
-3.	**Get Technology Programs (Hack) blogs** are focused on hacking well-curated libraries and software programs with source code that can be ported into developers environment-->
+3.	**Get Technology Programs (Hack) blogs** are focused on hacking well-curated libraries and software programs with source code that can be ported into developers environment
 
 # About MakeTechEz
 MakeTechEz is a place **to know, to learn, and to hack Technology**. MakeTechEz caters to beginners, techies as well as technology leaders. The sole motto is to make Technology Easier to Understand and Use. Hence MakeTechEz focuses on three areas

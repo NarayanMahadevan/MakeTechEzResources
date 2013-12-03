@@ -29,4 +29,13 @@
 	- Write a program that reads a nonnegative integer and computes and prints its factorial.
 	- Write a program that estimates the value of the mathematical constant e by using the formula: (Prompt the user for the desired accuracy of e (i.e., the number of terms in the summa-tion).
 		e = 1 + 1/1! + 1/2! + 1/3! + …
-
+- PP11 :- &nbsp;Write a program that calculates and prints the sum of the integers from 1 to 10. Use the while statement to loop through the calculation and increment statements. The loop should terminate when the value of x becomes 11.
+
+- PP12 :- &nbsp;  Develop a C++ program that uses a while statement to input the miles driven and gallons used for each trip. The program should calculate and display the miles per gallon obtained for each trip and print the average miles per gallon obtained for all trips. Also Print the total millage driven and the total gallons used as shown below.
+
+    	Enter miles driven (-1 to quit): 287 Enter gallons used: 13		MPG this trip : 22.076923		Total MPG     : 22.076923
+		Total Millage : 287
+		Total Gallons : 13		Enter miles driven (-1 to quit): 200 Enter gallons used: 10		MPG this trip : 20.000000		Total MPG     : 21.173913		Total Millage : 487
+		Total Gallons : 23		Enter the miles driven (-1 to quit): 120 Enter gallons used: 5		MPG this trip : 24.000000		Total MPG     : 21.678571
+		Total Millage : 607
+		Total Gallons : 28		Enter the miles used (-1 to quit): -1

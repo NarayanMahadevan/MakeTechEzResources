@@ -96,7 +96,7 @@ Some math library functions are summarized in Figure below as Part 1 and Part 2.
 [2]: /Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/MathLibFuncPart2.png "Math Library Function Part 2"
 
 <!--
-[1]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/MathLibFuncPart2.png "Math Library Function Part 2" 
+[2]: https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/MathLibFuncPart2.png "Math Library Function Part 2" 
 -->
 
 ##### SIDE PROGRAM # &nbsp;2
@@ -187,7 +187,7 @@ Lets consider an example to compute the volume of the Box Car and the Tank Car. 
 ![Function Declaration](/Users/narayan/Documents/MakeTechEzResources/images/GetOnToC++/DeclareFunctions.png "Function Declaration") 
 
 <!--!
-[Function Declaration](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareFunctions.png "Function Declaration") 
+![Function Declaration](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/DeclareFunctions.png "Function Declaration") 
 -->
 
 **Procedure Abstraction** is achieved when computational detail are moved into a function. The benefits are: 

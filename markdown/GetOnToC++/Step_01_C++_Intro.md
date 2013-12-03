@@ -242,7 +242,7 @@ If you are curious about how much memory your C++ implementation allocates for t
 ***
 
 <a name="var_types"/></a>
-# Section 2: Variable Types
+# Variable Types
   
 This section discusses different variable types. This includes 
 
