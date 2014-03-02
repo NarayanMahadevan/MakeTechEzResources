@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>Step 5: &nbsp;C/C++ Pointers Concept Questions</title>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$$$','$$$']]}});</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>Step 5: &nbsp;C/C++ Pointers Concept Questions</h1>
+
+<p></br></p>
+
+<ol>
+<li><p><a href="#ptr_var"><strong>Pointer Variable Declaration and Initialization</strong></a></p></li>
+<li><p><a href="#ptr_oper"><strong>Pointer Operators</strong></a></p></li>
+<li><p><a href="#call_by_ref"><strong>Calling Function by Reference</strong></a></p></li>
+<li><p><a href="#const_ptr"><strong>Using Const Qualifier with Pointers</strong></a></p></li>
+<li><p><a href="#ptr_and_array"><strong>Relationship between Pointers and Arrays</strong></a></p></li>
+<li><p><a href="#ptr_and_array"><strong>sizeOf Operator with Pointer and Array</strong></a></p></li>
+<li><p><a href="#ptr_to_ptr"><strong>Pointer to a Pointer(Multiple Indirection)</strong></a></p></li>
+<li><p><a href="#array_ptrs"><strong>Arrays of Pointers</strong></a></p></li>
+<li><p><a href="#func_ptrs"><strong>Function Pointers</strong></a></p></li>
+</ol>
+
+
+<p></br>
+<a name="ptr_var"/></a></p>
+
+<h2>Concept 1: Pointer Variable Declaration and Initialization</h2>
+
+<h6><a href="http://ideone.com/1EsbCY">Try Program Modifications Online</a></h6>
+
+<ul>
+<li><strong>Mod 1:</strong> Modify the program to check if yPtr is null. If yPtr is not null print the value and address of yPtr. If null print the address of the yPtr.</li>
+<li><strong>Mod 2:</strong> Modify the program to initialize the yPtr to null. Check if any memory is allocated to yPtr.</li>
+<li><strong>Mod 3:</strong> Modify the program to show the size of Memory yPtr holds is same as the size of memory of variable y which is same as size of int data type.</li>
+<li><strong>IMP Mod 4:</strong> Modify the program to initialize yPtr to point to y. Show the content and address of yPtr and y variable are the same.</li>
+</ul>
+
+
+<p><a name="ptr_oper"/></a></p>
+
+<h2>Concept 2: Pointer Operators</h2>
+
+<h6><a href="http://ideone.com/KWiJfe">Try Program Modifications Online</a></h6>
+
+<ul>
+<li><strong>Mod 1:</strong> Modify the program to assign new value to y, show that the yPtr also has the same value.</li>
+<li><strong>Mod 2:</strong> Modify the program to assign new value to yPtr, show that y also has the same value.</li>
+<li><strong>IMP Mod 3:</strong> Modify the above program to show the  &amp;<em>yPtr is same as </em>&amp;yptr which is same as yPtr as well as same as &amp;y</li>
+</ul>
+
+
+<p><a name="call_by_ref"/></a></p>
+
+<h2>Concept 3: Calling Function by Reference</h2>
+
+<h6><a href="http://ideone.com/C3vEU8">Try Program Modifications Online</a></h6>
+
+<ul>
+<li><strong>IMP Mod 1:</strong> Modify the program to show the memory address of variable n in cubeByValue function is different from the variable number defined in main.</li>
+<li><strong>IMP Mod 2:</strong> Modify the program to show the memory address of variable cubeVal in cubeByReference is same as the memory address of variable cubeRefVal defined in main.</li>
+<li><strong>IMP Mod 3:</strong> Modify the function passByReferenceTest to show in pass-by-reference the value if modified for xPtr, the same value is reflected for yPtr and y datatype</li>
+<li><strong>IMP Mod 4:</strong> Modify the function passByReferenceTest to show  xPtr can legally point to new Memory address but will not affect the yPtr</li>
+</ul>
+
+</body>
+</html>

@@ -993,7 +993,7 @@ Write a program that stores the students and their grade in 2D Array. Using the 
 
     void sortStudentGrades( int [][tests] ); // Sorting each Students Grades
     void doBubbleSort( int [], int ); // Sort Array using Bubble Sort
-    float averageGrade( const int [], int ); // Find the average Grade for each Student
+    float averageGrade( const int [], int ); // Find the avg Grade for each Student
     void printGrades( const int [][tests] ); // Printing Student Grades
 
     // Printing Grade Analytics

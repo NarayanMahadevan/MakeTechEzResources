@@ -28,7 +28,7 @@ Latency is the minimum time required to get any form of response, even if the wo
 <a name="system_throughput"/></a>
 #### Throughput
 # 
-Throughput is the work done in a given time. In Enterprise System it is typically transactions per second(tps). This are common sets of transactions that are frequently done by the system. In an Internet System its number of http calls handled by the system in a given time. While in a Web Service environment, its number of api calls handled in a given time. Sometimes improving throughput can effect the response time. So its best to improve responsiveness at the cost of response time to increase throughput and increase performance.
+Throughput is the work done in a given time. In Enterprise System it is typically transactions per second(tps). This are common sets of transactions that are frequently done by the system. In an Internet System its number of http calls handled by the system in a given time. While in a Web Service environment, its number of api calls handled in a given time. Sometimes improving throughput can effect the response time. But its best to improve responsiveness at the cost of response time to increase throughput and increase performance.
 	
 <a name="system_load"/></a>
 #### Load and Load Sensistivity
